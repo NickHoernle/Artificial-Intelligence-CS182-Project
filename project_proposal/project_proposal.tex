@@ -25,17 +25,46 @@
 \lstset{language=Python, basicstyle=\footnotesize} % set language as python
 
 \section*{Problem Statement}
-The driving force behind a stock's price consists of a vast interaction of factors that may include primary factors such as the sales, revenue and costs of the company. However, external forces such as the market condition, consumer satisfaction with the product or service and consumer herding (e.g. in a bare market many investors sell options due to a bare mindset in the market). The price variability of the stock is thus not inherently random and thus can be modeled using a Hidden Markov Model (HMM) where the stock price at close of business is dependent upon the price leading up to that day and additional evidence that can be found from corresponding sources.\\
-\par We propose that using Social Media feeds such as Twitter can enable us to design a Hidden Markov Model to add useful evidence into the model when making a prediction about a stock's price. The primary aim of this project will therefore be to model the system as an HMM, explore the Twitter API for simple tweets that correspond to a certain business, use off the shelf python-based tools to categorise the twitter data based on tweet sentiment and finally use this sentiment data in refining the HMM that is used to predict the stock price.
+Take three people in three locations, each with a different mode of transport available. Find a meeting location which is equidistant (in terms of commute time) for each person and which isn’t just in the middle of nowhere and return the optimum safe path (bike route, car route, bus route) for each person. 
 
 \section{Identiﬁcation of Speciﬁc Related Course Topics}
+Algorithms and techniques:
+\begin{itemize}
+\item Safety-Optimised Bike Routing - i.e. optimise bike paths by factoring in locations of frequent bike accidents, street lighting, bike routes vs main roads, road construction
+\item One possible approach for this could be graph search with path lengths calculated as path length multiplied by the frequency of accidents i.e. penalising paths where accidents frequently occur. For road segments where no accidents occur the length would be equal to the actual length. With this approach the algorithm should find the shortest path but taking into account the cost of roads which have a high frequency of accidents. The path found with this approach could be compared to the shortest path without accident-weighting to see what the difference is in terms of path length.
+\item Safety-Optimised walking paths - a similar approach to the above could be used to find safest walking paths using crime data and street lighting information.  
+\item Equidistant commute times - CSP?
+\item Modes of transport - CSP?
+\end{itemize}
+
+Extensions:
+Suggestions for places to meet at the meeting location 
+
 
 \section{Examples of Expected Behavior of the System}
 
 \section{Problems that we may encounter}
 
 \section{List of Papers or other Resources}
-Stock price database. We need to see if there is any access to bloomberg or something like that.
+Including Accident Information in Automatic Bicycle Route Planning for Urban Areas https://www.hindawi.com/journals/usr/2011/362817/
+
+
+Data sources:
+MBTA Schedules and Trip Planning Data API http://www.mbta.com/rider\_tools/developers/default.asp?id=21895
+City of Cambridge GIS data GEOJSON files http://cambridgegis.github.io/gisdata.html
+Contains data on infrastructure, landmarks ets
+Cambridge Open Data:
+\begin{itemize}
+\item Accidents - list of crashes involving motor vehicles, bicycles and/or pedestrians reported in the City of Cambridge from January 2010 through June 2016 https://data.cambridgema.gov/Public-Safety/Crashes/ybny-g9cv/data
+\item Crime - list of crime incidents featured in the Cambridge Police Department’s Annual Crime Reports and reported in the City of Cambridge from 2009-2016. Includes more than 40 types of crimes. typeshttps://data.cambridgema.gov/Public-Safety/Crime-Reports/xuad-73uj
+\item Metered Parking Spaces - https://data.cambridgema.gov/Traffic-Parking-and-Transportation/Metered-Parking-Spaces/6h7q-rwhf
+\item Boston Open data https://data.cityofboston.gov/
+\end{itemize}
+
+Example proposals from previous years
+http://isites.harvard.edu/fs/docs/icb.topic707165.files/pdfs/hysen\_noronha.pdf
+http://isites.harvard.edu/fs/docs/icb.topic914900.files/pdfs/proposal-hysen-noronha.pdf
+
 
 
 \end{document}
