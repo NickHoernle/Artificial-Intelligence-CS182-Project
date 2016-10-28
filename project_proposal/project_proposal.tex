@@ -3,12 +3,12 @@
 
 \title{
 \vspace{1cm}
-\textmd{\textbf{CS182 Project Proposal: Some title}}\\
+\textmd{\textbf{CS182 Project Proposal: Safe Bike Routes and Meeting Plans}}\\
 % \normalsize\vspace{0.1in}\small{Due\ on\ \hmwkDueDate}\\
 % \vspace{0.1in}\large{\textit{\hmwkClassInstructor\ \hmwkClassTime}}
 }
 
-\author{\textbf{Sophie Hilgard \textit{and} Nick Hoernle}}
+\author{\textbf{Sophie Hilgard, Nick Hoernle,  \textit{and} Nikki Ravi}}
 \date{\today} % Insert date here if you want it to appear below your name
 
 %----------------------------------------------------------------------------------------
@@ -25,46 +25,50 @@
 \lstset{language=Python, basicstyle=\footnotesize} % set language as python
 
 \section*{Problem Statement}
-Take three people in three locations, each with a different mode of transport available. Find a meeting location which is equidistant (in terms of commute time) for each person and which isn’t just in the middle of nowhere and return the optimum safe path (bike route, car route, bus route) for each person. 
+As an initial problem, we'll try to build on the limited success of Google in planning bike routes by additionally taking into account personal safety by building a map that incorporates data from crime statistics, bike accidents, and construction, as well as giving a stronger weighting to those routes which seem to have been vetted by other bikers, i.e. they appear frequently in Strava or MapMyRide accounts. Depending on how the time and scope of this initial problem play out, we'll also expand the project to incorporate public transit options and route finding involving multiple people seeking an equidistant (in commute time) meeting place.
 
-\section{Identiﬁcation of Speciﬁc Related Course Topics}
+\section{Identification of Specifi�c Related Course Topics:}
 Algorithms and techniques:
 \begin{itemize}
-\item Safety-Optimised Bike Routing - i.e. optimise bike paths by factoring in locations of frequent bike accidents, street lighting, bike routes vs main roads, road construction
-\item One possible approach for this could be graph search with path lengths calculated as path length multiplied by the frequency of accidents i.e. penalising paths where accidents frequently occur. For road segments where no accidents occur the length would be equal to the actual length. With this approach the algorithm should find the shortest path but taking into account the cost of roads which have a high frequency of accidents. The path found with this approach could be compared to the shortest path without accident-weighting to see what the difference is in terms of path length.
-\item Safety-Optimised walking paths - a similar approach to the above could be used to find safest walking paths using crime data and street lighting information.  
-\item Equidistant commute times - CSP?
-\item Modes of transport - CSP?
+\item Safety-Optimised Bike Routing: This will be modeled as a graph search, likely with a modified Djikstra`s algorithm or A* search with a multi-faceted heuristic. In this case, we seek to find the shortest path while penalizing routes through crime-heavy areas or with many bike accidents (of course, we'll have to normalize this by frequency of bike riding on any given road. This could possibly be accomplished with Strava data). 
+\item Safety-Optimised walking paths: a similar approach to the above could be used to find safest walking paths using crime data and street lighting information.  
+\item Note that the two above problems also offer much opportunity for developing pruning strategies within the graph search. In fact, these will likely be very important, as the state space for the graph search is likely to be very large.
+\item Equidistant commute times: This could potentially be modeled as a CSP, where there are constraints on the meeting area (perhaps we could even incorporate a desired type of meeting spot, e.g. a restaurant/coffee shop/library) and also on the modes of transportation available to the various parties
 \end{itemize}
 
-Extensions:
-Suggestions for places to meet at the meeting location 
+\section{Examples of Expected Behavior of the System:}
+In the initial stage, the expected behavior of the system would simply be to return a safe, shortest-time bike route between two locations. It would do this by modeling the space of possible paths as a graph, with edges weighted by our custom speed+safety heuristic and then running A* search, Djikstra's algorithm, or perhaps another similar graph search better adapted to this specific problem. In the extended version of the project, we would hope to be able to enter the locations of two or three different people with different transportation methods and have the system return an optimal meeting place with routes for all participants.
 
-
-\section{Examples of Expected Behavior of the System}
-
-\section{Problems that we may encounter}
+\section{Problems that we may encounter:}
+The graph for this particular problem is likely to be very large, and it seems likely we'll have to explore a variety of options for storing the graph and for pruning to get the speed of the program where we would like it (especially using Python). Additionally, it's possible there are limits on some of these APIs that we won't find out about until we get into the weeds (number of calls per day/week, for example). These always tend to crop up in projects of this nature. Additionally, I expect some of our data sources (Strava and MapMyRide perhaps) to be somewhat sparse in areas. This will require an adaptive heuristic for when certain data sources are and aren't available.
 
 \section{List of Papers or other Resources}
-Including Accident Information in Automatic Bicycle Route Planning for Urban Areas https://www.hindawi.com/journals/usr/2011/362817/
+Including Accident Information in Automatic Bicycle Route Planning for Urban Areas:\\
+\texttt{ https://www.hindawi.com/journals/usr/2011/362817/}\\ \\
+Microsoft Research Customizable Route Planning\\
+\texttt{https://www.microsoft.com/en-us/research/wp-content/uploads/2011/05/crp-sea.pdf}\\ \\
+Multi-Modal Journey Planning in the Presence of Uncertainty \\
+\texttt{http://users.ece.utexas.edu/~nikolova/papers/BoteaNikolovaBerlingerio-ICAPS13.pdf}\\ \\
+Intelligent Route Planning For Sustainable Mobility \\
+\texttt{http://www.slideshare.net/michaljakob/intelligent-route-planning-for-sustainable-mobility\\
+-62724040} \\
 
 
 Data sources:
-MBTA Schedules and Trip Planning Data API http://www.mbta.com/rider\_tools/developers/default.asp?id=21895
-City of Cambridge GIS data GEOJSON files http://cambridgegis.github.io/gisdata.html
-Contains data on infrastructure, landmarks ets
-Cambridge Open Data:
 \begin{itemize}
-\item Accidents - list of crashes involving motor vehicles, bicycles and/or pedestrians reported in the City of Cambridge from January 2010 through June 2016 https://data.cambridgema.gov/Public-Safety/Crashes/ybny-g9cv/data
-\item Crime - list of crime incidents featured in the Cambridge Police Department’s Annual Crime Reports and reported in the City of Cambridge from 2009-2016. Includes more than 40 types of crimes. typeshttps://data.cambridgema.gov/Public-Safety/Crime-Reports/xuad-73uj
-\item Metered Parking Spaces - https://data.cambridgema.gov/Traffic-Parking-and-Transportation/Metered-Parking-Spaces/6h7q-rwhf
-\item Boston Open data https://data.cityofboston.gov/
+\item MBTA Schedules and Trip Planning Data API: \\
+ \texttt{http://www.mbta.com/rider\_tools/developers/default.asp?id=21895} \\
+\item City of Cambridge GIS data GEOJSON files (Contains data on infrastructure, landmarks etc): \\
+\texttt{ http://cambridgegis.github.io/gisdata.html}
+\item Accidents - list of crashes involving motor vehicles, bicycles and/or pedestrians reported in the City of Cambridge from January 2010 through June 2016 \\
+\texttt {https://data.cambridgema.gov/Public-Safety/Crashes/ybny-g9cv/data} \\
+\item Crime - list of crime incidents featured in the Cambridge Police Department`s Annual Crime Reports and reported in the City of Cambridge from 2009-2016. Includes more than 40 types of crimes\\
+\texttt{https://data.cambridgema.gov/Public-Safety/Crime-Reports/xuad-73uj} \\
+\item Metered Parking Spaces: \\
+\texttt{https://data.cambridgema.gov/Traffic-Parking-and-Transportation/Metered-Parking-Spaces\\/6h7q-rwhf}\\
+\item Boston Open data \\
+\texttt{https://data.cityofboston.gov/} \\
+\item Route Paths From Strava 
 \end{itemize}
-
-Example proposals from previous years
-http://isites.harvard.edu/fs/docs/icb.topic707165.files/pdfs/hysen\_noronha.pdf
-http://isites.harvard.edu/fs/docs/icb.topic914900.files/pdfs/proposal-hysen-noronha.pdf
-
-
 
 \end{document}
