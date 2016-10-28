@@ -8,7 +8,7 @@
 % \vspace{0.1in}\large{\textit{\hmwkClassInstructor\ \hmwkClassTime}}
 }
 
-\author{\textbf{Sophie Hilgard, Nick Hoernle,  \textit{and} Nikki Ravi}}
+\author{\textbf{Sophie Hilgard, Nick Hoernle,  \textit{and} Nikhila Ravi}}
 \date{\today} % Insert date here if you want it to appear below your name
 
 %----------------------------------------------------------------------------------------
@@ -25,12 +25,12 @@
 \lstset{language=Python, basicstyle=\footnotesize} % set language as python
 
 \section*{Problem Statement}
-As an initial problem, we'll try to build on the limited success of Google in planning bike routes by additionally taking into account personal safety by building a map that incorporates data from crime statistics, bike accidents, and construction, as well as giving a stronger weighting to those routes which seem to have been vetted by other bikers, i.e. they appear frequently in Strava or MapMyRide accounts. Depending on how the time and scope of this initial problem play out, we'll also expand the project to incorporate public transit options and route finding involving multiple people seeking an equidistant (in commute time) meeting place.
+As an initial problem, we'll try to build on the limited success of Google in planning bike routes by additionally taking into account personal safety by building a map that incorporates data from crime statistics, bike accidents, and construction, as well as giving a stronger weighting to route segments which seem to have been vetted by other bikers, i.e. they appear frequently in Strava or MapMyRide accounts. Depending on how the time and scope of this initial problem play out, we'll also expand the project to incorporate public transit options and route finding involving multiple people seeking an equidistant (in commute time) meeting place.
 
 \section{Identification of SpecifiÅc Related Course Topics:}
 Algorithms and techniques:
 \begin{itemize}
-\item Safety-Optimised Bike Routing: This will be modeled as a graph search, likely with a modified Djikstra`s algorithm or A* search with a multi-faceted heuristic. In this case, we seek to find the shortest path while penalizing routes through crime-heavy areas or with many bike accidents (of course, we'll have to normalize this by frequency of bike riding on any given road. This could possibly be accomplished with Strava data). 
+\item Safety-Optimised Bike Routing: This will be modeled as a graph search, likely with a modified Djikstra`s algorithm or A* search with a multi-faceted heuristic. In this case, we seek to find the shortest path while penalizing routes through crime-heavy areas or with many bike accidents (of course, we'll have to normalize this by frequency of bike riding on any given road. This could possibly be accomplished with Strava data) and favouring dedicated bike paths over main roads.  The safety optimised path could be compared to the shortest length path to compare the tradeoff between speed and safety. 
 \item Safety-Optimised walking paths: a similar approach to the above could be used to find safest walking paths using crime data and street lighting information.  
 \item Note that the two above problems also offer much opportunity for developing pruning strategies within the graph search. In fact, these will likely be very important, as the state space for the graph search is likely to be very large.
 \item Equidistant commute times: This could potentially be modeled as a CSP, where there are constraints on the meeting area (perhaps we could even incorporate a desired type of meeting spot, e.g. a restaurant/coffee shop/library) and also on the modes of transportation available to the various parties
@@ -39,21 +39,25 @@ Algorithms and techniques:
 \section{Examples of Expected Behavior of the System:}
 In the initial stage, the expected behavior of the system would simply be to return a safe, shortest-time bike route between two locations. It would do this by modeling the space of possible paths as a graph, with edges weighted by our custom speed+safety heuristic and then running A* search, Djikstra's algorithm, or perhaps another similar graph search better adapted to this specific problem. In the extended version of the project, we would hope to be able to enter the locations of two or three different people with different transportation methods and have the system return an optimal meeting place with routes for all participants.
 
-\section{Problems that we may encounter:}
-The graph for this particular problem is likely to be very large, and it seems likely we'll have to explore a variety of options for storing the graph and for pruning to get the speed of the program where we would like it (especially using Python). Additionally, it's possible there are limits on some of these APIs that we won't find out about until we get into the weeds (number of calls per day/week, for example). These always tend to crop up in projects of this nature. Additionally, I expect some of our data sources (Strava and MapMyRide perhaps) to be somewhat sparse in areas. This will require an adaptive heuristic for when certain data sources are and aren't available.
+Time permitting, we also plan to create an interactive web visualisation showing a comparison of the shortest path along with the safest path between two points chosen by the user. 
 
-\section{List of Papers or other Resources}
-Including Accident Information in Automatic Bicycle Route Planning for Urban Areas:\\
-\texttt{ https://www.hindawi.com/journals/usr/2011/362817/}\\ \\
-Microsoft Research Customizable Route Planning\\
-\texttt{https://www.microsoft.com/en-us/research/wp-content/uploads/2011/05/crp-sea.pdf}\\ \\
-Multi-Modal Journey Planning in the Presence of Uncertainty \\
-\texttt{http://users.ece.utexas.edu/~nikolova/papers/BoteaNikolovaBerlingerio-ICAPS13.pdf}\\ \\
-Intelligent Route Planning For Sustainable Mobility \\
+\section{Problems that we may encounter:}
+The graph for this particular problem is likely to be very large, and it seems likely we'll have to explore a variety of options for storing the graph and for pruning to get the speed of the program where we would like it (especially using Python). Additionally, it's possible there are limits on some of these APIs that we won't find out about until we get into the weeds (number of calls per day/week, for example). Additionally, we expect some of our data sources (Strava and MapMyRide perhaps) to be somewhat sparse in areas. This will require an adaptive heuristic for when certain data sources are and aren't available.
+
+\section{Relevant Papers and Data Sources}
+
+Relevant prior work:
+\begin{itemize}
+\item Including Accident Information in Automatic Bicycle Route Planning for Urban Areas:\\
+\texttt{ https://www.hindawi.com/journals/usr/2011/362817/}\\ 
+\item Microsoft Research Customizable Route Planning \\
+\texttt{https://www.microsoft.com/en-us/research/wp-content/uploads/2011/05/crp-sea.pdf}\\ 
+\item Multi-Modal Journey Planning in the Presence of Uncertainty \\
+\texttt{http://users.ece.utexas.edu/~nikolova/papers/BoteaNikolovaBerlingerio-ICAPS13.pdf}\\
+\item Intelligent Route Planning For Sustainable Mobility \\
 \texttt{http://www.slideshare.net/michaljakob/intelligent-route-planning-for-sustainable-mobility\\
 -62724040} \\
-
-
+\end{itemize}
 Data sources:
 \begin{itemize}
 \item MBTA Schedules and Trip Planning Data API: \\
@@ -68,7 +72,8 @@ Data sources:
 \texttt{https://data.cambridgema.gov/Traffic-Parking-and-Transportation/Metered-Parking-Spaces\\/6h7q-rwhf}\\
 \item Boston Open data \\
 \texttt{https://data.cityofboston.gov/} \\
-\item Route Paths From Strava 
+\item Route Paths From the Strava API \\
+\texttt{http://labs.strava.com/developers/}
 \end{itemize}
 
 \end{document}

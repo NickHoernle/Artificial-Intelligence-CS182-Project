@@ -1,6 +1,6 @@
-## Artificial Intelligence Project - Some title
+## Artificial Intelligence Project - Safe Bike Routes and Meeting Plans
 
-Contributors: Sophie, Nick
+Contributors: Sophie, Nick, Nikki
 
 Deadlines:
 - [ ] Project Proposal - 10/28, 5:00 PM
