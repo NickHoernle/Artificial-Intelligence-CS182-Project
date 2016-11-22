@@ -9,16 +9,16 @@ class connection:
         self.source = source
         self.target = target
         self.distance = distance
-        
+
     def add_accidents(self, accidents):
         self.accidents = accidents
-        
+
     def get_child(self, node_id):
         if node_id==self.source:
             return self.target
         else:
             return self.source
-        
+
 
 class node:
     def __init__(self, id, x, y):
@@ -26,20 +26,20 @@ class node:
         self.x = x
         self.y = y
         self.connections = set()
-    
+
     def id(self):
         return self.id
     #make connection_ids the road centerline IDs
     def add_connection(self, connection_id):
         if connection_id not in self.connections:
             self.connections.add(connection_id)
-    
+
     def get_connections(self):
         return self.connections
-    
+
     def get_x_y(self):
         return (self.x, self.y)
-    
+
     def __str__(self):
         return '<Node> id: {}, x: {}, y: {} \nConnections: {}'.format(self.id, self.x, self.y, self.connections)
 
@@ -116,7 +116,7 @@ class PriorityQueue:
                 break
         else:
             self.push(item, priority)
-            
+
 def get_road_cost(road_list, intersection_graph):
     x,y = 0,0
     distance = 0
@@ -146,27 +146,26 @@ def a_star_search(start, end, intersection_graph, heuristic=null_heuristic):
     while not fringe.isEmpty():
         node = fringe.pop()
         discovered_nodes.add(node)
-        
+
         #at the goal node
         if node.id == end.id:
             return route_to_goal[node.id]
 
         for child_id in node.get_connections():
             child = intersection_graph[child_id]
-            
+
             #if we have not visited this node
             if not child in discovered_nodes:
                 road_list = route_to_goal[node.id] + [child_id]
-                
+
                 cost_of_road_list = get_road_cost(road_list, intersection_graph)
-                
+
                 # If we already have a route to this node
                 if child_id in route_to_goal:
                     if cost_of_road_list < route_to_goal[child.id]:
                         route_to_goal[child_id] = road_list
                 else:
                     route_to_goal[child_id] = road_list
-                
+
                 # update the fringe with this node
                 fringe.update(child, get_road_cost(road_list, intersection_graph) + heuristic(child, end))
->>>>>>> 052a8f044fc6680828db703abbe5392b6fd5265b
