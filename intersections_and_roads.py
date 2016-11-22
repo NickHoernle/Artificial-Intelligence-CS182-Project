@@ -1,6 +1,7 @@
 import numpy as np
 import pandas as pd
 import geopandas as gpd
+import heapq
 
 class connection:
     def __init__(self, id, source, target, distance):
@@ -76,3 +77,96 @@ def build_intersection_graph(intersections, street_centerline):
     connection_dict = dict()
     intersections.apply(follow_road, axis=1, args=[intersections, street_centerline, intersection_graph, connection_dict])
     return intersection_graph
+
+class PriorityQueue:
+    """
+      Implements a priority queue data structure. Each inserted item
+      has a priority associated with it and the client is usually interested
+      in quick retrieval of the lowest-priority item in the queue. This
+      data structure allows O(1) access to the lowest-priority item.
+      Thanks UC Berkeley, including a link to http://ai.berkeley.edu
+    """
+    def  __init__(self):
+        self.heap = []
+        self.count = 0
+
+    def push(self, item, priority):
+        entry = (priority, self.count, item)
+        heapq.heappush(self.heap, entry)
+        self.count += 1
+
+    def pop(self):
+        (_, _, item) = heapq.heappop(self.heap)
+        return item
+
+    def isEmpty(self):
+        return len(self.heap) == 0
+
+    def update(self, item, priority):
+        # If item already in priority queue with higher priority, update its priority and rebuild the heap.
+        # If item already in priority queue with equal or lower priority, do nothing.
+        # If item not in priority queue, do the same thing as self.push.
+        for index, (p, c, i) in enumerate(self.heap):
+            if i == item:
+                if p <= priority:
+                    break
+                del self.heap[index]
+                self.heap.append((priority, c, item))
+                heapq.heapify(self.heap)
+                break
+        else:
+            self.push(item, priority)
+            
+def get_road_cost(road_list, intersection_graph):
+    x,y = 0,0
+    distance = 0
+    for connection_id in road_list:
+        x1,y1 = intersection_graph[connection_id].get_x_y()
+        distance += euclidean_distance((x,y), (x1,y1))
+        x,y = x1,y1
+    return distance
+
+def null_heuristic(node, goal):
+    return 0
+
+def euclidean_heuristic(node, goal):
+    return euclidean_distance(node.get_x_y(), goal.get_x_y())
+
+def a_star_search(start, end, intersection_graph, heuristic=null_heuristic):
+
+    fringe = PriorityQueue()
+
+    discovered_nodes = set()
+    route_to_goal = dict()
+
+    route_to_goal[start.id] = []
+
+    fringe.push(start, 0)
+
+    while not fringe.isEmpty():
+        node = fringe.pop()
+        discovered_nodes.add(node)
+        
+        #at the goal node
+        if node.id == end.id:
+            return route_to_goal[node.id]
+
+        for child_id in node.get_connections():
+            child = intersection_graph[child_id]
+            
+            #if we have not visited this node
+            if not child in discovered_nodes:
+                road_list = route_to_goal[node.id] + [child_id]
+                
+                cost_of_road_list = get_road_cost(road_list, intersection_graph)
+                
+                # If we already have a route to this node
+                if child_id in route_to_goal:
+                    if cost_of_road_list < route_to_goal[child.id]:
+                        route_to_goal[child_id] = road_list
+                else:
+                    route_to_goal[child_id] = road_list
+                
+                # update the fringe with this node
+                fringe.update(child, get_road_cost(road_list, intersection_graph) + heuristic(child, end))
+>>>>>>> 052a8f044fc6680828db703abbe5392b6fd5265b
