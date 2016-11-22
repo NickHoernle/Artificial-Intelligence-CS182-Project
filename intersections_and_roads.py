@@ -1,6 +1,7 @@
 import numpy as np
 import pandas as pd
 import geopandas as gpd
+import heapq
 
 class node:
     def __init__(self, id, x, y):
@@ -97,7 +98,7 @@ class PriorityQueue:
         else:
             self.push(item, priority)
             
-def get_road_cost(road_list):
+def get_road_cost(road_list, intersection_graph):
     x,y = 0,0
     distance = 0
     for connection_id in road_list:
@@ -138,7 +139,7 @@ def a_star_search(start, end, intersection_graph, heuristic=null_heuristic):
             if not child in discovered_nodes:
                 road_list = route_to_goal[node.id] + [child_id]
                 
-                cost_of_road_list = get_road_cost(road_list)
+                cost_of_road_list = get_road_cost(road_list, intersection_graph)
                 
                 # If we already have a route to this node
                 if child_id in route_to_goal:
@@ -148,4 +149,4 @@ def a_star_search(start, end, intersection_graph, heuristic=null_heuristic):
                     route_to_goal[child_id] = road_list
                 
                 # update the fringe with this node
-                fringe.update(child, get_road_cost(road_list) + heuristic(child, end))
+                fringe.update(child, get_road_cost(road_list, intersection_graph) + heuristic(child, end))
