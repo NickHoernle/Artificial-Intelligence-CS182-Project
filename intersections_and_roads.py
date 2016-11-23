@@ -121,9 +121,12 @@ class PriorityQueue:
             self.push(item, priority)
 
 def get_road_cost(road_list, connection_list, intersection_graph, connection_dict):
+    x,y = 0,0
     distance = 0
-    for connection_id in connection_list:
-        distance += connection_dict[connection_id].get_distance()
+    for node_id in road_list:
+        x1,y1 = intersection_graph[node_id].get_x_y()
+        distance += euclidean_distance((x,y), (x1,y1))
+        x,y = x1,y1
     return distance
 
 def get_safe_road_cost(road_list, connection_list, intersection_graph, connection_dict):
