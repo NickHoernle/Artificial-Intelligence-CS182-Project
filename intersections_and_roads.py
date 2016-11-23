@@ -1,6 +1,8 @@
 import numpy as np
 import pandas as pd
 import geopandas as gpd
+import matplotlib
+import matplotlib.pyplot as plt
 import heapq
 
 class connection:
@@ -19,6 +21,13 @@ class connection:
         else:
             return self.source
 
+    def get_source(self, intersection_graph):
+        source = intersection_graph[self.source]
+        return source
+
+    def get_target(self, intersection_graph):
+        target = intersection_graph[self.target]
+        return target
 
 class node:
     def __init__(self, id, x, y):
@@ -67,16 +76,40 @@ def follow_road(intersection, intersections, street_centerline, intersection_gra
             distance = euclidean_distance(new_node.get_x_y(), this_node.get_x_y())
 
             if distance < 10000: # I don't understand why.... Suggestions welcome
-                this_node.add_connection(street.Street_ID)
-                new_node.add_connection(street.Street_ID)
-                if street.Street_ID not in connection_dict:
-                    connection_dict[street.Street_ID] = connection(street.Street_ID, this_node.id, new_node.id, distance)
+#             print str(street.Direction) if (str(street.Direction).strip() in ['0', '1', '-1']) else None
+                this_node.add_connection(street.id) if (str(street.Direction).strip() in ['0', '1']) else None
+                new_node.add_connection(street.id) if (str(street.Direction).strip() in ['0', '-1']) else None
+                if street.id not in connection_dict:
+                    connection_dict[street.id] = connection(street.id, this_node.id, new_node.id, distance)
 
 def build_intersection_graph(intersections, street_centerline):
     intersection_graph = dict()
     connection_dict = dict()
     intersections.apply(follow_road, axis=1, args=[intersections, street_centerline, intersection_graph, connection_dict])
-    return intersection_graph
+    return intersection_graph, connection_dict
+
+def plot_graph(intersection_graph, connection_dict, routes = []):
+    fig, ax = plt.subplots(1,1, figsize=(15, 15))
+
+    xs = [intersection_graph[key].get_x_y()[0] for key in intersection_graph]
+    ys = [intersection_graph[key].get_x_y()[1] for key in intersection_graph]
+
+    for key in intersection_graph:
+        node = intersection_graph[key]
+        for connection in node.get_connections():
+            child = connection_dict[connection]
+            line_x = [child.get_source(intersection_graph).get_x_y()[0], child.get_target(intersection_graph).get_x_y()[0]]
+            line_y = [child.get_source(intersection_graph).get_x_y()[1], child.get_target(intersection_graph).get_x_y()[1]]
+            ax.plot(line_x, line_y)
+
+    ax.scatter(xs, ys, s=10)
+
+    for route in routes:
+        xs = [intersection_graph[node].get_x_y()[0] for node in route]
+        ys = [intersection_graph[node].get_x_y()[1] for node in route]
+        ax.plot(xs, ys, c='r', linewidth=5)
+
+    plt.show()
 
 class PriorityQueue:
     """
