@@ -14,10 +14,13 @@ class connection:
         self.accidents = accidents
 
     def get_child(self, node_id):
-        if node_id==self.source:
+        if (node_id == self.source):
             return self.target
         else:
             return self.source
+        
+    def get_distance(self):
+        return self.distance
 
 
 class node:
@@ -76,7 +79,7 @@ def build_intersection_graph(intersections, street_centerline):
     intersection_graph = dict()
     connection_dict = dict()
     intersections.apply(follow_road, axis=1, args=[intersections, street_centerline, intersection_graph, connection_dict])
-    return intersection_graph
+    return intersection_graph, connection_dict
 
 class PriorityQueue:
     """
@@ -117,13 +120,16 @@ class PriorityQueue:
         else:
             self.push(item, priority)
 
-def get_road_cost(road_list, intersection_graph):
-    x,y = 0,0
+def get_road_cost(road_list, connection_list, intersection_graph, connection_dict):
     distance = 0
-    for connection_id in road_list:
-        x1,y1 = intersection_graph[connection_id].get_x_y()
-        distance += euclidean_distance((x,y), (x1,y1))
-        x,y = x1,y1
+    for connection_id in connection_list:
+        distance += connection_dict[connection_id].get_distance()
+    return distance
+
+def get_safe_road_cost(road_list, connection_list, intersection_graph, connection_dict):
+    distance = 0
+    for connection_id in connection_list:
+        distance += connection_dict[connection_id].get_distance()*connection_dict[connection_id].get_accidents()
     return distance
 
 def null_heuristic(node, goal):
@@ -132,14 +138,13 @@ def null_heuristic(node, goal):
 def euclidean_heuristic(node, goal):
     return euclidean_distance(node.get_x_y(), goal.get_x_y())
 
-def a_star_search(start, end, intersection_graph, heuristic=null_heuristic):
+def a_star_search(start, end, intersection_graph, connection_dict, get_road_cost, heuristic=null_heuristic):
 
     fringe = PriorityQueue()
 
     discovered_nodes = set()
     route_to_goal = dict()
-
-    route_to_goal[start.id] = []
+    route_to_goal[start.id] = {'nodes': [], 'connections': []}
 
     fringe.push(start, 0)
 
@@ -150,22 +155,27 @@ def a_star_search(start, end, intersection_graph, heuristic=null_heuristic):
         #at the goal node
         if node.id == end.id:
             return route_to_goal[node.id]
-
-        for child_id in node.get_connections():
+        
+        connections = map(lambda ID: connection_dict[ID], node.get_connections())
+        
+        for connection in connections:
+            child_id = connection.get_child()
             child = intersection_graph[child_id]
 
             #if we have not visited this node
             if not child in discovered_nodes:
-                road_list = route_to_goal[node.id] + [child_id]
-
-                cost_of_road_list = get_road_cost(road_list, intersection_graph)
+                road_list = route_to_goal[node.id]['nodes'] + [child_id]
+                connection_list = route_to_goal[node.id]['connections'] + [connection.id]
+                cost_of_road_list = get_road_cost(road_list, connection_list, intersection_graph, connection_dict)
 
                 # If we already have a route to this node
                 if child_id in route_to_goal:
-                    if cost_of_road_list < route_to_goal[child.id]:
-                        route_to_goal[child_id] = road_list
+                    current_best_route = route_to_goal[child.id]
+                    current_best_cost = get_road_cost(current_route['nodes'], current_route['connections'], intersection_graph, connection_dict)
+                    if cost_of_road_list < current_best_cost:
+                        route_to_goal[child_id] = {'nodes': road_list, 'connections': connections_list}
                 else:
-                    route_to_goal[child_id] = road_list
+                    route_to_goal[child_id] = {'nodes': road_list, 'connections': connections_list}
 
                 # update the fringe with this node
-                fringe.update(child, get_road_cost(road_list, intersection_graph) + heuristic(child, end))
+                fringe.update(child, get_road_cost(road_list, connection_list, intersection_graph, connection_dict) + heuristic(child, end))
