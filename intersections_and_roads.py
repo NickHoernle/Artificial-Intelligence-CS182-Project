@@ -1,6 +1,8 @@
 import numpy as np
 import pandas as pd
 import geopandas as gpd
+import matplotlib
+import matplotlib.pyplot as plt
 import heapq
 
 class connection:
@@ -18,10 +20,17 @@ class connection:
             return self.target
         else:
             return self.source
-        
+
     def get_distance(self):
         return self.distance
 
+    def get_source(self, intersection_graph):
+        source = intersection_graph[self.source]
+        return source
+
+    def get_target(self, intersection_graph):
+        target = intersection_graph[self.target]
+        return target
 
 class node:
     def __init__(self, id, x, y):
@@ -70,16 +79,40 @@ def follow_road(intersection, intersections, street_centerline, intersection_gra
             distance = euclidean_distance(new_node.get_x_y(), this_node.get_x_y())
 
             if distance < 10000: # I don't understand why.... Suggestions welcome
-                this_node.add_connection(street.Street_ID)
-                new_node.add_connection(street.Street_ID)
-                if street.Street_ID not in connection_dict:
-                    connection_dict[street.Street_ID] = connection(street.Street_ID, this_node.id, new_node.id, distance)
+#             print str(street.Direction) if (str(street.Direction).strip() in ['0', '1', '-1']) else None
+                this_node.add_connection(street.id) if (str(street.Direction).strip() in ['0', '1']) else None
+                new_node.add_connection(street.id) if (str(street.Direction).strip() in ['0', '-1']) else None
+                if street.id not in connection_dict:
+                    connection_dict[street.id] = connection(street.id, this_node.id, new_node.id, distance)
 
 def build_intersection_graph(intersections, street_centerline):
     intersection_graph = dict()
     connection_dict = dict()
     intersections.apply(follow_road, axis=1, args=[intersections, street_centerline, intersection_graph, connection_dict])
     return intersection_graph, connection_dict
+
+def plot_graph(intersection_graph, connection_dict, routes = []):
+    fig, ax = plt.subplots(1,1, figsize=(15, 15))
+
+    xs = [intersection_graph[key].get_x_y()[0] for key in intersection_graph]
+    ys = [intersection_graph[key].get_x_y()[1] for key in intersection_graph]
+
+    for key in intersection_graph:
+        node = intersection_graph[key]
+        for connection in node.get_connections():
+            child = connection_dict[connection]
+            line_x = [child.get_source(intersection_graph).get_x_y()[0], child.get_target(intersection_graph).get_x_y()[0]]
+            line_y = [child.get_source(intersection_graph).get_x_y()[1], child.get_target(intersection_graph).get_x_y()[1]]
+            ax.plot(line_x, line_y)
+
+    ax.scatter(xs, ys, s=10)
+
+    for route in routes:
+        xs = [intersection_graph[node].get_x_y()[0] for node in route]
+        ys = [intersection_graph[node].get_x_y()[1] for node in route]
+        ax.plot(xs, ys, c='r', linewidth=5)
+
+    plt.show()
 
 class PriorityQueue:
     """
@@ -121,12 +154,9 @@ class PriorityQueue:
             self.push(item, priority)
 
 def get_road_cost(road_list, connection_list, intersection_graph, connection_dict):
-    x,y = 0,0
     distance = 0
-    for node_id in road_list:
-        x1,y1 = intersection_graph[node_id].get_x_y()
-        distance += euclidean_distance((x,y), (x1,y1))
-        x,y = x1,y1
+    for connection_id in connection_list:
+        distance += connection_dict[connection_id].get_distance()
     return distance
 
 def get_safe_road_cost(road_list, connection_list, intersection_graph, connection_dict):
@@ -142,7 +172,7 @@ def euclidean_heuristic(node, goal):
     return euclidean_distance(node.get_x_y(), goal.get_x_y())
 
 def a_star_search(start, end, intersection_graph, connection_dict, get_road_cost, heuristic=null_heuristic):
-
+    print start.id, end.id
     fringe = PriorityQueue()
 
     discovered_nodes = set()
@@ -157,28 +187,31 @@ def a_star_search(start, end, intersection_graph, connection_dict, get_road_cost
 
         #at the goal node
         if node.id == end.id:
+            print 'end'
             return route_to_goal[node.id]
         
         connections = map(lambda ID: connection_dict[ID], node.get_connections())
         
         for connection in connections:
-            child_id = connection.get_child()
+            child_id = connection.get_child(node.id)
             child = intersection_graph[child_id]
 
             #if we have not visited this node
             if not child in discovered_nodes:
-                road_list = route_to_goal[node.id]['nodes'] + [child_id]
+                road_list = route_to_goal[node.id]['nodes'] + [child.id]
                 connection_list = route_to_goal[node.id]['connections'] + [connection.id]
                 cost_of_road_list = get_road_cost(road_list, connection_list, intersection_graph, connection_dict)
-
+                
                 # If we already have a route to this node
-                if child_id in route_to_goal:
+                if child.id in route_to_goal:
                     current_best_route = route_to_goal[child.id]
-                    current_best_cost = get_road_cost(current_route['nodes'], current_route['connections'], intersection_graph, connection_dict)
+                    current_best_cost = get_road_cost(current_best_route['nodes'], current_best_route['connections'], intersection_graph, connection_dict)
+#                     print 'cost', cost_of_road_list,  current_best_cost
                     if cost_of_road_list < current_best_cost:
-                        route_to_goal[child_id] = {'nodes': road_list, 'connections': connections_list}
+                        route_to_goal[child.id] = {'nodes': road_list, 'connections': connection_list}
                 else:
-                    route_to_goal[child_id] = {'nodes': road_list, 'connections': connections_list}
+                    route_to_goal[child.id] = {'nodes': road_list, 'connections': connection_list}
 
                 # update the fringe with this node
-                fringe.update(child, get_road_cost(road_list, connection_list, intersection_graph, connection_dict) + heuristic(child, end))
+
+                fringe.update(child, get_road_cost(route_to_goal[child.id]['nodes'], route_to_goal[child.id]['connections'], intersection_graph, connection_dict) + heuristic(child, end))   
