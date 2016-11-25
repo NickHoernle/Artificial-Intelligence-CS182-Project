@@ -11,9 +11,16 @@ class connection:
         self.source = source
         self.target = target
         self.distance = distance
+        self.accidents = 0
 
     def add_accidents(self, accidents):
         self.accidents = accidents
+
+    def get_accidents(self):
+        if self.accidents:
+            return self.accidents
+        else:
+            return None
 
     def get_child(self, node_id):
         if (node_id == self.source):
@@ -91,7 +98,7 @@ def build_intersection_graph(intersections, street_centerline):
     intersections.apply(follow_road, axis=1, args=[intersections, street_centerline, intersection_graph, connection_dict])
     return intersection_graph, connection_dict
 
-def plot_graph(intersection_graph, connection_dict, routes = []):
+def plot_graph(intersection_graph, connection_dict, routes = [], safe_routes=[]):
     fig, ax = plt.subplots(1,1, figsize=(15, 15))
 
     xs = [intersection_graph[key].get_x_y()[0] for key in intersection_graph]
@@ -111,6 +118,11 @@ def plot_graph(intersection_graph, connection_dict, routes = []):
         xs = [intersection_graph[node].get_x_y()[0] for node in route]
         ys = [intersection_graph[node].get_x_y()[1] for node in route]
         ax.plot(xs, ys, c='r', linewidth=5)
+
+    for route in safe_routes:
+        xs = [intersection_graph[node].get_x_y()[0] for node in route]
+        ys = [intersection_graph[node].get_x_y()[1] for node in route]
+        ax.plot(xs, ys, c='g', linewidth=2, linestyle='dashed')
 
     plt.show()
 
@@ -162,7 +174,10 @@ def get_road_cost(road_list, connection_list, intersection_graph, connection_dic
 def get_safe_road_cost(road_list, connection_list, intersection_graph, connection_dict):
     distance = 0
     for connection_id in connection_list:
-        distance += connection_dict[connection_id].get_distance()*connection_dict[connection_id].get_accidents()
+        weight = 1
+        if connection_dict[connection_id].get_accidents() is not None:
+            weight += connection_dict[connection_id].get_accidents()
+        distance += connection_dict[connection_id].get_distance()*weight
     return distance
 
 def null_heuristic(node, goal):
@@ -189,9 +204,9 @@ def a_star_search(start, end, intersection_graph, connection_dict, get_road_cost
         if node.id == end.id:
             print 'end'
             return route_to_goal[node.id]
-        
+
         connections = map(lambda ID: connection_dict[ID], node.get_connections())
-        
+
         for connection in connections:
             child_id = connection.get_child(node.id)
             child = intersection_graph[child_id]
@@ -201,7 +216,7 @@ def a_star_search(start, end, intersection_graph, connection_dict, get_road_cost
                 road_list = route_to_goal[node.id]['nodes'] + [child.id]
                 connection_list = route_to_goal[node.id]['connections'] + [connection.id]
                 cost_of_road_list = get_road_cost(road_list, connection_list, intersection_graph, connection_dict)
-                
+
                 # If we already have a route to this node
                 if child.id in route_to_goal:
                     current_best_route = route_to_goal[child.id]
@@ -214,4 +229,4 @@ def a_star_search(start, end, intersection_graph, connection_dict, get_road_cost
 
                 # update the fringe with this node
 
-                fringe.update(child, get_road_cost(route_to_goal[child.id]['nodes'], route_to_goal[child.id]['connections'], intersection_graph, connection_dict) + heuristic(child, end))   
+                fringe.update(child, get_road_cost(route_to_goal[child.id]['nodes'], route_to_goal[child.id]['connections'], intersection_graph, connection_dict) + heuristic(child, end))
