@@ -98,8 +98,9 @@ def build_intersection_graph(intersections, street_centerline):
     intersections.apply(follow_road, axis=1, args=[intersections, street_centerline, intersection_graph, connection_dict])
     return intersection_graph, connection_dict
 
-def plot_graph(intersection_graph, connection_dict, routes = [], safe_routes=[]):
-    fig, ax = plt.subplots(1,1, figsize=(15, 15))
+def plot_graph(intersection_graph, connection_dict, routes = [], safe_routes=[], ax = None):
+    if ax == None:
+        fig, ax = plt.subplots(1,1, figsize=(15, 15))
 
     xs = [intersection_graph[key].get_x_y()[0] for key in intersection_graph]
     ys = [intersection_graph[key].get_x_y()[1] for key in intersection_graph]
@@ -117,12 +118,12 @@ def plot_graph(intersection_graph, connection_dict, routes = [], safe_routes=[])
     for route in routes:
         xs = [intersection_graph[node].get_x_y()[0] for node in route]
         ys = [intersection_graph[node].get_x_y()[1] for node in route]
-        ax.plot(xs, ys, c='r', linewidth=5)
+        ax.plot(xs, ys, linewidth=5)
 
     for route in safe_routes:
         xs = [intersection_graph[node].get_x_y()[0] for node in route]
         ys = [intersection_graph[node].get_x_y()[1] for node in route]
-        ax.plot(xs, ys, c='g', linewidth=2, linestyle='dashed')
+        ax.plot(xs, ys, linewidth=3, linestyle='dashed')
 
     plt.show()
 
@@ -187,7 +188,6 @@ def euclidean_heuristic(node, goal):
     return euclidean_distance(node.get_x_y(), goal.get_x_y())
 
 def a_star_search(start, end, intersection_graph, connection_dict, get_road_cost, heuristic=null_heuristic):
-    print start.id, end.id
     fringe = PriorityQueue()
 
     discovered_nodes = set()
@@ -202,7 +202,6 @@ def a_star_search(start, end, intersection_graph, connection_dict, get_road_cost
 
         #at the goal node
         if node.id == end.id:
-            print 'end'
             return route_to_goal[node.id]
 
         connections = map(lambda ID: connection_dict[ID], node.get_connections())
