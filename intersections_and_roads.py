@@ -3,6 +3,7 @@ import pandas as pd
 import geopandas as gpd
 import matplotlib
 import matplotlib.pyplot as plt
+from shapely.geometry import *
 import heapq
 
 class connection:
@@ -12,6 +13,7 @@ class connection:
         self.target = target
         self.distance = distance
         self.accidents = 0
+        self.delta_elevation = 0
 
     def add_accidents(self, accidents):
         self.accidents = accidents
@@ -30,6 +32,9 @@ class connection:
 
     def get_distance(self):
         return self.distance
+    
+    def set_delta_elevation(self, elevation):
+        self.delta_elevation = elevation
 
     def get_source(self, intersection_graph):
         source = intersection_graph[self.source]
@@ -45,6 +50,7 @@ class node:
         self.x = x
         self.y = y
         self.connections = set()
+        self.elevation = None
 
     def id(self):
         return self.id
@@ -52,6 +58,12 @@ class node:
     def add_connection(self, connection_id):
         if connection_id not in self.connections:
             self.connections.add(connection_id)
+
+    def set_elevation(self, elevation):
+        self.elevation = elevation
+
+    def get_elevation(self):
+        return self.elevation
 
     def get_connections(self):
         return self.connections
@@ -68,7 +80,7 @@ def euclidean_distance(p1, p2):
 
 def follow_road(intersection, intersections, street_centerline, intersection_graph, connection_dict):
     if intersection.id not in intersection_graph:
-        intersection_graph[intersection.id] = node(intersection.id, intersection.P_X, intersection.P_Y)
+        intersection_graph[intersection.id] = node(intersection.id, intersection.geometry.x, intersection.geometry.y)
     this_node = intersection_graph[intersection.id]
 
     connected_streets = street_centerline[street_centerline.FromNode == intersection.NodeNumber]
@@ -80,12 +92,12 @@ def follow_road(intersection, intersections, street_centerline, intersection_gra
             next_node = next_nodes.iloc[-1] # assumption here
             node_id = next_node.id
             if node_id not in intersection_graph:
-                intersection_graph[node_id] = node(node_id, next_node.P_X, next_node.P_Y)
+                intersection_graph[node_id] = node(node_id, next_node.geometry.x, next_node.geometry.y)
 
             new_node = intersection_graph[node_id]
             distance = euclidean_distance(new_node.get_x_y(), this_node.get_x_y())
 
-            if distance < 10000: # I don't understand why.... Suggestions welcome
+            if distance < 5000: # I don't understand why.... Suggestions welcome
 #             print str(street.Direction) if (str(street.Direction).strip() in ['0', '1', '-1']) else None
                 this_node.add_connection(street.id) if (str(street.Direction).strip() in ['0', '1']) else None
                 new_node.add_connection(street.id) if (str(street.Direction).strip() in ['0', '-1']) else None
