@@ -32,7 +32,7 @@ class connection:
 
     def get_distance(self):
         return self.distance
-    
+
     def set_delta_elevation(self, elevation):
         self.delta_elevation = elevation
 
@@ -130,7 +130,7 @@ def plot_graph(intersection_graph, connection_dict, routes = [], safe_routes=[],
     for route in routes:
         xs = [intersection_graph[node].get_x_y()[0] for node in route]
         ys = [intersection_graph[node].get_x_y()[1] for node in route]
-        ax.plot(xs, ys, linewidth=5)
+        ax.plot(xs, ys, linewidth=5, linestyle='dashed')
 
     for route in safe_routes:
         xs = [intersection_graph[node].get_x_y()[0] for node in route]
@@ -138,6 +138,32 @@ def plot_graph(intersection_graph, connection_dict, routes = [], safe_routes=[],
         ax.plot(xs, ys, c='g', linewidth=3)
 
     plt.show()
+    return ax
+
+def plot_local_search_graph(centroid, starting_points, k_points, intersection_graph, connection_dict, routes = [], ax = None, candidate_nodes=[]):
+    if ax == None:
+        fig, ax = plt.subplots(1,1, figsize=(15, 15))
+
+    # clear the data to replot new data without closing the figure
+    ax.cla()
+    axis = plot_graph(intersection_graph, connection_dict,routes, [], ax=ax)
+
+    for point in candidate_nodes:
+        axis.scatter(point.get_x_y()[0], point.get_x_y()[1], s=40, color='yellow')
+
+    for point in starting_points:
+        axis.scatter(point.get_x_y()[0], point.get_x_y()[1], s=50, color='green')
+
+    for point in k_points:
+        axis.scatter(point.get_x_y()[0], point.get_x_y()[1], s=50, color='purple')
+
+    axis.scatter(centroid.get_x_y()[0], centroid.get_x_y()[1], color='red', s=50)
+
+    # needed to help with replotting of the data
+    ax.relim()
+    ax.autoscale_view(True,True,True)
+    plt.draw()
+    plt.pause(0.0001)
 
 class PriorityQueue:
     """
