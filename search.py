@@ -47,7 +47,7 @@ def simulated_annealing_b(intersection_graph, connections, cost_function, heuris
 
     return centroid
 
-def local_beam_search(k, intersection_graph, connection_dict, cost_function, heuristic, starting_points=[]):
+def k_beam_search(k, intersection_graph, connection_dict, cost_function, heuristic, starting_points=[]):
     if len(starting_points) < 2:
         raise ValueError('need more than two points to find best meeting spot')
 
@@ -74,7 +74,7 @@ def local_beam_search(k, intersection_graph, connection_dict, cost_function, heu
     # calculate the costs for the points
     # costs = [np.sum([cost(start_node, k_point, intersection_graph, connection_dict, cost_function, heuristic) for start_node in starting_points]) for k_point in k_points]
     all_costs = [[cost(start_node, k_point, intersection_graph, connection_dict, cost_function, heuristic) for start_node in starting_points] for k_point in k_points]
-    costs = [(max(costs) - min(costs)) for costs in all_costs]
+    costs = [(max(c) - min(c)) for c in all_costs]
     # save the min cost as the current best
     best_cost = min(costs)
     best_centroid = k_points[np.argmin(costs)]
@@ -98,7 +98,8 @@ def local_beam_search(k, intersection_graph, connection_dict, cost_function, heu
 
         # evaluate costs of all successors
         all_successor_costs = np.array([[cost(start_node, successor_node, intersection_graph, connection_dict, cost_function, heuristic) for start_node in starting_points] for successor_node in successor_nodes])
-        successor_costs = np.array([(max(costs) - min(costs)) for costs in all_successor_costs])
+        successor_costs = np.array([(max(c) - min(c)) for c in all_successor_costs])
+
         # retain best k successors
         best_k_indices = np.argsort(successor_costs, axis=0)[:k]
         best_k_costs = successor_costs[best_k_indices]

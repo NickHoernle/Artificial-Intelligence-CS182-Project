@@ -22,4 +22,4 @@ p5 = intersection_graph[np.random.choice(intersection_graph.keys())]
 
 starting_points = [p1,p2,p3, p4, p5]
 
-best_centroid, best_cost, k_points = local_beam_search(15, intersection_graph, connection_dict, get_road_cost, euclidean_heuristic, starting_points=starting_points)
+best_centroid, best_cost, k_points = k_beam_search(15, intersection_graph, connection_dict, get_road_cost, euclidean_heuristic, starting_points=starting_points)
