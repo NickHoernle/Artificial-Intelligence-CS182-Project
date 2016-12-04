@@ -152,7 +152,7 @@ def plot_local_search_graph(centroid, starting_points, k_points, intersection_gr
         axis.scatter(point.get_x_y()[0], point.get_x_y()[1], s=40, color='yellow')
 
     for point in starting_points:
-        axis.scatter(point.get_x_y()[0], point.get_x_y()[1], s=80, color='red', marker='x')
+        axis.scatter(point.get_x_y()[0], point.get_x_y()[1], s=70, linewidth=4, color='black', marker='x')
 
     for point in k_points:
         axis.scatter(point.get_x_y()[0], point.get_x_y()[1], s=50, color='purple')

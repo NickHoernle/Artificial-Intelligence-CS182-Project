@@ -106,14 +106,14 @@ def local_beam_search(k, intersection_graph, connection_dict, cost_function, heu
         # update k centroids
         k_points = successor_nodes[best_k_indices]
 
-        # replot the routes and centroid locations
-        routes, connections = get_routes_to_centroid(k_points[0], starting_points, k_points, intersection_graph, connection_dict)
-        plot_local_search_graph(best_centroid, starting_points, k_points, intersection_graph, connection_dict, routes, ax=ax, candidate_nodes=candidate_nodes)
-
         # update current best centroid and best cost
         if best_k_costs[0] < best_cost:
             best_cost = best_k_costs[0]
             best_centroid = k_points[0]
+
+            # replot the routes and centroid locations
+            routes, connections = get_routes_to_centroid(best_centroid, starting_points, k_points, intersection_graph, connection_dict)
+            plot_local_search_graph(best_centroid, starting_points, k_points, intersection_graph, connection_dict, routes, ax=ax, candidate_nodes=candidate_nodes)
 
         # if best successor is no better than current best then break and return current best
         else:
