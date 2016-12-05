@@ -97,7 +97,7 @@ def follow_road(intersection, intersections, street_centerline, intersection_gra
             new_node = intersection_graph[node_id]
             distance = euclidean_distance(new_node.get_x_y(), this_node.get_x_y())
 
-            if distance < 5000: # I don't understand why.... Suggestions welcome
+            if distance < 1000: # I don't understand why.... Suggestions welcome
 #             print str(street.Direction) if (str(street.Direction).strip() in ['0', '1', '-1']) else None
                 this_node.add_connection(street.id) if (str(street.Direction).strip() in ['0', '1']) else None
                 new_node.add_connection(street.id) if (str(street.Direction).strip() in ['0', '-1']) else None
@@ -130,7 +130,7 @@ def plot_graph(intersection_graph, connection_dict, routes = [], safe_routes=[],
     for route in routes:
         xs = [intersection_graph[node].get_x_y()[0] for node in route]
         ys = [intersection_graph[node].get_x_y()[1] for node in route]
-        ax.plot(xs, ys, linewidth=5, linestyle='dashed')
+        ax.plot(xs, ys, linewidth=7, linestyle='dashed')
 
     for route in safe_routes:
         xs = [intersection_graph[node].get_x_y()[0] for node in route]
@@ -145,7 +145,7 @@ def plot_local_search_graph(centroid, starting_points, k_points, intersection_gr
         fig, ax = plt.subplots(1,1, figsize=(15, 15))
 
     # clear the data to replot new data without closing the figure
-    ax.cla()
+    # ax.cla()
     axis = plot_graph(intersection_graph, connection_dict,routes, [], ax=ax)
 
     for point in candidate_nodes:
@@ -160,10 +160,11 @@ def plot_local_search_graph(centroid, starting_points, k_points, intersection_gr
     axis.scatter(centroid.get_x_y()[0], centroid.get_x_y()[1], color='red', s=50)
 
     # needed to help with replotting of the data
-    ax.relim()
-    ax.autoscale_view(True,True,True)
-    plt.draw()
-    plt.pause(0.0001)
+    # ax.relim()
+    # ax.autoscale_view(True,True,True)
+    # plt.draw()
+    # plt.pause(0.0001)
+    plt.show()
 
 class PriorityQueue:
     """

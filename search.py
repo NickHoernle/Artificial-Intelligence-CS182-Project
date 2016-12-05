@@ -52,9 +52,9 @@ def k_beam_search(k, intersection_graph, connection_dict, cost_function, heurist
         raise ValueError('need more than two points to find best meeting spot')
 
     # initialise plot
-    plt.ion()
-    fig, ax = plt.subplots(1,1, figsize=(15, 15))
-    ax.set_autoscale_on(True)
+    # plt.ion()
+    # fig, ax = plt.subplots(1,1, figsize=(15, 15))
+    # ax.set_autoscale_on(True)
 
     # get coordinates of starting points
     starting_coords = np.array([[point.get_x_y()[0],point.get_x_y()[1]] for point in starting_points])
@@ -113,8 +113,8 @@ def k_beam_search(k, intersection_graph, connection_dict, cost_function, heurist
             best_centroid = k_points[0]
 
             # replot the routes and centroid locations
-            routes, connections = get_routes_to_centroid(best_centroid, starting_points, k_points, intersection_graph, connection_dict)
-            plot_local_search_graph(best_centroid, starting_points, k_points, intersection_graph, connection_dict, routes, ax=ax, candidate_nodes=candidate_nodes)
+            # routes, connections = get_routes_to_centroid(best_centroid, starting_points, k_points, intersection_graph, connection_dict)
+            # plot_local_search_graph(best_centroid, starting_points, k_points, intersection_graph, connection_dict, routes, ax=ax, candidate_nodes=candidate_nodes)
 
         # if best successor is no better than current best then break and return current best
         else:
