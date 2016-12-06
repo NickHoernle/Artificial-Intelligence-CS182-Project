@@ -5,6 +5,7 @@ import matplotlib
 import matplotlib.pyplot as plt
 from shapely.geometry import *
 import heapq
+import Queue
 
 class connection:
     def __init__(self, id, source, target, distance):
@@ -97,7 +98,7 @@ def follow_road(intersection, intersections, street_centerline, intersection_gra
             new_node = intersection_graph[node_id]
             distance = euclidean_distance(new_node.get_x_y(), this_node.get_x_y())
 
-            if distance < 1000: # I don't understand why.... Suggestions welcome
+            if distance < 0.01: # I don't understand why.... Suggestions welcome
 #             print str(street.Direction) if (str(street.Direction).strip() in ['0', '1', '-1']) else None
                 this_node.add_connection(street.id) if (str(street.Direction).strip() in ['0', '1']) else None
                 new_node.add_connection(street.id) if (str(street.Direction).strip() in ['0', '-1']) else None
@@ -108,7 +109,21 @@ def build_intersection_graph(intersections, street_centerline):
     intersection_graph = dict()
     connection_dict = dict()
     intersections.apply(follow_road, axis=1, args=[intersections, street_centerline, intersection_graph, connection_dict])
-    return intersection_graph, connection_dict
+
+    # remove the shitty ghost nodes
+    found_nodes = dict()
+    found_connections = dict()
+    to_search = Queue.deque()
+    to_search.append(intersection_graph['769'])
+    while len(to_search) > 0:
+        node = to_search.pop()
+        found_nodes[node.id] = node
+        for conn in node.get_connections():
+            connection = connection_dict[conn]
+            found_connections[conn] = connection
+            if connection.get_child(node.id) not in found_nodes:
+                to_search.append(intersection_graph[connection.get_child(node.id)])
+    return found_nodes, found_connections
 
 def plot_graph(intersection_graph, connection_dict, routes = [], safe_routes=[], ax = None):
     if ax == None:
@@ -233,7 +248,7 @@ def get_safe_road_cost(road_list, connection_list, intersection_graph, connectio
     for connection_id in connection_list:
         weight = 1
         if connection_dict[connection_id].get_accidents() is not None:
-            weight += connection_dict[connection_id].get_accidents()
+            weight += 5*connection_dict[connection_id].get_accidents()
         distance += connection_dict[connection_id].get_distance()*weight
     return distance
 
