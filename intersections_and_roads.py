@@ -6,6 +6,7 @@ import matplotlib.pyplot as plt
 from shapely.geometry import *
 import heapq
 import Queue
+import pdb
 
 class connection:
     def __init__(self, id, source, target, distance):
@@ -20,10 +21,7 @@ class connection:
         self.accidents = accidents
 
     def get_accidents(self):
-        if self.accidents:
-            return self.accidents
-        else:
-            return None
+        return self.accidents
 
     def get_child(self, node_id):
         if (node_id == self.source):
@@ -99,17 +97,15 @@ def follow_road(intersection, intersections, street_centerline, intersection_gra
             distance = euclidean_distance(new_node.get_x_y(), this_node.get_x_y())
 
             if distance < 0.01: # I don't understand why.... Suggestions welcome
-#             print str(street.Direction) if (str(street.Direction).strip() in ['0', '1', '-1']) else None
                 this_node.add_connection(street.id) if (str(street.Direction).strip() in ['0', '1']) else None
                 new_node.add_connection(street.id) if (str(street.Direction).strip() in ['0', '-1']) else None
                 if street.id not in connection_dict:
                     connection_dict[street.id] = connection(street.id, this_node.id, new_node.id, distance)
 
-def build_intersection_graph(intersections, street_centerline):
+def build_intersection_graph(intersections, street_centerline, elevation, accidents):
     intersection_graph = dict()
     connection_dict = dict()
     intersections.apply(follow_road, axis=1, args=[intersections, street_centerline, intersection_graph, connection_dict])
-
     # remove the shitty ghost nodes
     found_nodes = dict()
     found_connections = dict()
@@ -117,12 +113,20 @@ def build_intersection_graph(intersections, street_centerline):
     to_search.append(intersection_graph['769'])
     while len(to_search) > 0:
         node = to_search.pop()
+
+        node.set_elevation(elevation[elevation['id']==int(node.id)]['elevation'].values[0])
         found_nodes[node.id] = node
         for conn in node.get_connections():
             connection = connection_dict[conn]
             found_connections[conn] = connection
-            if connection.get_child(node.id) not in found_nodes:
-                to_search.append(intersection_graph[connection.get_child(node.id)])
+            child = intersection_graph[connection.get_child(node.id)]
+            if child.id not in found_nodes:
+                child.set_elevation(elevation[elevation['id']==int(child.id)]['elevation'].values[0])
+                to_search.append(intersection_graph[child.id])
+            connection.set_delta_elevation(child.get_elevation() - node.get_elevation())
+            if conn in accidents.Street_ID.values:
+                accident_num = int(accidents[accidents.Street_ID == conn].num_accidents)
+                connection.add_accidents(accident_num)
     return found_nodes, found_connections
 
 def plot_graph(intersection_graph, connection_dict, routes = [], safe_routes=[], ax = None):
@@ -251,17 +255,31 @@ def get_road_cost(road_list, connection_list, intersection_graph, connection_dic
 def get_safe_road_cost(road_list, connection_list, intersection_graph, connection_dict):
     distance = 0
     for connection_id in connection_list:
-        weight = 1
-        if connection_dict[connection_id].get_accidents() is not None:
-            weight += 5*connection_dict[connection_id].get_accidents()
-        distance += connection_dict[connection_id].get_distance()*weight
+        multiplier = 10000
+        weight = connection_dict[connection_id].get_accidents() + 1
+        distance += (max(multiplier*connection_dict[connection_id].get_distance(), 1))**weight
     return distance
 
-def null_heuristic(node, goal):
+def get_safe_road_cost_with_elevation(road_list, connection_list, intersection_graph, connection_dict):
+    distance = 0
+    for connection_id in connection_list:
+        multiplier = 10000
+        weight = connection_dict[connection_id].get_accidents() + 1
+        distance += (max(multiplier*connection_dict[connection_id].get_distance(), 1))**weight
+        distance += connection_dict[connection_id].delta_elevation
+    return distance
+
+def null_heuristic(node, goal, intersection_graph, connection_dict):
     return 0
 
-def euclidean_heuristic(node, goal):
+def euclidean_heuristic(node, goal, intersection_graph, connection_dict):
     return euclidean_distance(node.get_x_y(), goal.get_x_y())
+
+def combined_heuristic(node, goal, intersection_graph, connection_dict):
+    accident_heuristic = np.min([connection_dict[c].get_accidents() for c in node.get_connections()]) + 1
+    distance = euclidean_distance(node.get_x_y(), goal.get_x_y())
+    elevation = goal.get_elevation() - node.get_elevation()
+    return (distance*100 + elevation)**accident_heuristic
 
 def a_star_search(start, end, intersection_graph, connection_dict, get_road_cost, heuristic=null_heuristic):
     fringe = PriorityQueue()
@@ -304,4 +322,4 @@ def a_star_search(start, end, intersection_graph, connection_dict, get_road_cost
 
                 # update the fringe with this node
 
-                fringe.update(child, get_road_cost(route_to_goal[child.id]['nodes'], route_to_goal[child.id]['connections'], intersection_graph, connection_dict) + heuristic(child, end))
+                fringe.update(child, get_road_cost(route_to_goal[child.id]['nodes'], route_to_goal[child.id]['connections'], intersection_graph, connection_dict) + heuristic(child, end, intersection_graph, connection_dict))
