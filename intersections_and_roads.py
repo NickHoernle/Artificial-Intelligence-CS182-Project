@@ -154,7 +154,7 @@ def plot_graph(intersection_graph, connection_dict, routes = [], safe_routes=[],
     for route in safe_routes:
         xs = [intersection_graph[node].get_x_y()[0] for node in route]
         ys = [intersection_graph[node].get_x_y()[1] for node in route]
-        ax.plot(xs, ys, c='g', linewidth=3)
+        ax.plot(xs, ys, linewidth=3)
 
     # plt.show()
     return ax
