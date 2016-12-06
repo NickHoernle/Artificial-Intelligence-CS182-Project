@@ -232,27 +232,31 @@ def get_road_cost(road_list, connection_list, intersection_graph, connection_dic
 def get_safe_road_cost(road_list, connection_list, intersection_graph, connection_dict):
     distance = 0
     for connection_id in connection_list:
-        weight = 1
-        multiplier = 1000
-        if connection_dict[connection_id].get_accidents() is not None:
-            weight += connection_dict[connection_id].get_accidents()
-        distance += (multiplier*connection_dict[connection_id].get_distance())**weight
+        multiplier = 10000
+        weight = connection_dict[connection_id].get_accidents() + 1
+        distance += (max(multiplier*connection_dict[connection_id].get_distance(), 1))**weight
     return distance
 
 def get_safe_road_cost_with_elevation(road_list, connection_list, intersection_graph, connection_dict):
     distance = 0
     for connection_id in connection_list:
-        multiplier = 1000
-        weight = connection_dict[connection_id].get_accidents()
-        distance += (multiplier*connection_dict[connection_id].get_distance())**weight
-        distance += 100*connection_dict[connection_id].delta_elevation
+        multiplier = 10000
+        weight = connection_dict[connection_id].get_accidents() + 1
+        distance += (max(multiplier*connection_dict[connection_id].get_distance(), 1))**weight
+        distance += connection_dict[connection_id].delta_elevation
     return distance
 
-def null_heuristic(node, goal):
+def null_heuristic(node, goal, intersection_graph, connection_dict):
     return 0
 
-def euclidean_heuristic(node, goal):
+def euclidean_heuristic(node, goal, intersection_graph, connection_dict):
     return euclidean_distance(node.get_x_y(), goal.get_x_y())
+
+def combined_heuristic(node, goal, intersection_graph, connection_dict):
+    accident_heuristic = np.min([connection_dict[c].get_accidents() for c in node.get_connections()]) + 1
+    distance = euclidean_distance(node.get_x_y(), goal.get_x_y())
+    elevation = goal.get_elevation() - node.get_elevation()
+    return (distance*100 + elevation)**accident_heuristic
 
 def a_star_search(start, end, intersection_graph, connection_dict, get_road_cost, heuristic=null_heuristic):
     fringe = PriorityQueue()
@@ -295,4 +299,12 @@ def a_star_search(start, end, intersection_graph, connection_dict, get_road_cost
 
                 # update the fringe with this node
 
-                fringe.update(child, get_road_cost(route_to_goal[child.id]['nodes'], route_to_goal[child.id]['connections'], intersection_graph, connection_dict) + heuristic(child, end))
+                fringe.update(child, get_road_cost(route_to_goal[child.id]['nodes'], route_to_goal[child.id]['connections'], intersection_graph, connection_dict) + heuristic(child, end, intersection_graph, connection_dict))
+
+
+
+
+
+
+
+
