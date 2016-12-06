@@ -123,9 +123,9 @@ def plot_graph(intersection_graph, connection_dict, routes = [], safe_routes=[],
             child = connection_dict[connection]
             line_x = [child.get_source(intersection_graph).get_x_y()[0], child.get_target(intersection_graph).get_x_y()[0]]
             line_y = [child.get_source(intersection_graph).get_x_y()[1], child.get_target(intersection_graph).get_x_y()[1]]
-            ax.plot(line_x, line_y)
+            ax.plot(line_x, line_y, color='#d3d3d3')
 
-    ax.scatter(xs, ys, s=10)
+    ax.scatter(xs, ys, s=10, color='#7e7e7e')
 
     for route in routes:
         xs = [intersection_graph[node].get_x_y()[0] for node in route]
@@ -137,7 +137,7 @@ def plot_graph(intersection_graph, connection_dict, routes = [], safe_routes=[],
         ys = [intersection_graph[node].get_x_y()[1] for node in route]
         ax.plot(xs, ys, c='g', linewidth=3)
 
-    plt.show()
+    # plt.show()
     return ax
 
 def plot_local_search_graph(centroid, starting_points, k_points, intersection_graph, connection_dict, routes = [], ax = None, candidate_nodes=[]):
@@ -145,23 +145,40 @@ def plot_local_search_graph(centroid, starting_points, k_points, intersection_gr
         fig, ax = plt.subplots(1,1, figsize=(15, 15))
 
     # clear the data to replot new data without closing the figure
-    # ax.cla()
-    axis = plot_graph(intersection_graph, connection_dict,routes, [], ax=ax)
-
+        # ax.cla()
+    # axis = plot_graph(intersection_graph, connection_dict,routes, [], ax=ax)
+    axis = ax
     for point in candidate_nodes:
         axis.scatter(point.get_x_y()[0], point.get_x_y()[1], s=40, color='yellow')
 
     for point in starting_points:
-        axis.scatter(point.get_x_y()[0], point.get_x_y()[1], s=70, linewidth=4, color='black', marker='x')
+        axis.scatter(point.get_x_y()[0], point.get_x_y()[1], s=60, linewidth=4, color='black', marker='x', zorder=3)
 
     for point in k_points:
-        axis.scatter(point.get_x_y()[0], point.get_x_y()[1], s=50, color='purple')
+        axis.scatter(point.get_x_y()[0], point.get_x_y()[1], s=50, color='purple', zorder=3)
 
-    axis.scatter(centroid.get_x_y()[0], centroid.get_x_y()[1], color='red', s=50)
+    axis.scatter(centroid.get_x_y()[0], centroid.get_x_y()[1], color='red', marker='*', linewidth=5, s=90, zorder=3)
 
+    xs = [intersection_graph[key].get_x_y()[0] for key in intersection_graph]
+    ys = [intersection_graph[key].get_x_y()[1] for key in intersection_graph]
+
+    for key in intersection_graph:
+        node = intersection_graph[key]
+        for connection in node.get_connections():
+            child = connection_dict[connection]
+            line_x = [child.get_source(intersection_graph).get_x_y()[0], child.get_target(intersection_graph).get_x_y()[0]]
+            line_y = [child.get_source(intersection_graph).get_x_y()[1], child.get_target(intersection_graph).get_x_y()[1]]
+            ax.plot(line_x, line_y, color='#d3d3d3', zorder=1)
+
+    ax.scatter(xs, ys, s=10, color='#7e7e7e', zorder=1)
+
+    for route in routes:
+        xs = [intersection_graph[node].get_x_y()[0] for node in route]
+        ys = [intersection_graph[node].get_x_y()[1] for node in route]
+        ax.plot(xs, ys, linewidth=4, linestyle='dashed', zorder=2)
     # needed to help with replotting of the data
-    # ax.relim()
-    # ax.autoscale_view(True,True,True)
+    ax.relim()
+    ax.autoscale_view(True,True,True)
     # plt.draw()
     # plt.pause(0.0001)
     plt.show()

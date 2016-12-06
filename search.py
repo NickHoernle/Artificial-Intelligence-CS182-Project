@@ -72,9 +72,9 @@ def k_beam_search(k, intersection_graph, connection_dict, cost_function, heurist
     # select k inital random starting points
     k_points = np.random.choice(candidate_nodes, k, replace=False)
     # calculate the costs for the points
-    # costs = [np.sum([cost(start_node, k_point, intersection_graph, connection_dict, cost_function, heuristic) for start_node in starting_points]) for k_point in k_points]
-    all_costs = [[cost(start_node, k_point, intersection_graph, connection_dict, cost_function, heuristic) for start_node in starting_points] for k_point in k_points]
-    costs = [(max(c) - min(c)) for c in all_costs]
+    costs = [np.sum([cost(start_node, k_point, intersection_graph, connection_dict, cost_function, heuristic) for start_node in starting_points]) for k_point in k_points]
+    # all_costs = [[cost(start_node, k_point, intersection_graph, connection_dict, cost_function, heuristic) for start_node in starting_points] for k_point in k_points]
+    # costs = [(max(c) - min(c)) for c in all_costs]
     # save the min cost as the current best
     best_cost = min(costs)
     best_centroid = k_points[np.argmin(costs)]
@@ -98,7 +98,8 @@ def k_beam_search(k, intersection_graph, connection_dict, cost_function, heurist
 
         # evaluate costs of all successors
         all_successor_costs = np.array([[cost(start_node, successor_node, intersection_graph, connection_dict, cost_function, heuristic) for start_node in starting_points] for successor_node in successor_nodes])
-        successor_costs = np.array([(max(c) - min(c)) for c in all_successor_costs])
+        successor_costs = np.array([np.sum(c) for c in all_successor_costs])
+        # successor_costs = np.array([(max(c) - min(c)) for c in all_successor_costs])
 
         # retain best k successors
         best_k_indices = np.argsort(successor_costs, axis=0)[:k]
@@ -122,7 +123,7 @@ def k_beam_search(k, intersection_graph, connection_dict, cost_function, heurist
     return best_centroid, best_cost, k_points
 
 # helper function to calculate the routes of all the starting points to the centroid
-def get_routes_to_centroid(best_centroid, starting_points, k_points, intersection_graph, connection_dict):
+def get_routes_to_centroid(best_centroid, starting_points, intersection_graph, connection_dict):
     routes = []
     connections = []
     for start in starting_points:
