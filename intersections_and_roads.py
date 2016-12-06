@@ -155,7 +155,7 @@ def plot_graph(intersection_graph, connection_dict, routes = [], safe_routes=[],
     # plt.show()
     return ax
 
-def plot_local_search_graph(centroid, starting_points, k_points, intersection_graph, connection_dict, routes = [], ax = None, candidate_nodes=[]):
+def plot_local_search_graph(centroid, starting_points, k_points, intersection_graph, connection_dict, routes = [], ax = None, candidate_nodes=[], fname=None):
     if ax == None:
         fig, ax = plt.subplots(1,1, figsize=(15, 15))
 
@@ -196,6 +196,11 @@ def plot_local_search_graph(centroid, starting_points, k_points, intersection_gr
     ax.autoscale_view(True,True,True)
     # plt.draw()
     # plt.pause(0.0001)
+
+
+    if fname:
+        plt.gcf()
+        plt.savefig(fname=fname)
     plt.show()
 
 class PriorityQueue:
