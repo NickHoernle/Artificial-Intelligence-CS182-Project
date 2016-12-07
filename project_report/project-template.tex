@@ -43,11 +43,58 @@ your paper.
 
 \begin{algorithm}
   \begin{algorithmic}
-    \Procedure{MyAlgorithm}{$b$}
-    \State{$a \gets 10$}
-    \EndProcedure{}
+    \Function{A-Star-Search}{$graph, start node, target node$}
+    \State{$node \gets $a node with $ \textsc{state}=start node$}
+    \State{$\textsc{path-cost} \gets \textbf{heuristic}(start node, target node)$}
+    \State{$frontier\gets $ a priority queue ordered by $\textsc{path-cost} + \textbf{heuristic}(node, target node)$ with $node$ as the only element}
+    \State{$explored \gets $ an empty set}
+    \Loop 
+    \If{$\textsc{Empty?}(frontier)$}
+    \State \textbf{return failure}
+    \EndIf
+    \State{$node \gets \textsc{pop}(frontier)$ /*chooses the lowest cost+heuristic node in $frontier$ */}
+     \If{$node == targetnode$}
+    \State {\textbf{return} \textsc{solution}($node$)}
+    \EndIf
+    \State{add node.\textsc{State} to $explored$}
+    \For{ \textbf{each} $path$ in \textsc{Paths}($node$)}
+    \State{$child \gets$ \textbf{child-node}($node, path$)}
+    \If {$child$.\textsc{State} is not in $explored$ or $frontier$}
+    \State{$frontier \gets$ \textbf{insert}($child, frontier$)}
+    \ElsIf  {$child$.\textsc{State} is in $frontier$ with higher \textsc{path-cost} + heuristic}
+    \State{replace that $frontier$ node with $child$}
+    \EndIf
+    \EndFor
+    \EndLoop
+    \EndFunction{}
   \end{algorithmic}
-  \caption{Here is the algorithm.}
+  \caption{A-Star Search}
+\end{algorithm}
+
+\begin{algorithm}
+  \begin{algorithmic}
+    \Function{Simulated Annealing Meeting Spot}{$graph, startingpts, cost, heuristic$}
+    \If{$\textbf{length}(startingpts)<2$}
+    \State \textbf{return error}
+    \EndIf
+    \State{$current \gets$ \textbf{mean}$(startingpts)$.\textsc{closest-node}}
+    \State{$temperature \gets e^{10}$}
+    \State{$\gamma \gets .5$ /*schedule to manage $temperature$ */}
+    \While{$temperature > e^{-2}$}
+      \State{$temperature \gets temperature*\gamma$}
+      \State{$next \gets$ a randomly selected $child$ of $current$}
+      \State{$current.\textsc{value} \gets \sum_{pt \in startingpts}\textbf{cost}(pt, centroid$)}
+      \State{$new.\textsc{value} \gets \sum_{pt \in startingpts}\textbf{cost}(pt, next$)}
+      \State{$\Delta E \gets new.\textsc{value} - current.\textsc{value}$}
+      \If {$\Delta E > 0$}
+      \State{$current \gets next$}
+      \Else
+       \State{$current \gets next$ with probability $e^{\Delta E / temperature}$}
+      \EndIf   
+    \EndWhile
+    \EndFunction{}
+  \end{algorithmic}
+  \caption{Simulated Annealing Meeting Spot}
 \end{algorithm}
 
 
