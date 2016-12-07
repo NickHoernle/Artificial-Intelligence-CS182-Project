@@ -84,8 +84,8 @@ your paper.
       \State{$temperature \gets temperature*\gamma$}
       \State{$next \gets$ a randomly selected $child$ of $current$}
       \State{$current.\textsc{value} \gets \sum_{pt \in startingpts}\textbf{cost}(pt, centroid$)}
-      \State{$new.\textsc{value} \gets \sum_{pt \in startingpts}\textbf{cost}(pt, next$)}
-      \State{$\Delta E \gets new.\textsc{value} - current.\textsc{value}$}
+      \State{$next.\textsc{value} \gets \sum_{pt \in startingpts}\textbf{cost}(pt, next$)}
+      \State{$\Delta E \gets next.\textsc{value} - current.\textsc{value}$}
       \If {$\Delta E > 0$}
       \State{$current \gets next$}
       \Else
