@@ -1,0 +1,116 @@
+\documentclass[11pt]{article}
+\usepackage{common}
+\title{Project Template}
+\author{Anna Sophie Hilgard, Nick Hoernle, and Nikhila Ravi}
+\begin{document}
+\maketitle{}
+
+
+\section{Introduction}
+
+The goal of our project is to create a routing system for bicycle trips that takes into account more than just distance. Current map applications like Google often route cyclists through busy streets and intersections, resulting in unnecessarily dangerous trip and sometimes accidents. The algorithm we chose to use for this problem is A* search with a variety of cost functions and heuristics incorporating distance, safety of a given route, and changes in elevation (also important for biking but not information Google maps currently considers).
+
+Additionally, we considered the problem of finding a central meeting place for two or more cyclists starting from different positions. To solve this optimization problem, we used k-beam search and simulated annealing.
+
+The graph search problem is directly analogous to techniques and ideas from the class: using intersections as nodes in the graph and road segments connecting intersections as paths, we are able to construct the city maps as directed graphs. From there, we can use data generated from a variety of sources to come up with approximate costs associated with paths and related heuristics at nodes.
+
+The optimization techniques we use are also direct applications of algorithms from the optimization portion of the course.
+
+Problem-specific adaptations were largely limited to the collection and interpretation of relevant data and the development of a cost function and relevant heuristics.
+
+\section{Background and Related Work}
+
+While our problem was fairly straightforward, we did do some research to get ideas for potential cost attributes and data sources. Our initial formulation of the problem, for example, did not include elevation differencing, but reading previous studies led us to believe that this was an important criterion. \cite{pmbr}.
+
+\section{Problem Specification}
+
+The problem that we are solving is of the general class of graph search problems. Given a strongly connected graph, we seek to minimize some cost function $cost(\sum_{i=0}^n path_i)$ given that  $path_0 \in Connections_{starting node}$ \\$path_i, path_{i+1} \in Connections_{node_j}$ for some j, \\$path_i, path_{i-1} \in Connections_{node_k}$ for some k, and \\$path_n \in Connections_{target node}$
+
+Specifically for our problem, the cost function is:\\
+$cost(path_i)= \alpha_i * length_i + ?? + \beta_i * abs(\Delta elevation_i)$
+
+In the optimization portion of our project, we seek to minimize the total cost to all parties:\\
+$min(\sum_j^n cost_j)$ where  $cost_j$ is the cost to participant j.
+
+\section{Approach}
+
+A clear specification of the algorithm(s) you used and a description
+of the main data structures in the implementation. Include a
+discussion of any details of the algorithm that were not in the
+published paper(s) that formed the basis of your implementation. A
+reader should be able to reconstruct and verify your work from reading
+your paper.
+
+\begin{algorithm}
+  \begin{algorithmic}
+    \Procedure{MyAlgorithm}{$b$}
+    \State{$a \gets 10$}
+    \EndProcedure{}
+  \end{algorithmic}
+  \caption{Here is the algorithm.}
+\end{algorithm}
+
+
+
+\section{Experiments}
+Analysis, evaluation, and critique of the algorithm and your
+implementation. Include a description of the testing data you used and
+a discussion of examples that illustrate major features of your
+system. Testing is a critical part of system construction, and the
+scope of your testing will be an important component in our
+evaluation. Discuss what you learned from the implementation.
+
+\begin{table}
+  \centering
+  \begin{tabular}{ll}
+    \toprule
+    & Score \\
+    \midrule
+    Approach 1 & \\
+    Approach 2 & \\
+    \bottomrule
+  \end{tabular}
+  \caption{Description of the results.}
+\end{table}
+
+
+\subsection{Results}
+
+ For algorithm-comparison projects: a section reporting empirical comparison results preferably presented graphically.
+
+
+\section{Discussion}
+
+Summary of approach and results. Major takeaways? Things you could improve in future work?
+
+\appendix
+
+\section{System Description}
+
+ Appendix 1 – A clear description of how to use your system and how to generate the output you discussed in the write-up. \emph{The teaching staff must be able to run your system.}
+
+\section{Group Makeup}
+
+\begin{enumerate}
+\item Nick Hoernle
+\begin{enumerate}
+\item Creation of graph dictionary structure and A*search algorithm
+\item Simulated annealing
+\end{enumerate}
+\item Nikhila Ravi
+\begin{enumerate}
+\item K-Beam Search
+\item Visualization and analysis of results of graph search algorithms
+\end{enumerate}
+\item Anna Sophie Hilgard
+\begin{enumerate}
+\item Construction of Datasets
+\item Research and Implementation of more complicated cost functions and heuristics
+\end{enumerate}
+\end{enumerate}
+
+
+\bibliographystyle{plain} 
+\bibliography{project-template}
+
+\end{document}
