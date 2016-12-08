@@ -25,9 +25,11 @@ While our problem was fairly straightforward, we did do some research to get ide
 
 \section{Problem Specification}
 
-The problem that we are solving is of the general class of graph search problems. Given a strongly connected graph, we seek to minimize some cost function $cost(\sum_{i=0}^n path_i)$ given that  $path_0 \in Connections_{starting node}$ \\$path_i, path_{i+1} \in Connections_{node_j}$ for some j, \\$path_i, path_{i-1} \in Connections_{node_k}$ for some k, and \\$path_n \in Connections_{target node}$
+The problem that we are solving is of the general class of graph search problems. Given a strongly connected graph, we seek to minimize some cost function $cost(\sum_{i=0}^n path_i)$ \\given that  $path_0 \in Connections_{starting node}$ \\$path_i, path_{i+1} \in Connections_{node_j}$ for some j, \\$path_i, path_{i-1} \in Connections_{node_k}$ for some k, and \\$path_n \in Connections_{target node}$
 
 Specifically for our problem, the cost function is:\\
+
+TODO: get exact cost function
 $cost(path_i)= \alpha_i * length_i + ?? + \beta_i * abs(\Delta elevation_i)$
 
 In the optimization portion of our project, we seek to minimize the total cost to all parties:\\
@@ -137,20 +139,20 @@ evaluation. Discuss what you learned from the implementation.
 \includegraphics[width=0.6\textwidth]{sf_new_plot_2.png}
 \end{figure}
 
-\item{Evaluation:}
+\item{Evaluation:} We went through a few iterations of tuning the parameters in our cost function to get the appearance of the graphs to mimic what we think we'd want as cyclists. Because the cost in our problem is qualitative rather than explicitly quantitative, we were largely forced to estimate parameters based on what we thought would be reasonable rather than deriving them from empirical data of some sort. That said, we all felt that with our final parameters the algorithm was doing a reasonable job at generating routes we would want.
 
-\item{Critique:}
+\item{Critique:} Our algorithms could have been made to run somewhat faster by incorporating pruning strategies but we were generally satisfied with run times. Additionally, it was difficult to generate a very useful admissible heuristic for bike crashes because one could almost always find an extremely convoluted path to avoid almost all of them, and so to have a heuristic which is always $le$ the actual cost to the goal is often not that informative.
 
 \end{itemize}
 
 \begin{table}[H]
   \centering
-  \begin{tabular}{ll}
+  \begin{tabular}{lll}
     \toprule
-    & Score \\
-    \midrule
-    Approach 1 & \\
-    Approach 2 & \\
+    & Time & Total Cost \\
+    \midrule 
+    Simulated Annealing & &\\
+    K-Beam Search & &\\
     \bottomrule
   \end{tabular}
   \caption{Description of the results.}
@@ -159,18 +161,29 @@ evaluation. Discuss what you learned from the implementation.
 
 \subsection{Results}
 
- For algorithm-comparison projects: a section reporting empirical comparison results preferably presented graphically.
+TODO: Comparison of K-beam search and Simulated annealing: time to find solution vs total cost of solution found for a number of trials
+
+TODO: Comparison of routes found: For a number of routes, let's tabulate total distance traveled, total accidents passed over, and total change in elevation for the routes calculated between those nodes by our three cost functions to A*
+
+TODO: Comparison of nodes expanded/time used for Combination Cost function with different heuristics: For a number of routes, let's tabulate total routes expanded and time used when running the combination cost function with each of our three heuristics. 
 
 
 \section{Discussion}
 
-Summary of approach and results. Major takeaways? Things you could improve in future work?
+The graph search approach is a very straightforward and satisfactory solution to this problem. We felt that our results were very reasonable given our preexisting knowledge of Cambridge and San Francisco streets. \\
+A couple takeaways from this project:
+\begin{itemize}
+\item As always, you're only as good as your data. We had some lofty goals for the data that we'd be able to collect and use for this project, but even the data we ended up using was harder to collect and map that we anticipated, and much of the crash data was a few years old. Cambridge and San Francisco are relatively tech-forward cities, so I can imagine this would be even more difficult in most other environments
+\item It was interesting to see how our algorithm scaled to the larger map of San Francisco. To plan routes through a larger area, it's clear that we would have to adapt the algorithm to get the runtime within a reasonable range. In particular, we found in our reading that many routing engines actually use inadmissible heuristics for these tasks and still find reasonable results but in a much quicker time.
+\end{itemize}
+
+In future work, we could develop faster algorithms by using pruning procedures or finding ways to run expensive operations in parallel or vectorized forms. We could develop more sophisticated models of biking comfort by also including road construction data and pothole reports.
 
 \appendix
 
 \section{System Description}
 
- Appendix 1 â€“ A clear description of how to use your system and how to generate the output you discussed in the write-up. \emph{The teaching staff must be able to run your system.}
+ TODO:€“ A clear description of how to use your system and how to generate the output you discussed in the write-up. \emph{The teaching staff must be able to run your system.}
 
 \section{Group Makeup}
 
