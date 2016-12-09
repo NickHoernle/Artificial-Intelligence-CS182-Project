@@ -226,7 +226,7 @@ class map_structure:
     ########################################################
     ## Search Functions
     ########################################################
-    def a_star_search(self, start, end, road_cost, heuristic=null_heuristic, return_expanded_nodes=False):
+    def a_star_search(self, start, end, road_cost, heuristic, return_expanded_nodes=False):
         fringe = PriorityQueue()
 
         discovered_nodes = set()
@@ -318,7 +318,7 @@ class map_structure:
             # it is important that these delta elevation and distance metrics are
             # of the same order of magnitude. It is possibly worth investigating
             # some standardisation of these terms
-            distance += np.abs(connection.delta_elevation)
+            distance += connection.delta_elevation
         return distance
 
     ########################################################
@@ -380,7 +380,7 @@ class map_structure:
 
         return centroid
 
-    def k_beam_search(k, cost_function, heuristic, starting_points=[]):
+    def k_beam_search(self, k, cost_function, heuristic, starting_points=[]):
         if len(starting_points) < 2:
             raise ValueError('need more than two points to find best meeting spot')
 
@@ -428,7 +428,7 @@ class map_structure:
             successor_nodes = np.array([get_node((node, connection)) for (node, connection) in successor_connections])
 
             # evaluate costs of all successors
-            all_successor_costs = np.array([[cost(start_node, successor_node, cost_function, heuristic) for start_node in starting_points] for successor_node in successor_nodes])
+            all_successor_costs = np.array([[self.cost(start_node, successor_node, cost_function, heuristic) for start_node in starting_points] for successor_node in successor_nodes])
             successor_costs = np.array([np.sum(c) for c in all_successor_costs])
             # successor_costs = np.array([(max(c) - min(c)) for c in all_successor_costs])
 
