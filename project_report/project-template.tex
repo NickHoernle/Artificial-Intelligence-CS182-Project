@@ -27,10 +27,12 @@ While our problem was fairly straightforward, we did do some research to get ide
 
 The problem that we are solving is of the general class of graph search problems. Given a strongly connected graph, we seek to minimize some cost function $cost(\sum_{i=0}^n path_i)$ \\given that  $path_0 \in Connections_{starting node}$ \\$path_i, path_{i+1} \in Connections_{node_j}$ for some j, \\$path_i, path_{i-1} \in Connections_{node_k}$ for some k, and \\$path_n \in Connections_{target node}$
 
-Specifically for our problem, the cost function is:\\
+Specifically for our problem, we created three different cost functions:\\
+Distance only: $cost(path_i)= length_i$ \\
+Distance and safety only: $cost(path_i)  = \alpha* length_i * \beta * accidents_i$ \\
+Distance, safety, and elevation: $cost(path_i) = \alpha* length_i * \beta * accidents_i + abs(\Delta elevation_i)$ \\
 
-TODO: get exact cost function
-$cost(path_i)= \alpha_i * length_i + ?? + \beta_i * abs(\Delta elevation_i)$
+Where $\alpha$ and $\beta$ are multipliers to bring each of these values within what we find to be an appropriate range to generate reasonable results.
 
 In the optimization portion of our project, we seek to minimize the total cost to all parties:\\
 $min(\sum_j^n cost_j)$ where  $cost_j$ is the cost to participant j.
@@ -161,12 +163,29 @@ evaluation. Discuss what you learned from the implementation.
 
 \subsection{Results}
 
+Comparison of routes found by three different cost functions to A* with three different heuristics: \\
+
+\begin{figure}[H]
+\caption{Basic road cost under three different heuristics. Here we would expect the combined heuristic to significantly underperform the null heuristic and euclidean heuristic in terms of distance as the heuristic does not properly model the cost function. Therefore the heuristic is both inadmissible and inconsistent for this problem. }
+\includegraphics[width=1\textwidth]{../images/cost_1.png}
+\end{figure}
+
+\begin{figure}[H]
+\caption{Safety road cost under three different heuristics. Again, we expect to see the combined heuristic underperform the null heuristic and euclidean heuristic as the heuristic does not properly model the cost function and is neither admissible nor consistent }
+\includegraphics[width=1\textwidth]{../images/cost_2.png}
+\end{figure}
+
+\begin{figure}[H]
+\caption{Safety, distance, and elevation cost under three different heuristics. Here we still do not expect the combined heuristic to find the ideal solution, as the heuristic is not consistent, but it should do a reasonable job and significantly decrease the nodes expanded.}
+\includegraphics[width=1\textwidth]{../images/cost_3.png}
+\end{figure}
+
+\begin{figure}[H]
+\caption{Total distance, total nodes expanded, and total elevation change for the three cost functions under uniform cost search.}
+\includegraphics[width=1\textwidth]{../images/total_costs.png}
+\end{figure}
+
 TODO: Comparison of K-beam search and Simulated annealing: time to find solution vs total cost of solution found for a number of trials
-
-TODO: Comparison of routes found: For a number of routes, let's tabulate total distance traveled, total accidents passed over, and total change in elevation for the routes calculated between those nodes by our three cost functions to A*
-
-TODO: Comparison of nodes expanded/time used for Combination Cost function with different heuristics: For a number of routes, let's tabulate total routes expanded and time used when running the combination cost function with each of our three heuristics. 
-
 
 \section{Discussion}
 
@@ -183,7 +202,7 @@ In future work, we could develop faster algorithms by using pruning procedures o
 
 \section{System Description}
 
- TODO:€“ A clear description of how to use your system and how to generate the output you discussed in the write-up. \emph{The teaching staff must be able to run your system.}
+The easiest way to use our system is to open the provided iPython notebook and run each of the cells. All of the supporting functions can be found in \texttt{final\_project.py}.
 
 \section{Group Makeup}
 
