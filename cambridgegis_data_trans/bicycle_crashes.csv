@@ -1,0 +1,881 @@
+,Crash Number,Date Time,Day Of Week,Object 1,Object 2,Street Number,Steet Name,Cross Street,Location,Latitude,Longitude,Coordinates,Street_ID
+41,23676,01/10/2010 08:45:00 AM,Sunday,Auto,Bicycle,,HARVARD ST,QUINCY ST," HARVARD ST & QUINCY ST Cambridge, MA",42.372305,-71.115147,"(42.372305, -71.115147)",Harvard_St_25
+57,23693,01/16/2010 07:48:00 PM,Saturday,Auto,Bicycle,,Hampshire St,ELM ST," Hampshire St & ELM ST Cambridge, MA",42.37048,-71.096879,"(42.37048, -71.096879)",Elm_St_6
+76,23717,01/22/2010 01:15:00 PM,Friday,Auto,Bicycle,,Vassar St,Massachusetts Ave," Vassar St & Massachusetts Ave Cambridge, MA",42.360154,-71.094882,"(42.360154, -71.094882)",Vassar_St_5
+124,23764,02/04/2010 08:06:00 PM,Thursday,Auto,Bicycle,,Broadway,Ware St," Broadway & Ware St Cambridge, MA",42.373833,-71.112444,"(42.373833, -71.112444)",Broadwa_40
+152,23793,02/12/2010 03:10:00 PM,Friday,Auto,Bicycle,,Appleton St,HIGHLAND AVE," Appleton St & HIGHLAND AVE Cambridge, MA",42.379135,-71.133842,"(42.379135, -71.133842)",Highlan_St_2
+157,23797,02/13/2010 09:55:00 PM,Saturday,Auto,Bicycle,,Massachusetts Ave,DOUGLASS ST," Massachusetts Ave & DOUGLASS ST Cambridge, MA",42.363897,-71.10119,"(42.363897, -71.10119)",Douglas_St_1
+177,23820,02/19/2010 09:30:00 PM,Friday,Auto,Bicycle,,Hampshire St,PROSPECT ST," Hampshire St & PROSPECT ST Cambridge, MA",42.372202,-71.098975,"(42.372202, -71.098975)",Prospec_St_8
+207,23874,03/04/2010 04:22:00 PM,Wednesday,Auto,Bicycle,1310,Cambridge St,,"1310 Cambridge St Cambridge, MA",42.37345,-71.099503,"(42.37345, -71.099503)",Cambrid_St_28
+211,23849,02/26/2010 08:45:00 AM,Friday,Auto,Bicycle,,Binney St,Third St," Binney St & Third St Cambridge, MA",42.365678,-71.082406,"(42.365678, -71.082406)",Third_St_7
+232,23869,03/03/2010 06:45:00 PM,Wednesday,Auto,Bicycle,187,Hampshire St,,"187 Hampshire St Cambridge, MA",42.372747,-71.09943,"(42.372747, -71.09943)",Hampshi_St_14
+234,23871,03/03/2010 08:29:00 PM,Wednesday,MBTA Bus,Bicycle,,Brattle St,JFK St," Brattle St & JFK St Cambridge, MA",42.373467,-71.119389,"(42.373467, -71.119389)",Massach_Ave_43
+258,23893,03/08/2010 12:00:00 PM,Monday,Auto,Bicycle,,GARDEN ST,MASON ST," GARDEN ST & MASON ST Cambridge, MA",42.376564,-71.122185,"(42.376564, -71.122185)",Garden_St_4
+286,23917,03/16/2010 01:50:00 PM,Tuesday,Auto,Bicycle,1,Hampshire St,Broadway,"1 Hampshire St Cambridge, MA",42.365232,-71.090065,"(42.365232, -71.090065)",Broadwa_5
+295,23942,03/18/2010 04:50:00 PM,Thursday,Auto,Bicycle,,Cedar St,Massachusetts Ave," Cedar St & Massachusetts Ave Cambridge, MA",42.397973,-71.130897,"(42.397973, -71.130897)",Massach_Ave_101
+306,23945,03/20/2010 03:53:00 PM,Saturday,Auto,Bicycle,1820,Massachusetts Ave,ROSELAND ST,"1820 Massachusetts Ave Cambridge, MA",42.368925,-71.110257,"(42.368925, -71.110257)",Bay_St_3
+323,23959,03/25/2010 08:45:00 AM,Thursday,Truck,Bicycle,,ELIOT ST,JFK St," ELIOT ST & JFK St Cambridge, MA",42.371416,-71.121105,"(42.371416, -71.121105)",JFK_St_2
+326,23962,03/25/2010 03:30:00 PM,Thursday,Bicycle,Auto,,GARDEN ST,Appian Way," GARDEN ST & Appian Way Cambridge, MA",42.375974,-71.120983,"(42.375974, -71.120983)",Garden_St_2
+329,23965,03/25/2010 05:35:00 PM,Thursday,Pedestrian,Bicycle,28,Dewolfe St,,"28 Dewolfe St Cambridge, MA",42.369371,-71.116741,"(42.369371, -71.116741)",Cowpert_St_1
+330,23966,03/25/2010 06:20:00 PM,Thursday,Auto,Bicycle,58,Willow St,,"58 Willow St Cambridge, MA",42.371301,-71.092813,"(42.371301, -71.092813)",Willow_St_2
+333,23968,03/26/2010 09:17:00 AM,Friday,Auto,Bicycle,,Vassar St,MAIN ST," Vassar St & MAIN ST Cambridge, MA",42.362709,-71.089933,"(42.362709, -71.089933)",Main_St_7
+346,23980,03/29/2010 02:10:00 PM,Monday,Auto,Bicycle,,River St,Blackstone St," River St & Blackstone St Cambridge, MA",42.362009,-71.114307,"(42.362009, -71.114307)",River_St_2
+358,23992,04/01/2010 06:30:00 PM,Thursday,Auto,Bicycle,1293,Cambridge St,,"1293 Cambridge St Cambridge, MA",42.373589,-71.098999,"(42.373589, -71.098999)",Cambrid_St_27
+363,23997,04/02/2010 12:59:00 PM,Friday,Auto,Bicycle,,Brattle St,PALMER ST," Brattle St & PALMER ST Cambridge, MA",42.373371,-71.119913,"(42.373371, -71.119913)",Brattle_St_3
+368,24002,04/03/2010 04:15:00 PM,Saturday,Auto,Bicycle,,Massachusetts Ave,Vassar St," Massachusetts Ave & Vassar St Cambridge, MA",42.360154,-71.094882,"(42.360154, -71.094882)",Vassar_St_5
+379,24012,04/06/2010 06:40:00 PM,Tuesday,Bicycle,Auto,,Vassar St,Massachusetts Ave," Vassar St & Massachusetts Ave Cambridge, MA",42.360154,-71.094882,"(42.360154, -71.094882)",Vassar_St_5
+383,24015,04/07/2010 05:17:00 PM,Wednesday,Auto,Bicycle,,Cambridge St,PROSPECT ST," Cambridge St & PROSPECT ST Cambridge, MA",42.37338,-71.09814,"(42.37338, -71.09814)",Prospec_St_10
+387,24019,04/08/2010 01:34:00 PM,Thursday,Auto,Bicycle,,Hampshire St,PROSPECT ST," Hampshire St & PROSPECT ST Cambridge, MA",42.372202,-71.098975,"(42.372202, -71.098975)",Prospec_St_8
+390,24022,04/08/2010 05:25:00 PM,Thursday,Auto,Bicycle,576,Massachusetts Ave,,"576 Massachusetts Ave Cambridge, MA",42.364779,-71.102991,"(42.364779, -71.102991)",Massach_Ave_17
+394,24041,04/09/2010 06:45:00 PM,Friday,Auto,Bicycle,280,HARVARD ST,,"280 HARVARD ST Cambridge, MA",42.369027,-71.104207,"(42.369027, -71.104207)",Bigelow_St_2
+411,24047,04/13/2010 11:39:00 AM,Tuesday,Auto,Bicycle,306,Broadway,,"306 Broadway Cambridge, MA",42.36831,-71.098723,"(42.36831, -71.098723)",Broadwa_17
+417,24052,04/14/2010 12:00:00 PM,Wednesday,Auto,Bicycle,50,Hampshire St,,"50 Hampshire St Cambridge, MA",42.366878,-71.092829,"(42.366878, -71.092829)",Hampshi_St_3
+424,24058,04/15/2010 06:10:00 PM,Thursday,Auto,Bicycle,,GARDEN ST,HURON AVE," GARDEN ST & HURON AVE Cambridge, MA",42.383868,-71.129312,"(42.383868, -71.129312)",Huron_Ave_33
+445,24082,04/20/2010 05:00:00 PM,Tuesday,Auto,Bicycle,336,Rindge Ave,,"336 Rindge Ave Cambridge, MA",42.393734,-71.13742,"(42.393734, -71.13742)",Rindge_Ave_17
+450,24085,04/21/2010 04:30:00 PM,Wednesday,Auto,Bicycle,432,Massachusetts Ave,,"432 Massachusetts Ave Cambridge, MA",42.363468,-71.100584,"(42.363468, -71.100584)",Massach_Ave_11
+451,24086,04/21/2010 04:50:00 PM,Wednesday,Auto,Bicycle,,Hampshire St,Columbia St," Hampshire St & Columbia St Cambridge, MA",42.369917,-71.096192,"(42.369917, -71.096192)",Columbi_St_13
+452,24087,04/21/2010 06:14:00 PM,Wednesday,Auto,Bicycle,110,MAGAZINE ST,,"110 MAGAZINE ST Cambridge, MA",42.360046,-71.109848,"(42.360046, -71.109848)",Magazin_St_9
+457,24101,04/22/2010 02:29:00 PM,Thursday,Auto,Bicycle,,MOUNT AUBURN ST,Brattle St," MOUNT AUBURN ST & Brattle St Cambridge, MA",42.375282,-71.145695,"(42.375282, -71.145695)",Brattle_St_9
+464,24097,04/23/2010 07:38:00 PM,Friday,Auto,Bicycle,,Albany St,PACIFIC ST," Albany St & PACIFIC ST Cambridge, MA",42.358977,-71.100134,"(42.358977, -71.100134)",Albany_St_2
+476,24117,04/27/2010 06:00:00 PM,Tuesday,Auto,Bicycle,,OXFORD AVE,Wendell St," OXFORD AVE & Wendell St Cambridge, MA",42.381554,-71.116331,"(42.381554, -71.116331)",Oxford_St_4
+483,24124,04/28/2010 06:40:00 PM,Wednesday,Auto,Bicycle,,Hampshire St,Amory St," Hampshire St & Amory St Cambridge, MA",42.372845,-71.099759,"(42.372845, -71.099759)",Hampshi_St_14
+490,24134,04/30/2010 05:03:00 PM,Friday,Bicycle,,100,MAIN ST,,"100 MAIN ST Cambridge, MA",42.361509,-71.082553,"(42.361509, -71.082553)",Main_St_2
+508,24150,05/05/2010 11:33:00 PM,Wednesday,Auto,Bicycle,,Western Ave,Putnam Ave," Western Ave & Putnam Ave Cambridge, MA",42.364484,-71.113893,"(42.364484, -71.113893)",Western_Ave_3
+513,24157,05/06/2010 10:21:00 AM,Thursday,Auto,Bicycle,675,Massachusetts Ave,,"675 Massachusetts Ave Cambridge, MA",42.365813,-71.104082,"(42.365813, -71.104082)",Massach_Ave_19
+516,24160,05/06/2010 03:40:00 PM,Thursday,Auto,Bicycle,931,Massachusetts Ave,,"931 Massachusetts Ave Cambridge, MA",42.368799,-71.10941,"(42.368799, -71.10941)",Massach_Ave_28
+519,24165,05/07/2010 08:00:00 AM,Friday,Auto,Bicycle,,Cambridge St,FIRST ST," Cambridge St & FIRST ST Cambridge, MA",42.370636,-71.076934,"(42.370636, -71.076934)",Cambrid_St_1
+522,24168,05/07/2010 06:30:00 PM,Friday,Bicycle,Parked Vehicle,,Cambridge St,OAK ST," Cambridge St & OAK ST Cambridge, MA",42.373577,-71.099662,"(42.373577, -71.099662)",Cambrid_St_28
+535,24180,05/10/2010 05:20:00 PM,Monday,Auto,Bicycle,,Broadway,Norfolk St," Broadway & Norfolk St Cambridge, MA",42.36852,-71.099001,"(42.36852, -71.099001)",Broadwa_17
+537,24182,05/10/2010 07:47:00 AM,Monday,Auto,Bicycle,,Broadway,PROSPECT ST," Broadway & PROSPECT ST Cambridge, MA",42.369317,-71.101021,"(42.369317, -71.101021)",Prospec_St_5
+541,24187,05/10/2010 03:14:00 PM,Monday,Taxi,Bicycle,22,ELIOT ST,,"22 ELIOT ST Cambridge, MA",42.371759,-71.121286,"(42.371759, -71.121286)",Eliot_St_1
+553,24198,05/13/2010 02:45:00 PM,Thursday,Auto,Bicycle,657,Cambridge St,,"657 Cambridge St Cambridge, MA",42.372069,-71.087291,"(42.372069, -71.087291)",Cambrid_St_11
+559,24204,05/16/2010 03:20:00 PM,Sunday,Auto,Bicycle,445,Massachusetts Ave,,"445 Massachusetts Ave Cambridge, MA",42.363802,-71.100716,"(42.363802, -71.100716)",Coolidge_Pl_1
+560,24206,05/17/2010 02:49:00 PM,Monday,Auto,Bicycle,212,Windsor St,,"212 Windsor St Cambridge, MA",42.366461,-71.095544,"(42.366461, -71.095544)",Windsor_St_7
+566,24211,05/18/2010 05:29:00 PM,Tuesday,Auto,Bicycle,159,Hampshire St,,"159 Hampshire St Cambridge, MA",42.371723,-71.098224,"(42.371723, -71.098224)",Hampshi_St_12
+567,24212,05/18/2010 05:45:00 PM,Tuesday,Auto,Bicycle,,Cottage St,River St," Cottage St & River St Cambridge, MA",42.364042,-71.108254,"(42.364042, -71.108254)",River_St_12
+574,24221,05/19/2010 07:02:00 PM,Wednesday,Taxi,Bicycle,602,GREEN ST,,"602 GREEN ST Cambridge, MA",42.368459,-71.111397,"(42.368459, -71.111397)",Green_St_15
+591,24247,05/21/2010 10:44:00 AM,Friday,Auto,Bicycle,,Sidney St,HAMILTON ST," Sidney St & HAMILTON ST Cambridge, MA",42.357864,-71.105423,"(42.357864, -71.105423)",Sidney_St_7
+594,24236,05/22/2010 03:59:00 PM,Saturday,Auto,Bicycle,,Massachusetts Ave,Windsor St," Massachusetts Ave & Windsor St Cambridge, MA",42.361389,-71.096953,"(42.361389, -71.096953)",Windsor_St_1
+596,24238,05/22/2010 06:13:00 PM,Saturday,Truck,Bicycle,,Rindge Ave,Clifton St," Rindge Ave & Clifton St Cambridge, MA",42.393702,-71.136228,"(42.393702, -71.136228)",Rindge_Ave_16
+600,24246,05/24/2010 05:22:00 PM,Monday,Auto,Bicycle,1745,Massachusetts Ave,,"1745 Massachusetts Ave Cambridge, MA",42.369202,-71.110689,"(42.369202, -71.110689)",Dana_St_1
+602,24243,05/25/2010 07:19:00 AM,Tuesday,Auto,Bicycle,,Cambridge St,SUMNER RD," Cambridge St & SUMNER RD Cambridge, MA",42.375266,-71.112729,"(42.375266, -71.112729)",Sumner_Rd_1
+608,24251,05/26/2010 03:04:00 PM,Wednesday,Moped,Bicycle,,Ames St,Amherst St," Ames St & Amherst St Cambridge, MA",42.360009,-71.087643,"(42.360009, -71.087643)",Amherst_St_2
+610,24253,05/26/2010 05:30:00 PM,Wednesday,Auto,Bicycle,,Brattle St,LEXINGTON AVE," Brattle St & LEXINGTON AVE Cambridge, MA",42.376345,-71.139754,"(42.376345, -71.139754)",Brattle_St_19
+613,24256,05/27/2010 04:11:00 PM,Thursday,Taxi,Bicycle,340,Putnam Ave,,"340 Putnam Ave Cambridge, MA",42.361554,-71.113335,"(42.361554, -71.113335)",Allston_St_13
+617,24261,05/27/2010 11:49:00 AM,Sunday,Taxi,Bicycle,,Massachusetts Ave,EVERETT ST," Massachusetts Ave & EVERETT ST Cambridge, MA",42.380006,-71.119917,"(42.380006, -71.119917)",Massach_Ave_53
+619,24263,05/28/2010 07:09:00 AM,Monday,Auto,Bicycle,12,EVERETT ST,,"12 EVERETT ST Cambridge, MA",42.379797,-71.118688,"(42.379797, -71.118688)",Everett_St_1
+623,24267,05/28/2010 11:35:00 PM,Monday,Taxi,Bicycle,1945,Massachusetts Ave,,"1945 Massachusetts Ave Cambridge, MA",42.38975,-71.120095,"(42.38975, -71.120095)",Massach_Ave_76
+628,24271,06/01/2010 11:23:00 AM,Tuesday,Auto,Bicycle,,Cambridge St,Warren St," Cambridge St & Warren St Cambridge, MA",42.372102,-71.088276,"(42.372102, -71.088276)",Cambrid_St_12
+644,24289,06/03/2010 02:49:00 PM,Thursday,Auto,Bicycle,1544,Cambridge St,,"1544 Cambridge St Cambridge, MA",42.374379,-71.106302,"(42.374379, -71.106302)",Cambrid_St_39
+647,24292,06/03/2010 06:24:00 PM,Thursday,Bus (Other),Bicycle,,Massachusetts Ave,Amherst St," Massachusetts Ave & Amherst St Cambridge, MA",42.358188,-71.093089,"(42.358188, -71.093089)",Amherst_St_1
+648,24293,06/03/2010 08:52:00 PM,Thursday,Auto,Bicycle,472,Massachusetts Ave,,"472 Massachusetts Ave Cambridge, MA",42.363773,-71.101286,"(42.363773, -71.101286)",Massach_Ave_14
+653,24297,06/04/2010 02:49:00 PM,Friday,Auto,Bicycle,,Broadway,West Pl," Broadway & West Pl Cambridge, MA",42.37034,-71.103615,"(42.37034, -71.103615)",Broadwa_24
+665,24308,06/07/2010 10:15:00 AM,Monday,Auto,Bicycle,,MAIN ST,Bishop Allen Dr," MAIN ST & Bishop Allen Dr Cambridge, MA",42.363333,-71.098364,"(42.363333, -71.098364)",Bishop-A_Dr_1
+667,24310,06/07/2010 07:12:00 PM,Monday,Auto,Bicycle,,Massachusetts Ave,FOREST ST," Massachusetts Ave & FOREST ST Cambridge, MA",42.38538,-71.119336,"(42.38538, -71.119336)",Forest_St_4
+670,24312,06/08/2010 12:36:00 PM,,Auto,Bicycle,620,Massachusetts Ave,,"620 Massachusetts Ave Cambridge, MA",42.365024,-71.103402,"(42.365024, -71.103402)",Massach_Ave_18
+689,24357,06/11/2010 12:14:00 PM,Friday,Auto,Bicycle,,Massachusetts Ave,GARDEN ST," Massachusetts Ave & GARDEN ST Cambridge, MA",42.375131,-71.119151,"(42.375131, -71.119151)",Garden_St_29
+700,24349,06/15/2010 05:17:00 PM,Tuesday,Auto,Bicycle,319,Massachusetts Ave,,"319 Massachusetts Ave Cambridge, MA",42.36248,-71.09852,"(42.36248, -71.09852)",Massach_Ave_9
+701,24351,06/16/2010 09:55:00 AM,Wednesday,Auto,Bicycle,,Massachusetts Ave,STATE ST," Massachusetts Ave & STATE ST Cambridge, MA",42.362647,-71.099069,"(42.362647, -71.099069)",State_St_4
+702,24353,06/16/2010 05:49:00 PM,Wednesday,Auto,Bicycle,,Massachusetts Ave,PEARL ST," Massachusetts Ave & PEARL ST Cambridge, MA",42.36471,-71.102567,"(42.36471, -71.102567)",Massach_Ave_16
+726,24378,06/24/2010 02:00:00 PM,Thursday,Auto,Bicycle,,HURON AVE,Appleton Pl," HURON AVE & Appleton Pl Cambridge, MA",42.381521,-71.134102,"(42.381521, -71.134102)",Huron_Ave_20
+730,24379,06/25/2010 10:22:00 PM,Friday,Auto,Bicycle,,Hampshire St,PROSPECT ST," Hampshire St & PROSPECT ST Cambridge, MA",42.372202,-71.098975,"(42.372202, -71.098975)",Prospec_St_8
+737,24389,06/26/2010 05:13:00 PM,Saturday,Auto,Bicycle,2161,Massachusetts Ave,,"2161 Massachusetts Ave Cambridge, MA",42.392537,-71.124399,"(42.392537, -71.124399)",Milton_St_1
+749,24402,06/30/2010 12:49:00 PM,,Auto,Bicycle,,Massachusetts Ave,Inman St," Massachusetts Ave & Inman St Cambridge, MA",42.36659,-71.10568,"(42.36659, -71.10568)",Massach_Ave_21
+757,24410,07/02/2010 04:50:00 PM,Friday,Auto,Bicycle,,Massachusetts Ave,DOVER ST," Massachusetts Ave & DOVER ST Cambridge, MA",42.394524,-71.127012,"(42.394524, -71.127012)",Dover_St_1
+760,24470,07/02/2010 01:44:00 PM,,Auto,Bicycle,720,Massachusetts Ave,,"720 Massachusetts Ave Cambridge, MA",42.365955,-71.104965,"(42.365955, -71.104965)",Massach_Ave_20
+765,24417,07/04/2010 09:47:00 PM,Sunday,Auto,Bicycle,,Broadway,Columbia St," Broadway & Columbia St Cambridge, MA",42.367871,-71.09736,"(42.367871, -71.09736)",Columbi_St_10
+774,24424,07/06/2010 02:00:00 PM,,Auto,Bicycle,120,Vassar St,,"120 Vassar St Cambridge, MA",42.358848,-71.096286,"(42.358848, -71.096286)",Vassar_St_4
+775,24425,07/06/2010 05:13:00 PM,,Auto,Bicycle,,Sidney St,PACIFIC ST," Sidney St & PACIFIC ST Cambridge, MA",42.36036,-71.102479,"(42.36036, -71.102479)",Sidney_St_12
+781,24462,07/07/2010 11:29:00 AM,,Auto,Bicycle,,Vassar St,Massachusetts Ave," Vassar St & Massachusetts Ave Cambridge, MA",42.360154,-71.094882,"(42.360154, -71.094882)",Vassar_St_5
+784,24430,07/08/2010 02:49:00 PM,,Auto,Bicycle,,Massachusetts Ave,DAVENPORT ST," Massachusetts Ave & DAVENPORT ST Cambridge, MA",42.389419,-71.120032,"(42.389419, -71.120032)",Davenpo_St_1
+791,24436,07/09/2010 09:07:00 AM,,Auto,Bicycle,1,Hampshire St,,"1 Hampshire St Cambridge, MA",42.365232,-71.090065,"(42.365232, -71.090065)",Broadwa_5
+794,24439,07/09/2010 04:38:00 PM,,Auto,Bicycle,,Cambridge St,Windsor St," Cambridge St & Windsor St Cambridge, MA",42.37275,-71.093288,"(42.37275, -71.093288)",Cambrid_St_20
+798,24441,07/10/2010 02:03:00 PM,,Auto,Bicycle,1899,Massachusetts Ave,,"1899 Massachusetts Ave Cambridge, MA",42.369202,-71.110689,"(42.369202, -71.110689)",Dana_St_1
+813,24460,07/13/2010 04:54:00 PM,,Auto,Bicycle,97A,Hampshire St,,"97A Hampshire St Cambridge, MA",42.369242,-71.09527,"(42.369242, -71.09527)",Hampshi_St_7
+815,24474,07/13/2010 06:01:00 PM,Tuesday,Auto,Bicycle,,Brattle St,HILLIARD ST," Brattle St & HILLIARD ST Cambridge, MA",42.374856,-71.122345,"(42.374856, -71.122345)",Appian_Way_1
+816,24464,07/14/2010 05:33:00 PM,,Auto,Bicycle,,GARDEN ST,Walden St," GARDEN ST & Walden St Cambridge, MA",42.385523,-71.132217,"(42.385523, -71.132217)",Walden_St_7
+821,24476,07/14/2010 05:29:00 PM,Wednesday,Taxi,Bicycle,,Massachusetts Ave,HARVARD SQ," Massachusetts Ave & HARVARD SQ Cambridge, MA",42.374384,-71.118788,"(42.374384, -71.118788)",Peabody_St_1
+828,24482,07/15/2010 07:12:00 PM,Thursday,Auto,Bicycle,55-5,Columbia St,,"55-5 Columbia St Cambridge, MA",42.364856,-71.099155,"(42.364856, -71.099155)",Columbi_Ter_1
+830,24484,07/16/2010 05:29:00 PM,Friday,Auto,Bicycle,700,Massachusetts Ave,,"700 Massachusetts Ave Cambridge, MA",42.365901,-71.104876,"(42.365901, -71.104876)",Massach_Ave_20
+839,24496,07/18/2010 12:14:00 PM,Sunday,Auto,Bicycle,,Massachusetts Ave,EXETER PARK," Massachusetts Ave & EXETER PARK Cambridge, MA",42.384803,-71.119405,"(42.384803, -71.119405)",Massach_Ave_62
+844,24498,07/19/2010 06:20:00 PM,Monday,Auto,Bicycle,,PLYMOUTH ST,MOUNT AUBURN ST," PLYMOUTH ST & MOUNT AUBURN ST Cambridge, MA",42.371421,-71.117061,"(42.371421, -71.117061)",Plympto_St_4
+850,24506,07/20/2010 07:09:00 PM,Tuesday,Taxi,Bicycle,2067,Massachusetts Ave,,"2067 Massachusetts Ave Cambridge, MA",42.391469,-71.123101,"(42.391469, -71.123101)",Massach_Ave_83
+858,24549,07/21/2010 05:20:00 PM,,Auto,Bicycle,689,Massachusetts Ave,,"689 Massachusetts Ave Cambridge, MA",42.365977,-71.104356,"(42.365977, -71.104356)",Massach_Ave_19
+889,24544,07/30/2010 05:48:00 PM,Friday,Auto,Bicycle,,Cambridge St,LINE ST," Cambridge St & LINE ST Cambridge, MA",42.374028,-71.103097,"(42.374028, -71.103097)",Cambrid_St_33
+890,24545,07/30/2010 09:40:00 AM,Friday,Auto,Bicycle,,MEMORIAL DR,Vassar St," MEMORIAL DR & Vassar St Cambridge, MA",42.353438,-71.107141,"(42.353438, -71.107141)",Memoria_Dr_2
+892,24550,07/30/2010 12:00:00 PM,Friday,Auto,Bicycle,,Cambridge St,Cardinal Medeiros Ave," Cambridge St & Cardinal Medeiros Ave Cambridge, MA",42.372123,-71.088456,"(42.372123, -71.088456)",Cambrid_St_13
+904,24558,08/02/2010 08:39:00 AM,Monday,Auto,Bicycle,,ELIOT ST,JFK St," ELIOT ST & JFK St Cambridge, MA",42.371416,-71.121105,"(42.371416, -71.121105)",JFK_St_2
+926,24580,08/07/2010 06:00:00 PM,Saturday,Auto,Bicycle,,Massachusetts Ave,PEARL ST," Massachusetts Ave & PEARL ST Cambridge, MA",42.36471,-71.102567,"(42.36471, -71.102567)",Massach_Ave_16
+940,24593,08/11/2010 05:23:00 PM,Wednesday,Auto,Bicycle,,Broadway,HANCOCK ST," Broadway & HANCOCK ST Cambridge, MA",42.37132,-71.106094,"(42.37132, -71.106094)",Broadwa_29
+954,24610,08/13/2010 06:30:00 PM,Friday,Auto,Bicycle,,Massachusetts Ave,Albany St," Massachusetts Ave & Albany St Cambridge, MA",42.360828,-71.096012,"(42.360828, -71.096012)",Albany_St_4
+958,24613,08/14/2010 08:45:00 AM,Saturday,Auto,Bicycle,,Concord Ave,Bond St," Concord Ave & Bond St Cambridge, MA",42.380394,-71.127504,"(42.380394, -71.127504)",Concord_Ave_5
+961,24616,08/14/2010 07:57:00 PM,Saturday,Auto,Bicycle,1008,Massachusetts Ave,,"1008 Massachusetts Ave Cambridge, MA",42.369244,-71.111345,"(42.369244, -71.111345)",Massach_Ave_30
+979,24635,08/20/2010 07:40:00 AM,Friday,Auto,Bicycle,69,Sixth St,,"69 Sixth St Cambridge, MA",42.369353,-71.085434,"(42.369353, -71.085434)",Sixth_St_6
+981,24637,08/20/2010 08:55:00 AM,Friday,Auto,Bicycle,,GARDEN ST,Appian Way," GARDEN ST & Appian Way Cambridge, MA",42.375974,-71.120983,"(42.375974, -71.120983)",Garden_St_2
+1011,24659,08/25/2010 08:22:00 PM,Wednesday,Auto,Bicycle,,Cambridge St,HARDING ST," Cambridge St & HARDING ST Cambridge, MA",42.372409,-71.090656,"(42.372409, -71.090656)",Cambrid_St_16
+1018,24670,08/26/2010 02:42:00 PM,Thursday,Auto,Bicycle,,QUINCY ST,Cambridge St," QUINCY ST & Cambridge St Cambridge, MA",42.375474,-71.114321,"(42.375474, -71.114321)",Quincy_St_3
+1022,24675,08/26/2010 02:49:00 PM,Thursday,Auto,Bicycle,,Inman St,West St," Inman St & West St Cambridge, MA",42.369399,-71.10339,"(42.369399, -71.10339)",Inman_St_5
+1026,24679,08/27/2010 03:30:00 PM,Friday,Auto,Bicycle,,Brattle St,MOUNT AUBURN ST," Brattle St & MOUNT AUBURN ST Cambridge, MA",42.375282,-71.145695,"(42.375282, -71.145695)",Brattle_St_9
+1027,24680,08/27/2010 04:05:00 PM,Friday,Auto,Bicycle,,Broadway,PRESCOTT ST," Broadway & PRESCOTT ST Cambridge, MA",42.374368,-71.113638,"(42.374368, -71.113638)",Prescot_St_2
+1037,24688,08/30/2010 03:14:00 PM,Monday,Auto,Bicycle,2000,Massachusetts Ave,,"2000 Massachusetts Ave Cambridge, MA",42.390338,-71.121411,"(42.390338, -71.121411)",Massach_Ave_79
+1039,24694,08/30/2010 11:03:00 PM,Monday,Auto,Bicycle,,Massachusetts Ave,Albany St," Massachusetts Ave & Albany St Cambridge, MA",42.360828,-71.096012,"(42.360828, -71.096012)",Albany_St_4
+1044,24692,08/31/2010 04:09:00 PM,Tuesday,Auto,Bicycle,,Cambridge St,Ellsworth Ave," Cambridge St & Ellsworth Ave Cambridge, MA",42.374407,-71.106082,"(42.374407, -71.106082)",Cambrid_St_38
+1046,24698,08/31/2010 06:45:00 AM,Tuesday,Auto,Bicycle,,GARDEN ST,MASON ST," GARDEN ST & MASON ST Cambridge, MA",42.376564,-71.122185,"(42.376564, -71.122185)",Garden_St_4
+1063,24717,09/03/2010 02:48:00 PM,Friday,Auto,Bicycle,1033,Massachusetts Ave,,"1033 Massachusetts Ave Cambridge, MA",42.369697,-71.11193,"(42.369697, -71.11193)",Massach_Ave_31
+1066,24720,09/04/2010 12:00:00 PM,Saturday,Auto,Bicycle,34,KINNAIRD ST,,"34 KINNAIRD ST Cambridge, MA",42.365688,-71.109017,"(42.365688, -71.109017)",Kinnair_St_3
+1067,24722,09/04/2010 01:31:00 PM,Saturday,Pedestrian,Bicycle,581,Massachusetts Ave,,"581 Massachusetts Ave Cambridge, MA",42.365007,-71.102735,"(42.365007, -71.102735)",Massach_Ave_17
+1079,24732,09/08/2010 05:10:00 PM,Wednesday,Auto,Bicycle,,Massachusetts Ave,Sidney St," Massachusetts Ave & Sidney St Cambridge, MA",42.36295,-71.09958,"(42.36295, -71.09958)",Massach_Ave_10
+1080,24733,09/08/2010 06:11:00 PM,Wednesday,Auto,Bicycle,,Cambridge St,QUINCY ST," Cambridge St & QUINCY ST Cambridge, MA",42.375474,-71.114321,"(42.375474, -71.114321)",Quincy_St_3
+1094,24747,09/12/2010 03:18:00 PM,Sunday,Auto,Bicycle,,Massachusetts Ave,SMART ST," Massachusetts Ave & SMART ST Cambridge, MA",42.361114,-71.09657,"(42.361114, -71.09657)",Massach_Ave_4
+1100,24754,09/13/2010 05:49:00 PM,Monday,Bus (Other),Bicycle,,Broadway,PRESCOTT ST," Broadway & PRESCOTT ST Cambridge, MA",42.374368,-71.113638,"(42.374368, -71.113638)",Prescot_St_2
+1108,24762,09/14/2010 03:59:00 PM,Tuesday,Auto,Bicycle,,SOMERVILLE AVE,Massachusetts Ave," SOMERVILLE AVE & Massachusetts Ave Cambridge, MA",42.388965,-71.119695,"(42.388965, -71.119695)",Somervi_Ave_2
+1113,24768,09/15/2010 11:39:00 AM,Wednesday,Auto,Bicycle,738,Massachusetts Ave,,"738 Massachusetts Ave Cambridge, MA",42.366063,-71.105159,"(42.366063, -71.105159)",Massach_Ave_20
+1115,24770,09/16/2010 06:30:00 PM,Thursday,Bicycle,Bicycle,120,Hampshire St,,"120 Hampshire St Cambridge, MA",42.370024,-71.096542,"(42.370024, -71.096542)",Hampshi_St_9
+1124,24780,09/16/2010 03:30:00 PM,Thursday,Auto,Bicycle,,Massachusetts Ave,ROSELAND ST," Massachusetts Ave & ROSELAND ST Cambridge, MA",42.386821,-71.119182,"(42.386821, -71.119182)",Roselan_St_2
+1129,24789,09/17/2010 05:45:00 PM,Friday,Auto,Bicycle,,Massachusetts Ave,LINNAEAN ST," Massachusetts Ave & LINNAEAN ST Cambridge, MA",42.384872,-71.119394,"(42.384872, -71.119394)",Massach_Ave_64
+1130,24790,09/17/2010 05:46:00 PM,Friday,Auto,Bicycle,,Massachusetts Ave,EVERETT ST," Massachusetts Ave & EVERETT ST Cambridge, MA",42.380006,-71.119917,"(42.380006, -71.119917)",Massach_Ave_53
+1136,24849,09/18/2010 08:25:00 PM,Saturday,Auto,Bicycle,,Cambridge St,Windsor St," Cambridge St & Windsor St Cambridge, MA",42.37275,-71.093288,"(42.37275, -71.093288)",Cambrid_St_20
+1140,24794,09/20/2010 08:04:00 AM,Monday,Auto,Bicycle,459,Broadway,,"459 Broadway Cambridge, MA",42.374336,-71.111559,"(42.374336, -71.111559)",Cambrid_St_45
+1141,24795,09/20/2010 01:50:00 PM,Monday,Auto,Bicycle,,Broadway,Ware St," Broadway & Ware St Cambridge, MA",42.373833,-71.112444,"(42.373833, -71.112444)",Broadwa_40
+1146,24800,09/21/2010 04:25:00 PM,Tuesday,Auto,Bicycle,,Massachusetts Ave,Albany St," Massachusetts Ave & Albany St Cambridge, MA",42.360828,-71.096012,"(42.360828, -71.096012)",Albany_St_4
+1157,24808,09/23/2010 09:30:00 AM,Thursday,Auto,Bicycle,,QUINCY ST,Cambridge St," QUINCY ST & Cambridge St Cambridge, MA",42.375474,-71.114321,"(42.375474, -71.114321)",Quincy_St_3
+1158,24809,09/23/2010 09:31:00 AM,Thursday,Auto,Bicycle,,JFK St,ELIOT ST," JFK St & ELIOT ST Cambridge, MA",42.371416,-71.121105,"(42.371416, -71.121105)",JFK_St_2
+1161,24812,09/23/2010 06:00:00 PM,Thursday,Auto,Bicycle,,PROSPECT ST,Hampshire St," PROSPECT ST & Hampshire St Cambridge, MA",42.372202,-71.098975,"(42.372202, -71.098975)",Prospec_St_8
+1163,24817,09/24/2010 09:00:00 AM,Friday,Auto,Bicycle,,Hampshire St,Webster Ave," Hampshire St & Webster Ave Cambridge, MA",42.366778,-71.092369,"(42.366778, -71.092369)",Hampshi_St_2
+1165,24820,09/24/2010 01:44:00 PM,Friday,Auto,Bicycle,,MOUNT AUBURN ST,Dewolfe St," MOUNT AUBURN ST & Dewolfe St Cambridge, MA",42.371077,-71.116118,"(42.371077, -71.116118)",DeWolfe_St_6
+1166,24821,09/24/2010 02:41:00 PM,Friday,Auto,Bicycle,686,Cambridge St,,"686 Cambridge St Cambridge, MA",42.371962,-71.087955,"(42.371962, -71.087955)",Cambrid_St_12
+1193,24851,10/01/2010 06:59:00 AM,Friday,Auto,Bicycle,,Cambridge St,LINE ST," Cambridge St & LINE ST Cambridge, MA",42.374028,-71.103097,"(42.374028, -71.103097)",Cambrid_St_33
+1213,24899,10/03/2010 07:09:00 AM,Sunday,Auto,Bicycle,220,Alewife Brook Pky,,"220 Alewife Brook Pky Cambridge, MA",42.388585,-71.143236,"(42.388585, -71.143236)",Alewife-B_Pkwy_1
+1217,24876,10/04/2010 10:50:00 AM,Monday,Auto,Bicycle,,Cambridge St,Warren St," Cambridge St & Warren St Cambridge, MA",42.372102,-71.088276,"(42.372102, -71.088276)",Cambrid_St_12
+1218,24878,10/04/2010 02:00:00 PM,Monday,Auto,Bicycle,,Beech St,ELM ST," Beech St & ELM ST Cambridge, MA",42.39151,-71.119059,"(42.39151, -71.119059)",Elm-S_N_4
+1234,24893,10/06/2010 06:29:00 PM,Wednesday,Auto,Bicycle,,Massachusetts Ave,MELLEN ST," Massachusetts Ave & MELLEN ST Cambridge, MA",42.380832,-71.11987,"(42.380832, -71.11987)",Langdon_St_6
+1262,24922,10/12/2010 02:29:00 PM,Tuesday,Auto,Bicycle,330,Broadway,Amory St,"330 Broadway Cambridge, MA",42.369561,-71.102171,"(42.369561, -71.102171)",Broadwa_22
+1268,24926,10/13/2010 10:19:00 AM,Wednesday,Auto,Bicycle,,Columbia St,LINCOLN ST," Columbia St & LINCOLN ST Cambridge, MA",42.371406,-71.095344,"(42.371406, -71.095344)",Columbi_St_14
+1280,24940,10/17/2010 11:10:00 PM,Sunday,Auto,Bicycle,,PROSPECT ST,Hampshire St," PROSPECT ST & Hampshire St Cambridge, MA",42.372202,-71.098975,"(42.372202, -71.098975)",Prospec_St_8
+1283,24943,10/18/2010 08:29:00 AM,Monday,Auto,Bicycle,,Massachusetts Ave,Landsdowne St," Massachusetts Ave & Landsdowne St Cambridge, MA",42.361746,-71.097556,"(42.361746, -71.097556)",Massach_Ave_6
+1299,24962,10/20/2010 05:55:00 PM,Wednesday,Auto,Bicycle,,Cambridge St,Columbia St," Cambridge St & Columbia St Cambridge, MA",42.372912,-71.094512,"(42.372912, -71.094512)",Cambrid_St_21
+1301,24963,10/21/2010 11:46:00 AM,Thursday,Auto,Bicycle,,Massachusetts Ave,Amherst St," Massachusetts Ave & Amherst St Cambridge, MA",42.358188,-71.093089,"(42.358188, -71.093089)",Amherst_St_1
+1317,24981,10/25/2010 10:11:00 AM,Monday,Auto,Bicycle,,Broadway,Antrim St," Broadway & Antrim St Cambridge, MA",42.370399,-71.103764,"(42.370399, -71.103764)",Antrim_St_1
+1322,24991,10/25/2010 12:34:00 PM,Monday,Auto,Bicycle,,Putnam Ave,Massachusetts Ave," Putnam Ave & Massachusetts Ave Cambridge, MA",42.370356,-71.113274,"(42.370356, -71.113274)",Massach_Ave_33
+1334,24999,10/27/2010 09:40:00 AM,Wednesday,Auto,Bicycle,,Massachusetts Ave,GARFIELD ST," Massachusetts Ave & GARFIELD ST Cambridge, MA",42.383788,-71.119514,"(42.383788, -71.119514)",Garfiel_St_1
+1336,25001,10/27/2010 06:20:00 PM,Wednesday,Auto,Bicycle,,Columbia St,Bishop Allen Dr," Columbia St & Bishop Allen Dr Cambridge, MA",42.364154,-71.099474,"(42.364154, -71.099474)",Columbi_St_2
+1347,25011,10/30/2010 11:03:00 AM,Tuesday,Taxi,Bicycle,575,Massachusetts Ave,,"575 Massachusetts Ave Cambridge, MA",42.364881,-71.102534,"(42.364881, -71.102534)",Massach_Ave_17
+1355,25018,11/01/2010 07:54:00 AM,Monday,Auto,Bicycle,,HARVARD ST,LEE ST," HARVARD ST & LEE ST Cambridge, MA",42.369762,-71.105848,"(42.369762, -71.105848)",Lee_St_2
+1359,25022,11/01/2010 10:25:00 PM,Monday,Auto,Bicycle,199,Hampshire St,,"199 Hampshire St Cambridge, MA",42.373046,-71.100106,"(42.373046, -71.100106)",Hampshi_St_16
+1360,25023,11/02/2010 04:28:00 PM,Tuesday,Auto,Bicycle,,Western Ave,PLEASANT ST," Western Ave & PLEASANT ST Cambridge, MA",42.365079,-71.10695,"(42.365079, -71.10695)",Pleasan_St_15
+1361,25024,11/02/2010 06:43:00 PM,Tuesday,Auto,Bicycle,878,Cambridge St,,"878 Cambridge St Cambridge, MA",42.372861,-71.09455,"(42.372861, -71.09455)",Columbi_St_16
+1384,25045,11/08/2010 04:57:00 PM,Monday,Auto,Bicycle,,Massachusetts Ave,SOMERVILLE AVE," Massachusetts Ave & SOMERVILLE AVE Cambridge, MA",42.388965,-71.119695,"(42.388965, -71.119695)",Somervi_Ave_2
+1392,25056,11/10/2010 08:04:00 AM,Wednesday,Auto,Bicycle,,Hampshire St,Amory St," Hampshire St & Amory St Cambridge, MA",42.372845,-71.099759,"(42.372845, -71.099759)",Hampshi_St_14
+1394,25058,11/10/2010 04:28:00 PM,Wednesday,Auto,Bicycle,,Cambridge St,Second St," Cambridge St & Second St Cambridge, MA",42.370859,-71.078595,"(42.370859, -71.078595)",Second_St_11
+1421,25129,11/18/2010 06:00:00 PM,Thursday,Bicycle,Parked Vehicle,1783,Massachusetts Ave,,"1783 Massachusetts Ave Cambridge, MA",42.385988,-71.119062,"(42.385988, -71.119062)",Newport_Rd_1
+1425,25087,11/19/2010 09:21:00 PM,Friday,Auto,Bicycle,,Hampshire St,Cambridge St," Hampshire St & Cambridge St Cambridge, MA",42.373729,-71.100837,"(42.373729, -71.100837)",Hampshi_St_18
+1427,25093,11/19/2010 08:29:00 AM,Friday,Auto,Bicycle,,Putnam Ave,Allston St," Putnam Ave & Allston St Cambridge, MA",42.361702,-71.113463,"(42.361702, -71.113463)",Putnam_Ave_14
+1431,25109,11/20/2010 08:30:00 AM,Saturday,Van,Bicycle,,Franklin St,Brookline Pl," Franklin St & Brookline Pl Cambridge, MA",42.362426,-71.101698,"(42.362426, -71.101698)",Frankli_St_2
+1432,25090,11/21/2010 11:25:00 AM,Sunday,Auto,Bicycle,,Columbia St,Hampshire St," Columbia St & Hampshire St Cambridge, MA",42.369917,-71.096192,"(42.369917, -71.096192)",Columbi_St_13
+1433,25091,11/21/2010 07:19:00 PM,Sunday,Auto,Bicycle,1153,Cambridge St,,"1153 Cambridge St Cambridge, MA",42.37326,-71.096492,"(42.37326, -71.096492)",Cambrid_St_24
+1439,25098,11/22/2010 08:15:00 AM,Monday,Auto,Bicycle,48-5,Hampshire St,Webster Ave,"48-5 Hampshire St Cambridge, MA",42.366763,-71.092449,"(42.366763, -71.092449)",Hampshi_St_3
+1450,25114,11/24/2010 12:49:00 PM,Wednesday,Auto,Bicycle,267,PEARL ST,Putnam Ave,"267 PEARL ST Cambridge, MA",42.358169,-71.109829,"(42.358169, -71.109829)",Pearl_St_6
+1451,25115,11/24/2010 12:56:00 PM,Wednesday,Taxi,Bicycle,,JFK St,ELIOT ST," JFK St & ELIOT ST Cambridge, MA",42.371416,-71.121105,"(42.371416, -71.121105)",JFK_St_2
+1464,25125,11/29/2010 06:27:00 PM,Monday,Auto,Bicycle,,Broadway,PROSPECT ST," Broadway & PROSPECT ST Cambridge, MA",42.369317,-71.101021,"(42.369317, -71.101021)",Prospec_St_5
+1469,25132,11/30/2010 08:29:00 AM,Tuesday,Auto,Bicycle,,MOUNT AUBURN ST,Putnam Ave," MOUNT AUBURN ST & Putnam Ave Cambridge, MA",42.370091,-71.113336,"(42.370091, -71.113336)",Mt-A_St_1
+1496,25157,12/04/2010 06:00:00 PM,Saturday,Pedestrian,Bicycle,,Massachusetts Ave,Temple St," Massachusetts Ave & Temple St Cambridge, MA",42.365973,-71.104675,"(42.365973, -71.104675)",Temple_St_1
+1499,25160,12/05/2010 01:31:00 PM,Sunday,Auto,Bicycle,1672,Massachusetts Ave,HUDSON ST,"1672 Massachusetts Ave Cambridge, MA",42.382134,-71.119877,"(42.382134, -71.119877)",Hudson_St_3
+1502,25162,12/06/2010 05:19:00 PM,Monday,Auto,Bicycle,,Broadway,Windsor St," Broadway & Windsor St Cambridge, MA",42.367107,-71.095416,"(42.367107, -71.095416)",Windsor_St_8
+1504,25164,12/07/2010 09:00:00 AM,Tuesday,Auto,Bicycle,,Concord Ave,MOULTON ST," Concord Ave & MOULTON ST Cambridge, MA",42.389615,-71.148119,"(42.389615, -71.148119)",Moulton_St_1
+1505,25165,12/07/2010 02:00:00 PM,Tuesday,Auto,Bicycle,,Broadway,Inman St," Broadway & Inman St Cambridge, MA",42.370072,-71.102933,"(42.370072, -71.102933)",Inman_St_7
+1512,25170,12/08/2010 01:35:00 PM,Wednesday,Auto,Bicycle,,Albany St,Massachusetts Ave," Albany St & Massachusetts Ave Cambridge, MA",42.360828,-71.096012,"(42.360828, -71.096012)",Albany_St_4
+1532,25189,12/13/2010 09:00:00 AM,Monday,Auto,Bicycle,874,Massachusetts Ave,LEE ST,"874 Massachusetts Ave Cambridge, MA",42.367715,-71.107618,"(42.367715, -71.107618)",Massach_Ave_25
+1542,25199,12/14/2010 05:51:00 PM,Tuesday,Auto,Bicycle,,Massachusetts Ave,Bigelow St," Massachusetts Ave & Bigelow St Cambridge, MA",42.366995,-71.106343,"(42.366995, -71.106343)",Bigelow_St_1
+1557,25215,12/17/2010 09:00:00 AM,Friday,Auto,Bicycle,,GRANITE ST,ROCKINGHAM ST," GRANITE ST & ROCKINGHAM ST Cambridge, MA",42.355591,-71.111313,"(42.355591, -71.111313)",Granite_St_1
+1621,25274,01/02/2011 04:50:00 PM,Sunday,Auto,Bicycle,,MEMORIAL DR,PLEASANT ST," MEMORIAL DR & PLEASANT ST Cambridge, MA",42.35884,-71.115589,"(42.35884, -71.115589)",Memoria_Dr_15
+1631,25294,01/05/2011 06:14:00 PM,Thursday,Auto,Bicycle,,Massachusetts Ave,FOREST ST," Massachusetts Ave & FOREST ST Cambridge, MA",42.38538,-71.119336,"(42.38538, -71.119336)",Forest_St_4
+1655,25317,01/10/2011 05:42:00 PM,Monday,Bicycle,,28,FERNALD DR,,"28 FERNALD DR Cambridge, MA",42.382975,-71.126268,"(42.382975, -71.126268)",Fernald_Dr_1
+1657,25333,01/10/2011 09:00:00 AM,Monday,Auto,Bicycle,,River St,HOWARD ST," River St & HOWARD ST Cambridge, MA",42.363279,-71.110521,"(42.363279, -71.110521)",River_St_9
+1674,25334,01/14/2011 08:29:00 AM,Friday,Auto,Bicycle,,Hampshire St,ELM ST," Hampshire St & ELM ST Cambridge, MA",42.37048,-71.096879,"(42.37048, -71.096879)",Elm_St_6
+1688,25347,01/17/2011 03:39:00 PM,Monday,Auto,Bicycle,41,LINNAEAN ST,,"41 LINNAEAN ST Cambridge, MA",42.383558,-71.124268,"(42.383558, -71.124268)",Linnaea_St_3
+1717,25379,01/20/2011 08:35:00 PM,Thursday,Auto,Bicycle,,Broadway,Portland St," Broadway & Portland St Cambridge, MA",42.365792,-71.09207,"(42.365792, -71.09207)",Portlan_St_5
+1731,25391,01/23/2011 05:03:00 PM,Sunday,Auto,Bicycle,,Bennett St,ELIOT ST," Bennett St & ELIOT ST Cambridge, MA",42.372321,-71.121864,"(42.372321, -71.121864)",Eliot_St_2
+1907,25564,02/11/2011 09:56:00 AM,Friday,Auto,Bicycle,,Broadway,Ames St," Broadway & Ames St Cambridge, MA",42.363981,-71.087416,"(42.363981, -71.087416)",Broadwa_3
+1927,25593,02/14/2011 06:30:00 PM,Monday,Bicycle,Auto,,Massachusetts Ave,Windsor St," Massachusetts Ave & Windsor St Cambridge, MA",42.361389,-71.096953,"(42.361389, -71.096953)",Windsor_St_1
+1962,25620,02/22/2011 05:00:00 PM,Tuesday,Auto,Bicycle,1,Hampshire St,,"1 Hampshire St Cambridge, MA",42.365232,-71.090065,"(42.365232, -71.090065)",Broadwa_5
+1964,25625,02/22/2011 07:30:00 PM,Tuesday,Auto,Bicycle,,Broadway,LEE ST," Broadway & LEE ST Cambridge, MA",42.370823,-71.104839,"(42.370823, -71.104839)",Broadwa_27
+1997,25659,02/28/2011 05:12:00 PM,Monday,Auto,Bicycle,872,Massachusetts Ave,LEE ST,"872 Massachusetts Ave Cambridge, MA",42.367621,-71.107586,"(42.367621, -71.107586)",Massach_Ave_25
+2001,25663,03/01/2011 09:45:00 AM,Monday,Auto,Bicycle,2469,Massachusetts Ave,,"2469 Massachusetts Ave Cambridge, MA",42.369202,-71.110689,"(42.369202, -71.110689)",Dana_St_1
+2002,25664,03/01/2011 11:04:00 AM,Monday,Auto,Bicycle,50,Vassar St,,"50 Vassar St Cambridge, MA",42.361229,-71.09214,"(42.361229, -71.09214)",Vassar_St_5
+2029,25824,03/07/2011 06:04:00 PM,Thursday,Auto,Bicycle,,Massachusetts Ave,Rindge Ave," Massachusetts Ave & Rindge Ave Cambridge, MA",42.392615,-71.124874,"(42.392615, -71.124874)",Massach_Ave_86
+2075,25745,03/19/2011 03:30:00 PM,Saturday,Auto,Bicycle,1559,Massachusetts Ave,,"1559 Massachusetts Ave Cambridge, MA",42.369202,-71.110689,"(42.369202, -71.110689)",Dana_St_1
+2084,25751,03/22/2011 12:30:00 PM,Tuesday,Auto,Bicycle,,Concord Ave,Walden St," Concord Ave & Walden St Cambridge, MA",42.383833,-71.134089,"(42.383833, -71.134089)",Walden_St_4
+2095,25765,03/25/2011 01:19:00 AM,Friday,Auto,Bicycle,,Massachusetts Ave,Norfolk St," Massachusetts Ave & Norfolk St Cambridge, MA",42.364424,-71.102083,"(42.364424, -71.102083)",Norfolk_St_1
+2096,25766,03/25/2011 09:00:00 AM,Friday,Auto,Bicycle,,ELIOT ST,Bennett St," ELIOT ST & Bennett St Cambridge, MA",42.372316,-71.121861,"(42.372316, -71.121861)",Eliot_St_2
+2104,25796,03/26/2011 12:59:00 PM,Saturday,Auto,Bicycle,,JFK St,ELIOT ST," JFK St & ELIOT ST Cambridge, MA",42.371416,-71.121105,"(42.371416, -71.121105)",JFK_St_2
+2137,25808,04/03/2011 03:10:00 PM,Sunday,Auto,Bicycle,,MOUNT AUBURN ST,Athens St," MOUNT AUBURN ST & Athens St Cambridge, MA",42.370745,-71.115182,"(42.370745, -71.115182)",Mt-A_St_4
+2138,25809,04/04/2011 06:59:00 AM,Monday,Auto,Bicycle,,Cambridge St,ROBERTS RD," Cambridge St & ROBERTS RD Cambridge, MA",42.37476,-71.108824,"(42.37476, -71.108824)",Cambrid_St_42
+2140,25813,04/04/2011 07:11:00 PM,Monday,Auto,Bicycle,,Cambridge St,Tremont St," Cambridge St & Tremont St Cambridge, MA",42.37325,-71.09713,"(42.37325, -71.09713)",Tremont_St_5
+2146,25821,04/07/2011 11:29:00 AM,Thursday,Auto,Bicycle,743,Massachusetts Ave,,"743 Massachusetts Ave Cambridge, MA",42.366462,-71.105186,"(42.366462, -71.105186)",Massach_Ave_20
+2161,25835,04/11/2011 06:24:00 PM,Monday,Auto,Bicycle,,Massachusetts Ave,HANCOCK ST," Massachusetts Ave & HANCOCK ST Cambridge, MA",42.36838,-71.108783,"(42.36838, -71.108783)",Hancock_St_4
+2195,25873,04/19/2011 05:49:00 PM,,Auto,Bicycle,,Putnam Ave,PLEASANT ST," Putnam Ave & PLEASANT ST Cambridge, MA",42.360131,-71.112777,"(42.360131, -71.112777)",Pleasan_St_4
+2200,25879,04/21/2011 08:15:00 AM,,Auto,Bicycle,,Broadway,Ames St," Broadway & Ames St Cambridge, MA",42.363981,-71.087416,"(42.363981, -71.087416)",Broadwa_3
+2217,25906,04/26/2011 09:00:00 AM,Tuesday,Auto,Bicycle,,PROSPECT ST,HARVARD ST," PROSPECT ST & HARVARD ST Cambridge, MA",42.368301,-71.101743,"(42.368301, -71.101743)",Prospec_St_4
+2225,25900,04/29/2011 08:22:00 AM,Tuesday,Auto,Bicycle,625,MOUNT AUBURN ST,,"625 MOUNT AUBURN ST Cambridge, MA",42.375376,-71.147145,"(42.375376, -71.147145)",Mt-A_St_41
+2228,25902,04/30/2011 11:49:00 PM,Wednesday,Auto,Bicycle,204,Hampshire St,,"204 Hampshire St Cambridge, MA",42.373126,-71.100274,"(42.373126, -71.100274)",Hampshi_St_16
+2234,25908,05/02/2011 05:19:00 PM,Monday,Auto,Bicycle,,Broadway,Columbia St," Broadway & Columbia St Cambridge, MA",42.367871,-71.09736,"(42.367871, -71.09736)",Columbi_St_10
+2244,25919,05/05/2011 11:29:00 AM,Thursday,Auto,Bicycle,,Broadway,ELLERY ST," Broadway & ELLERY ST Cambridge, MA",42.372752,-71.109728,"(42.372752, -71.109728)",Ellery_St_5
+2253,25926,05/07/2011 03:59:00 PM,,Auto,Bicycle,,Massachusetts Ave,Waterhouse St," Massachusetts Ave & Waterhouse St Cambridge, MA",42.37787,-71.120647,"(42.37787, -71.120647)",Waterho_St_4
+2262,25933,05/10/2011 04:28:00 PM,Tuesday,Auto,Bicycle,137,MOUNT AUBURN ST,,"137 MOUNT AUBURN ST Cambridge, MA",42.374003,-71.124392,"(42.374003, -71.124392)",Mt-A_St_22
+2263,25934,05/10/2011 06:47:00 PM,Tuesday,Auto,Bicycle,,Broadway,Inman St," Broadway & Inman St Cambridge, MA",42.370072,-71.102933,"(42.370072, -71.102933)",Inman_St_7
+2277,25953,05/13/2011 08:41:00 AM,Friday,Auto,Bicycle,,Massachusetts Ave,HANCOCK ST," Massachusetts Ave & HANCOCK ST Cambridge, MA",42.36838,-71.108783,"(42.36838, -71.108783)",Hancock_St_4
+2286,25962,05/14/2011 09:45:00 PM,Saturday,Auto,Bicycle,,Bishop Allen Dr,ESSEX ST," Bishop Allen Dr & ESSEX ST Cambridge, MA",42.365853,-71.102331,"(42.365853, -71.102331)",Essex_St_3
+2305,25984,05/20/2011 03:33:00 PM,Friday,Auto,Bicycle,42,Vassar St,,"42 Vassar St Cambridge, MA",42.361316,-71.092383,"(42.361316, -71.092383)",Vassar_St_5
+2307,25980,05/21/2011 04:44:00 PM,Saturday,Auto,Bicycle,,MOUNT AUBURN ST,HAWTHORNE ST," MOUNT AUBURN ST & HAWTHORNE ST Cambridge, MA",42.386721,-71.14101,"(42.386721, -71.14101)",Concord_Ave_21
+2310,25991,05/21/2011 03:59:00 PM,Monday,Auto,Bicycle,,MOUNT AUBURN ST,Coolidge Ave," MOUNT AUBURN ST & Coolidge Ave Cambridge, MA",42.37494,-71.139721,"(42.37494, -71.139721)",Mt-A_St_35
+2326,25998,05/26/2011 10:09:00 AM,Thursday,Auto,Bicycle,,ELIOT ST,JFK St," ELIOT ST & JFK St Cambridge, MA",42.371416,-71.121105,"(42.371416, -71.121105)",JFK_St_2
+2342,26011,05/28/2011 11:03:00 AM,Saturday,Auto,Bicycle,221,Hampshire St,,"221 Hampshire St Cambridge, MA",42.373441,-71.100317,"(42.373441, -71.100317)",Hampshi_St_16
+2347,26020,05/30/2011 05:06:00 PM,Monday,Auto,Bicycle,359,Rindge Ave,,"359 Rindge Ave Cambridge, MA",42.394532,-71.13713,"(42.394532, -71.13713)",Rindge_Ave_17
+2349,26017,05/31/2011 05:07:00 PM,Saturday,Auto,Bicycle,,Massachusetts Ave,Village St," Massachusetts Ave & Village St Cambridge, MA",42.361986,-71.097962,"(42.361986, -71.097962)",Village_St_1
+2350,26021,05/31/2011 07:40:00 AM,Tuesday,Auto,Bicycle,,Hampshire St,PROSPECT ST," Hampshire St & PROSPECT ST Cambridge, MA",42.372202,-71.098975,"(42.372202, -71.098975)",Prospec_St_8
+2352,26023,05/31/2011 06:59:00 PM,Tuesday,Auto,Bicycle,250,Brattle St,,"250 Brattle St Cambridge, MA",42.375533,-71.14336,"(42.375533, -71.14336)",Brattle_St_9
+2365,26033,06/03/2011 05:29:00 PM,Friday,Auto,Bicycle,,Vassar St,MAIN ST," Vassar St & MAIN ST Cambridge, MA",42.362709,-71.089933,"(42.362709, -71.089933)",Main_St_7
+2370,26042,06/04/2011 10:30:00 AM,Saturday,Auto,Bicycle,,Massachusetts Ave,Rindge Ave," Massachusetts Ave & Rindge Ave Cambridge, MA",42.392615,-71.124874,"(42.392615, -71.124874)",Massach_Ave_86
+2372,26044,06/04/2011 12:10:00 PM,Saturday,Auto,Bicycle,,Massachusetts Ave,Hadley St," Massachusetts Ave & Hadley St Cambridge, MA",42.391158,-71.122802,"(42.391158, -71.122802)",Hadley_St_1
+2383,26053,06/07/2011 08:35:00 AM,Tuesday,Auto,Bicycle,,Cambridge St,Cardinal Medeiros Ave," Cambridge St & Cardinal Medeiros Ave Cambridge, MA",42.372123,-71.088456,"(42.372123, -71.088456)",Cambrid_St_13
+2384,26054,06/07/2011 09:30:00 AM,Tuesday,Truck,Bicycle,,PROSPECT ST,GARDNER RD," PROSPECT ST & GARDNER RD Cambridge, MA",42.370894,-71.099902,"(42.370894, -71.099902)",Prospec_St_7
+2386,26087,06/13/2011 07:50:00 AM,Monday,Taxi,Bicycle,359,Broadway,,"359 Broadway Cambridge, MA",42.370608,-71.103869,"(42.370608, -71.103869)",Broadwa_25
+2387,26058,06/07/2011 05:25:00 PM,Tuesday,Auto,Bicycle,,Bishop Allen Dr,Columbia St," Bishop Allen Dr & Columbia St Cambridge, MA",42.364154,-71.099474,"(42.364154, -71.099474)",Columbi_St_2
+2388,26059,06/07/2011 05:29:00 PM,Sunday,Auto,Bicycle,,Brattle St,FRESH POND PKY," Brattle St & FRESH POND PKY Cambridge, MA",42.376154,-71.140758,"(42.376154, -71.140758)",Brattle_St_16
+2390,26062,06/07/2011 05:29:00 PM,Tuesday,Auto,Bicycle,,Massachusetts Ave,Blake St," Massachusetts Ave & Blake St Cambridge, MA",42.390918,-71.122259,"(42.390918, -71.122259)",Massach_Ave_81
+2391,26060,06/08/2011 07:54:00 AM,Wednesday,Auto,Bicycle,,Broadway,FAYETTE ST," Broadway & FAYETTE ST Cambridge, MA",42.370786,-71.104741,"(42.370786, -71.104741)",Fayette_St_1
+2394,26068,06/08/2011 02:46:00 PM,Wednesday,Auto,Bicycle,93,Rindge Ave,,"93 Rindge Ave Cambridge, MA",42.392954,-71.128563,"(42.392954, -71.128563)",Rindge_Ave_6
+2425,26095,06/14/2011 12:49:00 PM,Tuesday,Auto,Bicycle,,Columbia St,Cambridge St," Columbia St & Cambridge St Cambridge, MA",42.372912,-71.094512,"(42.372912, -71.094512)",Cambrid_St_21
+2427,26097,06/15/2011 04:12:00 PM,Wednesday,Bicycle,Parked Vehicle,,Broadway,Antrim St," Broadway & Antrim St Cambridge, MA",42.370399,-71.103764,"(42.370399, -71.103764)",Antrim_St_1
+2436,26106,06/17/2011 12:00:00 AM,Friday,Auto,Bicycle,1692,Massachusetts Ave,,"1692 Massachusetts Ave Cambridge, MA",42.382829,-71.119857,"(42.382829, -71.119857)",Massach_Ave_58
+2437,26107,06/17/2011 09:11:00 AM,Friday,Auto,Bicycle,,MAIN ST,Windsor St," MAIN ST & Windsor St Cambridge, MA",42.363207,-71.0967,"(42.363207, -71.0967)",Main_St_11
+2454,26121,06/21/2011 07:18:00 PM,Tuesday,Auto,Bicycle,1957,Massachusetts Ave,Allen St,"1957 Massachusetts Ave Cambridge, MA",42.389902,-71.120264,"(42.389902, -71.120264)",Allen_St_1
+2458,26126,06/22/2011 06:58:00 PM,Wednesday,Bicycle,Auto,,PROSPECT ST,Broadway," PROSPECT ST & Broadway Cambridge, MA",42.369317,-71.101021,"(42.369317, -71.101021)",Prospec_St_5
+2461,26129,06/23/2011 08:00:00 AM,Thursday,Auto,Bicycle,,Windsor St,Massachusetts Ave," Windsor St & Massachusetts Ave Cambridge, MA",42.361389,-71.096953,"(42.361389, -71.096953)",Windsor_St_1
+2471,26141,06/25/2011 07:30:00 AM,Saturday,Auto,Bicycle,,Brattle St,PALMER ST," Brattle St & PALMER ST Cambridge, MA",42.373371,-71.119913,"(42.373371, -71.119913)",Brattle_St_3
+2485,26153,06/27/2011 11:52:00 AM,Monday,Truck,Bicycle,,Massachusetts Ave,ESSEX ST," Massachusetts Ave & ESSEX ST Cambridge, MA",42.36508,-71.10318,"(42.36508, -71.10318)",Essex_St_1
+2489,26157,06/27/2011 12:00:00 PM,Monday,Truck,Bicycle,,GARDEN ST,MASON ST," GARDEN ST & MASON ST Cambridge, MA",42.376564,-71.122185,"(42.376564, -71.122185)",Garden_St_4
+2498,26168,07/01/2011 04:40:00 PM,,Auto,Bicycle,,ELLERY ST,Broadway," ELLERY ST & Broadway Cambridge, MA",42.372752,-71.109728,"(42.372752, -71.109728)",Ellery_St_5
+2503,26165,07/02/2011 03:59:00 PM,,Auto,Bicycle,,MAIN ST,Windsor St," MAIN ST & Windsor St Cambridge, MA",42.363207,-71.0967,"(42.363207, -71.0967)",Main_St_11
+2524,26191,07/11/2011 11:19:00 AM,,Auto,Bicycle,468,Broadway,,"468 Broadway Cambridge, MA",42.373951,-71.113066,"(42.373951, -71.113066)",Broadwa_42
+2528,26195,07/11/2011 08:35:00 AM,,Auto,Bicycle,,HURON AVE,PARK AVE," HURON AVE & PARK AVE Cambridge, MA",42.378904,-71.14834,"(42.378904, -71.14834)",Huron_Ave_1
+2530,26197,07/12/2011 08:00:00 AM,Tuesday,Auto,Bicycle,,Cambridge St,Ellsworth Ave," Cambridge St & Ellsworth Ave Cambridge, MA",42.374407,-71.106082,"(42.374407, -71.106082)",Cambrid_St_38
+2531,26198,07/12/2011 08:23:00 AM,Tuesday,Auto,Bicycle,358,Broadway,,"358 Broadway Cambridge, MA",42.370367,-71.104168,"(42.370367, -71.104168)",Broadwa_25
+2534,26201,07/13/2011 07:30:00 PM,Wednesday,Bicycle,Parked Vehicle,2143,Massachusetts Ave,,"2143 Massachusetts Ave Cambridge, MA",42.392356,-71.124267,"(42.392356, -71.124267)",Massach_Ave_85
+2542,26209,07/14/2011 05:36:00 PM,Thursday,Auto,Bicycle,,Massachusetts Ave,FOREST ST," Massachusetts Ave & FOREST ST Cambridge, MA",42.38538,-71.119336,"(42.38538, -71.119336)",Forest_St_4
+2559,26234,07/18/2011 08:52:00 PM,Monday,Auto,Bicycle,,Massachusetts Ave,Vassar St," Massachusetts Ave & Vassar St Cambridge, MA",42.360154,-71.094882,"(42.360154, -71.094882)",Vassar_St_5
+2562,26238,07/19/2011 06:21:00 PM,Tuesday,Auto,Bicycle,629,Massachusetts Ave,,"629 Massachusetts Ave Cambridge, MA",42.365287,-71.103394,"(42.365287, -71.103394)",Massach_Ave_18
+2567,26242,07/21/2011 12:00:00 AM,Thursday,Auto,Bicycle,,Massachusetts Ave,Rindge Ave," Massachusetts Ave & Rindge Ave Cambridge, MA",42.392615,-71.124874,"(42.392615, -71.124874)",Massach_Ave_86
+2573,26251,07/22/2011 11:01:00 AM,Friday,Auto,Bicycle,,Hampshire St,PROSPECT ST," Hampshire St & PROSPECT ST Cambridge, MA",42.372202,-71.098975,"(42.372202, -71.098975)",Prospec_St_8
+2579,26255,07/23/2011 02:49:00 PM,Saturday,Auto,Bicycle,,GARDEN ST,Walden St," GARDEN ST & Walden St Cambridge, MA",42.385523,-71.132217,"(42.385523, -71.132217)",Walden_St_7
+2588,26264,07/26/2011 11:29:00 PM,Tuesday,Auto,Bicycle,,Massachusetts Ave,Hadley St," Massachusetts Ave & Hadley St Cambridge, MA",42.391158,-71.122802,"(42.391158, -71.122802)",Hadley_St_1
+2598,26273,07/28/2011 08:19:00 AM,Thursday,Auto,Bicycle,,Broadway,Hampshire St," Broadway & Hampshire St Cambridge, MA",42.365435,-71.091112,"(42.365435, -71.091112)",Broadwa_6
+2604,26300,07/29/2011 09:31:00 PM,Friday,Auto,Bicycle,524,Franklin St,,"524 Franklin St Cambridge, MA",42.367759,-71.111376,"(42.367759, -71.111376)",Frankli_St_14
+2609,26286,07/30/2011 02:00:00 AM,Saturday,Taxi,Bicycle,,Massachusetts Ave,Bow St," Massachusetts Ave & Bow St Cambridge, MA",42.372211,-71.115587,"(42.372211, -71.115587)",Massach_Ave_36A
+2610,26287,07/30/2011 06:59:00 PM,Saturday,Auto,Bicycle,,Landsdowne St,Massachusetts Ave," Landsdowne St & Massachusetts Ave Cambridge, MA",42.361746,-71.097556,"(42.361746, -71.097556)",Massach_Ave_6
+2611,26288,07/30/2011 09:00:00 PM,Saturday,Auto,Bicycle,524,Franklin St,,"524 Franklin St Cambridge, MA",42.367759,-71.111376,"(42.367759, -71.111376)",Frankli_St_14
+2620,26294,08/03/2011 08:26:00 AM,Wednesday,Auto,Bicycle,,Massachusetts Ave,Cedar St," Massachusetts Ave & Cedar St Cambridge, MA",42.397973,-71.130897,"(42.397973, -71.130897)",Massach_Ave_101
+2621,26295,08/03/2011 09:55:00 AM,Wednesday,Auto,Bicycle,,Brattle St,HAWTHORNE ST," Brattle St & HAWTHORNE ST Cambridge, MA",42.376233,-71.125649,"(42.376233, -71.125649)",Brattle_St_13
+2625,26302,08/04/2011 04:05:00 PM,Thursday,Bicycle,Pedestrian,183,PROSPECT ST,,"183 PROSPECT ST Cambridge, MA",42.36992,-71.100806,"(42.36992, -71.100806)",Prospec_St_5
+2627,26304,08/04/2011 05:32:00 PM,Tuesday,Auto,Bicycle,,Broadway,Windsor St," Broadway & Windsor St Cambridge, MA",42.367107,-71.095416,"(42.367107, -71.095416)",Windsor_St_8
+2641,26318,08/07/2011 03:20:00 PM,Sunday,Auto,Bicycle,20,OXFORD AVE,,"20 OXFORD AVE Cambridge, MA",42.376466,-71.156494,"(42.376466, -71.156494)",Oxford_Ave_1
+2651,26326,08/09/2011 04:05:00 PM,Tuesday,Auto,Bicycle,,Hampshire St,ELM ST," Hampshire St & ELM ST Cambridge, MA",42.37048,-71.096879,"(42.37048, -71.096879)",Elm_St_6
+2661,26335,08/11/2011 09:59:00 AM,Thursday,Auto,Bicycle,,Cambridge St,Windsor St," Cambridge St & Windsor St Cambridge, MA",42.37275,-71.093288,"(42.37275, -71.093288)",Cambrid_St_20
+2665,26339,08/11/2011 07:44:00 AM,Thursday,Auto,Bicycle,,Massachusetts Ave,Blake St," Massachusetts Ave & Blake St Cambridge, MA",42.390918,-71.122259,"(42.390918, -71.122259)",Massach_Ave_81
+2668,26341,08/12/2011 09:40:00 AM,Friday,Truck,Bicycle,,Franklin St,Western Ave," Franklin St & Western Ave Cambridge, MA",42.365143,-71.106206,"(42.365143, -71.106206)",Western_Ave_13
+2670,26343,08/12/2011 04:37:00 PM,Friday,Auto,Bicycle,193,Hampshire St,Cambridge St,"193 Hampshire St Cambridge, MA",42.372944,-71.099708,"(42.372944, -71.099708)",Hampshi_Ct_1
+2672,26344,08/13/2011 06:40:00 PM,Friday,Auto,Bicycle,1933,Massachusetts Ave,,"1933 Massachusetts Ave Cambridge, MA",42.38961,-71.11996,"(42.38961, -71.11996)",Davenpo_St_1
+2673,26345,08/13/2011 06:59:00 PM,Saturday,Auto,Bicycle,,NORRIS ST,Massachusetts Ave," NORRIS ST & Massachusetts Ave Cambridge, MA",42.39603,-71.128707,"(42.39603, -71.128707)",Massach_Ave_96
+2686,26358,08/16/2011 12:59:00 PM,Tuesday,Auto,Bicycle,,Hampshire St,PROSPECT ST," Hampshire St & PROSPECT ST Cambridge, MA",42.372202,-71.098975,"(42.372202, -71.098975)",Prospec_St_8
+2689,26366,08/18/2011 03:45:00 PM,Thursday,Auto,Bicycle,1809,Massachusetts Ave,,"1809 Massachusetts Ave Cambridge, MA",42.369202,-71.110689,"(42.369202, -71.110689)",Dana_St_1
+2697,26375,08/19/2011 07:43:00 PM,Friday,Auto,Bicycle,,Massachusetts Ave,Blake St," Massachusetts Ave & Blake St Cambridge, MA",42.390918,-71.122259,"(42.390918, -71.122259)",Massach_Ave_81
+2700,26395,08/19/2011 12:00:00 PM,Friday,Auto,Bicycle,,Hampshire St,Inman St," Hampshire St & Inman St Cambridge, MA",42.373475,-71.100531,"(42.373475, -71.100531)",Hampshi_St_16
+2705,26380,08/22/2011 01:44:00 PM,Monday,Auto,Bicycle,,Amherst St,Massachusetts Ave," Amherst St & Massachusetts Ave Cambridge, MA",42.358188,-71.093089,"(42.358188, -71.093089)",Amherst_St_1
+2709,26385,08/23/2011 08:03:00 AM,Tuesday,Auto,Bicycle,,MEACHAM RD,Massachusetts Ave," MEACHAM RD & Massachusetts Ave Cambridge, MA",42.39508,-71.12764,"(42.39508, -71.12764)",Meacham_Rd_1
+2712,26388,08/23/2011 05:01:00 PM,Tuesday,Auto,Bicycle,92,Brattle St,,"92 Brattle St Cambridge, MA",42.37588,-71.125121,"(42.37588, -71.125121)",Brattle_St_13
+2716,26392,08/24/2011 01:09:00 PM,Wednesday,Auto,Bicycle,,Amherst St,Ames St," Amherst St & Ames St Cambridge, MA",42.360009,-71.087643,"(42.360009, -71.087643)",Amherst_St_2
+2721,26398,08/25/2011 01:32:00 PM,Thursday,Auto,Bicycle,,DOVER ST,Massachusetts Ave," DOVER ST & Massachusetts Ave Cambridge, MA",42.394524,-71.127012,"(42.394524, -71.127012)",Dover_St_1
+2737,26412,08/29/2011 09:00:00 AM,Monday,Auto,Bicycle,,Hampshire St,PROSPECT ST," Hampshire St & PROSPECT ST Cambridge, MA",42.372202,-71.098975,"(42.372202, -71.098975)",Prospec_St_8
+2751,26426,08/31/2011 10:21:00 AM,Wednesday,Auto,Bicycle,,Cambridge St,Windsor St," Cambridge St & Windsor St Cambridge, MA",42.37275,-71.093288,"(42.37275, -71.093288)",Cambrid_St_20
+2753,26428,08/31/2011 03:10:00 PM,Wednesday,Auto,Bicycle,1039,Massachusetts Ave,Trowbridge St,"1039 Massachusetts Ave Cambridge, MA",42.36993,-71.112459,"(42.36993, -71.112459)",Massach_Ave_31
+2769,28046,09/03/2011 12:31:00 PM,Monday,Bicycle,Parked Vehicle,,Brattle St,HAWTHORNE ST," Brattle St & HAWTHORNE ST Cambridge, MA",42.376233,-71.125649,"(42.376233, -71.125649)",Brattle_St_13
+2776,26448,09/06/2011 06:39:00 PM,Tuesday,Auto,Bicycle,,GARDEN ST,Walker St," GARDEN ST & Walker St Cambridge, MA",42.379657,-71.124694,"(42.379657, -71.124694)",Walker_St_1
+2787,26462,09/10/2011 12:50:00 AM,Saturday,Taxi,Bicycle,,Massachusetts Ave,Sidney St," Massachusetts Ave & Sidney St Cambridge, MA",42.36295,-71.09958,"(42.36295, -71.09958)",Massach_Ave_10
+2798,26474,09/14/2011 08:03:00 AM,Wednesday,Auto,Bicycle,,Portland St,Broadway," Portland St & Broadway Cambridge, MA",42.365792,-71.09207,"(42.365792, -71.09207)",Portlan_St_5
+2806,26481,09/14/2011 06:43:00 PM,Wednesday,Auto,Bicycle,287,PROSPECT ST,,"287 PROSPECT ST Cambridge, MA",42.37251,-71.099131,"(42.37251, -71.099131)",Hampshi_St_14
+2807,26483,09/14/2011 04:30:00 PM,Wednesday,Auto,Bicycle,,Washington Ave,Windsor St," Washington Ave & Windsor St Cambridge, MA",42.364863,-71.096266,"(42.364863, -71.096266)",Washing_St_1
+2813,26487,09/15/2011 04:30:00 PM,Thursday,Auto,Bicycle,,Massachusetts Ave,Cedar St," Massachusetts Ave & Cedar St Cambridge, MA",42.397973,-71.130897,"(42.397973, -71.130897)",Massach_Ave_101
+2814,26488,09/15/2011 08:35:00 PM,Thursday,Auto,Bicycle,,HARVARD ST,Columbia St," HARVARD ST & Columbia St Cambridge, MA",42.366993,-71.097861,"(42.366993, -71.097861)",Columbi_St_9
+2816,26490,09/15/2011 02:23:00 PM,Thursday,Auto,Bicycle,,Cambridge St,Ellsworth Ave," Cambridge St & Ellsworth Ave Cambridge, MA",42.374407,-71.106082,"(42.374407, -71.106082)",Cambrid_St_38
+2821,26497,09/16/2011 06:14:00 PM,Friday,Auto,Bicycle,,Massachusetts Ave,Albany St," Massachusetts Ave & Albany St Cambridge, MA",42.360828,-71.096012,"(42.360828, -71.096012)",Albany_St_4
+2822,26498,09/17/2011 02:49:00 AM,Saturday,Taxi,Bicycle,,Massachusetts Ave,MEMORIAL DR," Massachusetts Ave & MEMORIAL DR Cambridge, MA",42.357364,-71.092567,"(42.357364, -71.092567)",Memoria_Dr_17
+2840,26516,09/20/2011 02:12:00 PM,Tuesday,Auto,Bicycle,,EIGHTH ST,Otis St," EIGHTH ST & Otis St Cambridge, MA",42.371125,-71.086287,"(42.371125, -71.086287)",Eighth_St_3
+2871,26551,09/28/2011 09:05:00 AM,Wednesday,Auto,Bicycle,,Cambridge St,ELM ST," Cambridge St & ELM ST Cambridge, MA",42.373017,-71.095346,"(42.373017, -71.095346)",Elm_St_8
+2880,26559,09/30/2011 07:02:00 PM,Friday,Auto,Bicycle,850,Massachusetts Ave,,"850 Massachusetts Ave Cambridge, MA",42.367101,-71.107419,"(42.367101, -71.107419)",Green_St_11
+2889,26566,10/02/2011 11:00:00 PM,Sunday,Auto,Bicycle,32,Vassar St,,"32 Vassar St Cambridge, MA",42.361735,-71.091339,"(42.361735, -71.091339)",Vassar_St_5
+2891,26573,10/02/2011 12:59:00 PM,Sunday,Auto,Bicycle,303,Broadway,Tremont St,"303 Broadway Cambridge, MA",42.368945,-71.099721,"(42.368945, -71.099721)",Broadwa_18
+2901,26580,10/04/2011 08:06:00 PM,Tuesday,Auto,Bicycle,,Hampshire St,ELM ST," Hampshire St & ELM ST Cambridge, MA",42.37048,-71.096879,"(42.37048, -71.096879)",Elm_St_6
+2908,26586,10/06/2011 07:19:00 AM,Thursday,Auto,Bicycle,,Broadway,Windsor St," Broadway & Windsor St Cambridge, MA",42.367107,-71.095416,"(42.367107, -71.095416)",Windsor_St_8
+2913,26592,10/07/2011 09:40:00 AM,Friday,Bicycle,Pedestrian,583,MOUNT AUBURN ST,,"583 MOUNT AUBURN ST Cambridge, MA",42.375426,-71.145214,"(42.375426, -71.145214)",Brattle_St_9
+2917,26596,10/07/2011 04:43:00 PM,Friday,Auto,Bicycle,,Massachusetts Ave,NEWPORT RD," Massachusetts Ave & NEWPORT RD Cambridge, MA",42.385839,-71.119287,"(42.385839, -71.119287)",Massach_Ave_67
+2927,26606,10/11/2011 09:00:00 AM,Tuesday,Auto,Bicycle,738,Cambridge St,,"738 Cambridge St Cambridge, MA",42.372115,-71.089167,"(42.372115, -71.089167)",Cambrid_St_15
+2928,26607,10/11/2011 05:48:00 PM,Tuesday,Taxi,Bicycle,,Cambridge St,HARDING ST," Cambridge St & HARDING ST Cambridge, MA",42.372409,-71.090656,"(42.372409, -71.090656)",Cambrid_St_16
+2932,26610,10/12/2011 07:32:00 PM,Wednesday,Van,Bicycle,1555,Massachusetts Ave,,"1555 Massachusetts Ave Cambridge, MA",42.377893,-71.119878,"(42.377893, -71.119878)",Massach_Ave_49
+2948,26627,10/14/2011 08:26:00 AM,Friday,Auto,Bicycle,1000,Cambridge St,,"1000 Cambridge St Cambridge, MA",42.372653,-71.093451,"(42.372653, -71.093451)",Windsor_St_16
+2949,26628,10/14/2011 08:29:00 AM,Friday,Auto,Bicycle,,MOUNT AUBURN ST,Aberdeen Way," MOUNT AUBURN ST & Aberdeen Way Cambridge, MA",42.375274,-71.145841,"(42.375274, -71.145841)",Aberdee_Ave_1
+2953,26639,10/14/2011 07:44:00 AM,Friday,Auto,Bicycle,,Binney St,Sixth St," Binney St & Sixth St Cambridge, MA",42.366151,-71.086075,"(42.366151, -71.086075)",Binney_St_5
+2959,26631,10/15/2011 12:00:00 PM,Saturday,Auto,Bicycle,,PLYMPTON ST,MOUNT AUBURN ST," PLYMPTON ST & MOUNT AUBURN ST Cambridge, MA",42.371412,-71.117053,"(42.371412, -71.117053)",Plympto_St_4
+2970,26650,10/18/2011 07:50:00 AM,Wednesday,Auto,Bicycle,,Concord Ave,HURON AVE," Concord Ave & HURON AVE Cambridge, MA",42.382404,-71.130996,"(42.382404, -71.130996)",Huron_Ave_27
+2973,26655,10/18/2011 10:15:00 PM,Tuesday,Auto,Bicycle,,Massachusetts Ave,Albany St," Massachusetts Ave & Albany St Cambridge, MA",42.360828,-71.096012,"(42.360828, -71.096012)",Albany_St_4
+2980,26662,10/20/2011 08:39:00 AM,Thursday,Auto,Bicycle,,Massachusetts Ave,Rice St," Massachusetts Ave & Rice St Cambridge, MA",42.395333,-71.127921,"(42.395333, -71.127921)",Massach_Ave_95
+2987,26669,10/20/2011 07:59:00 PM,Thursday,Auto,Bicycle,1000,Cambridge St,,"1000 Cambridge St Cambridge, MA",42.372653,-71.093451,"(42.372653, -71.093451)",Windsor_St_16
+2994,26682,10/21/2011 07:50:00 PM,Friday,Auto,Bicycle,,Cambridge St,Warren Pl," Cambridge St & Warren Pl Cambridge, MA",42.372102,-71.088276,"(42.372102, -71.088276)",Cambrid_St_12
+2996,27184,10/21/2011 03:59:00 PM,,Truck,Bicycle,,MAIN ST,Windsor St," MAIN ST & Windsor St Cambridge, MA",42.363207,-71.0967,"(42.363207, -71.0967)",Main_St_11
+3009,26688,10/24/2011 02:49:00 PM,Monday,Auto,Bicycle,,Broadway,ELLERY ST," Broadway & ELLERY ST Cambridge, MA",42.372752,-71.109728,"(42.372752, -71.109728)",Ellery_St_5
+3012,26692,10/25/2011 05:39:00 PM,Tuesday,Auto,Bicycle,204,Columbia St,,"204 Columbia St Cambridge, MA",42.368239,-71.097026,"(42.368239, -71.097026)",Columbi_St_10
+3034,26718,10/28/2011 08:45:00 AM,Friday,Taxi,Bicycle,,Massachusetts Ave,Rice St," Massachusetts Ave & Rice St Cambridge, MA",42.395333,-71.127921,"(42.395333, -71.127921)",Massach_Ave_95
+3047,26729,10/31/2011 02:49:00 PM,Monday,Auto,Bicycle,,Brookline St,Waverly St," Brookline St & Waverly St Cambridge, MA",42.355175,-71.110278,"(42.355175, -71.110278)",Brookli_St_4
+3070,26751,11/04/2011 09:30:00 AM,Friday,Auto,Bicycle,,Putnam Ave,River St," Putnam Ave & River St Cambridge, MA",42.362257,-71.113547,"(42.362257, -71.113547)",Putnam_Ave_15
+3086,26767,11/08/2011 12:07:00 PM,Tuesday,Auto,Bicycle,,Massachusetts Ave,EVERETT ST," Massachusetts Ave & EVERETT ST Cambridge, MA",42.380006,-71.119917,"(42.380006, -71.119917)",Massach_Ave_53
+3104,26777,11/11/2011 10:38:00 AM,Friday,Taxi,Bicycle,,Broadway,Columbia St," Broadway & Columbia St Cambridge, MA",42.367871,-71.09736,"(42.367871, -71.09736)",Columbi_St_10
+3114,26790,11/12/2011 09:45:00 PM,Saturday,Auto,Bicycle,,Massachusetts Ave,PLEASANT ST," Massachusetts Ave & PLEASANT ST Cambridge, MA",42.366408,-71.105392,"(42.366408, -71.105392)",Massach_Ave_20
+3126,26803,11/15/2011 08:19:00 AM,Tuesday,Truck,Bicycle,,Gore St,LAMBERT ST," Gore St & LAMBERT ST Cambridge, MA",42.373046,-71.086493,"(42.373046, -71.086493)",Gore_St_10
+3129,26813,11/15/2011 05:06:00 PM,Wednesday,Auto,Bicycle,320,Broadway,,"320 Broadway Cambridge, MA",42.36918,-71.101398,"(42.36918, -71.101398)",Prospec_St_4
+3141,26818,11/17/2011 08:00:00 AM,Thursday,Auto,Bicycle,232,Broadway,,"232 Broadway Cambridge, MA",42.366661,-71.094596,"(42.366661, -71.094596)",Broadwa_11
+3148,26829,11/18/2011 04:28:00 PM,Friday,Auto,Bicycle,,ORCHARD ST,Blake St," ORCHARD ST & Blake St Cambridge, MA",42.391837,-71.121002,"(42.391837, -71.121002)",Orchard_St_3
+3154,26834,11/19/2011 08:29:00 PM,Saturday,Auto,Bicycle,350,Third St,Kendall Sq,"350 Third St Cambridge, MA",42.363675,-71.083353,"(42.363675, -71.083353)",Third_St_2
+3157,26836,11/20/2011 10:44:00 AM,Sunday,Auto,Bicycle,,HARVARD ST,PROSPECT ST," HARVARD ST & PROSPECT ST Cambridge, MA",42.368301,-71.101743,"(42.368301, -71.101743)",Prospec_St_4
+3169,26401,11/25/2011 06:40:00 PM,Thursday,Auto,Bicycle,,Massachusetts Ave,Dana Pl," Massachusetts Ave & Dana Pl Cambridge, MA",42.369169,-71.110776,"(42.369169, -71.110776)",Massach_Ave_30
+3174,26851,11/26/2011 04:34:00 PM,Saturday,Taxi,Bicycle,,Massachusetts Ave,STATE ST," Massachusetts Ave & STATE ST Cambridge, MA",42.362647,-71.099069,"(42.362647, -71.099069)",State_St_4
+3190,26870,11/30/2011 01:05:00 PM,Wednesday,Auto,Bicycle,,Ames St,Amherst St," Ames St & Amherst St Cambridge, MA",42.360009,-71.087643,"(42.360009, -71.087643)",Amherst_St_2
+3191,26871,11/30/2011 02:25:00 PM,Wednesday,Auto,Bicycle,,River St,Blackstone St," River St & Blackstone St Cambridge, MA",42.362009,-71.114307,"(42.362009, -71.114307)",River_St_2
+3192,26872,11/30/2011 04:12:00 PM,Wednesday,Auto,Bicycle,,Broadway,Galileo Galilei Way," Broadway & Galileo Galilei Way Cambridge, MA",42.364812,-71.089386,"(42.364812, -71.089386)",Galilei_Way_2
+3195,26875,11/30/2011 06:59:00 PM,Wednesday,Taxi,Bicycle,,Brookline St,Putnam Ave," Brookline St & Putnam Ave Cambridge, MA",42.357369,-71.108023,"(42.357369, -71.108023)",Brookli_St_7
+3244,26920,12/13/2011 01:44:00 AM,Tuesday,Auto,Bicycle,,Massachusetts Ave,Vassar St," Massachusetts Ave & Vassar St Cambridge, MA",42.360154,-71.094882,"(42.360154, -71.094882)",Vassar_St_5
+3254,26929,12/14/2011 07:34:00 PM,Wednesday,Auto,Bicycle,1430,Massachusetts Ave,Church St,"1430 Massachusetts Ave Cambridge, MA",42.374014,-71.119122,"(42.374014, -71.119122)",Massach_Ave_43
+3266,26958,12/16/2011 04:24:00 PM,,Auto,Bicycle,,MAIN ST,Vassar St," MAIN ST & Vassar St Cambridge, MA",42.362709,-71.089933,"(42.362709, -71.089933)",Main_St_7
+3306,26982,12/27/2011 10:19:00 AM,Tuesday,Auto,Bicycle,,Cambridge St,Trowbridge St," Cambridge St & Trowbridge St Cambridge, MA",42.374918,-71.11006,"(42.374918, -71.11006)",Cambrid_St_43
+3310,26987,12/28/2011 02:19:00 PM,Wednesday,Auto,Bicycle,240,Albany St,,"240 Albany St Cambridge, MA",42.358382,-71.100964,"(42.358382, -71.100964)",Albany_St_1
+3315,26992,12/30/2011 10:19:00 AM,Friday,Auto,Bicycle,810,MAIN ST,,"810 MAIN ST Cambridge, MA",42.363147,-71.097329,"(42.363147, -71.097329)",Main_St_12
+3327,30225,01/03/2012 09:00:00 AM,Tuesday,Auto,Bicycle,,Cambridge St,Willow St," Cambridge St & Willow St Cambridge, MA",42.37256,-71.091821,"(42.37256, -71.091821)",Cambrid_St_18
+3328,30226,01/03/2012 03:00:00 PM,Tuesday,Auto,Bicycle,,Massachusetts Ave,Norfolk St," Massachusetts Ave & Norfolk St Cambridge, MA",42.364424,-71.102083,"(42.364424, -71.102083)",Norfolk_St_1
+3332,30231,01/05/2012 05:39:00 PM,Thursday,Auto,Bicycle,,Hampshire St,Tremont St," Hampshire St & Tremont St Cambridge, MA",42.371501,-71.098121,"(42.371501, -71.098121)",Tremont_St_3
+3339,30238,01/06/2012 05:22:00 PM,Friday,Auto,Bicycle,,Massachusetts Ave,Windsor St," Massachusetts Ave & Windsor St Cambridge, MA",42.361389,-71.096953,"(42.361389, -71.096953)",Windsor_St_1
+3343,30242,01/09/2012 09:30:00 AM,Monday,Auto,Bicycle,,Massachusetts Ave,Landsdowne St," Massachusetts Ave & Landsdowne St Cambridge, MA",42.361746,-71.097556,"(42.361746, -71.097556)",Massach_Ave_6
+3353,30252,01/11/2012 07:18:00 AM,Wednesday,Auto,Bicycle,1688,Massachusetts Ave,,"1688 Massachusetts Ave Cambridge, MA",42.382726,-71.11981,"(42.382726, -71.11981)",Massach_Ave_58
+3372,30270,01/14/2012 03:14:00 AM,Saturday,Auto,Bicycle,,Massachusetts Ave,EXETER PARK," Massachusetts Ave & EXETER PARK Cambridge, MA",42.384803,-71.119405,"(42.384803, -71.119405)",Massach_Ave_62
+3409,30303,01/22/2012 02:30:00 PM,Sunday,Auto,Bicycle,,Cambridge St,SPRINGFIELD ST," Cambridge St & SPRINGFIELD ST Cambridge, MA",42.373689,-71.100529,"(42.373689, -71.100529)",Springf_St_1
+3431,30329,01/27/2012 06:20:00 PM,Friday,Auto,Bicycle,,Walden St,Raymond St," Walden St & Raymond St Cambridge, MA",42.387396,-71.127554,"(42.387396, -71.127554)",Walden_St_12
+3451,30347,02/02/2012 09:04:00 AM,Thursday,Auto,Bicycle,,HURON AVE,RESERVOIR ST," HURON AVE & RESERVOIR ST Cambridge, MA",42.381423,-71.135808,"(42.381423, -71.135808)",Reservo_St_4
+3456,30352,02/02/2012 06:21:00 PM,Thursday,Auto,Bicycle,,Massachusetts Ave,Rice St," Massachusetts Ave & Rice St Cambridge, MA",42.395333,-71.127921,"(42.395333, -71.127921)",Massach_Ave_95
+3460,30355,02/03/2012 01:30:00 PM,Friday,Auto,Bicycle,287,Broadway,,"287 Broadway Cambridge, MA",42.368469,-71.098563,"(42.368469, -71.098563)",Broadwa_17
+3463,30358,02/03/2012 06:17:00 PM,Friday,Auto,Bicycle,,Hampshire St,Bristol St," Hampshire St & Bristol St Cambridge, MA",42.367952,-71.093803,"(42.367952, -71.093803)",Hampshi_St_4
+3466,30364,02/03/2012 02:52:00 PM,Friday,Auto,Bicycle,,Cambridge St,SPRINGFIELD ST," Cambridge St & SPRINGFIELD ST Cambridge, MA",42.373689,-71.100529,"(42.373689, -71.100529)",Springf_St_1
+3469,30361,02/05/2012 03:00:00 PM,Sunday,Auto,Bicycle,,MOUNT AUBURN ST,Brattle St," MOUNT AUBURN ST & Brattle St Cambridge, MA",42.375282,-71.145695,"(42.375282, -71.145695)",Brattle_St_9
+3485,30382,02/09/2012 05:10:00 PM,Thursday,Auto,Bicycle,1975,Massachusetts Ave,,"1975 Massachusetts Ave Cambridge, MA",42.390201,-71.120625,"(42.390201, -71.120625)",Massach_Ave_78
+3514,30411,02/17/2012 03:00:00 PM,Friday,Auto,Bicycle,2274,Massachusetts Ave,,"2274 Massachusetts Ave Cambridge, MA",42.368925,-71.110257,"(42.368925, -71.110257)",Bay_St_3
+3532,30426,02/22/2012 05:49:00 PM,Wednesday,Auto,Bicycle,,Broadway,Amory St," Broadway & Amory St Cambridge, MA",42.369702,-71.102,"(42.369702, -71.102)",Amory_St_1
+3538,30431,02/23/2012 02:00:00 PM,Thursday,Auto,Bicycle,,Western Ave,Putnam Ave," Western Ave & Putnam Ave Cambridge, MA",42.364484,-71.113893,"(42.364484, -71.113893)",Western_Ave_3
+3542,30438,02/23/2012 07:44:00 AM,Thursday,Auto,Bicycle,,DAVENPORT ST,Massachusetts Ave," DAVENPORT ST & Massachusetts Ave Cambridge, MA",42.389419,-71.120032,"(42.389419, -71.120032)",Davenpo_St_1
+3556,30454,02/28/2012 09:14:00 AM,Tuesday,Auto,Bicycle,,Massachusetts Ave,Walden St," Massachusetts Ave & Walden St Cambridge, MA",42.391373,-71.123272,"(42.391373, -71.123272)",Massach_Ave_83
+3561,30459,02/28/2012 06:45:00 PM,Tuesday,Bus (Other),Bicycle,,Broadway,Hampshire St," Broadway & Hampshire St Cambridge, MA",42.365435,-71.091112,"(42.365435, -71.091112)",Broadwa_6
+3567,30453,02/29/2012 09:45:00 PM,Wednesday,Auto,Bicycle,,ELM ST,Broadway," ELM ST & Broadway Cambridge, MA",42.368203,-71.098201,"(42.368203, -71.098201)",Broadwa_16
+3593,30485,03/07/2012 07:57:00 PM,Wednesday,Auto,Bicycle,1,Hampshire St,,"1 Hampshire St Cambridge, MA",42.365232,-71.090065,"(42.365232, -71.090065)",Broadwa_5
+3599,30490,03/08/2012 06:21:00 PM,Thursday,Auto,Bicycle,164,Hampshire St,,"164 Hampshire St Cambridge, MA",42.371792,-71.098651,"(42.371792, -71.098651)",Murdock_St_1
+3606,30494,03/09/2012 01:08:00 PM,Friday,Auto,Bicycle,,SPRINGFIELD ST,Cambridge St," SPRINGFIELD ST & Cambridge St Cambridge, MA",42.373689,-71.100529,"(42.373689, -71.100529)",Springf_St_1
+3607,30495,03/09/2012 12:00:00 AM,Friday,Auto,Bicycle,831,Massachusetts Ave,,"831 Massachusetts Ave Cambridge, MA",42.367211,-71.106461,"(42.367211, -71.106461)",Massach_Ave_23
+3612,30501,03/12/2012 07:59:00 PM,Monday,Auto,Bicycle,,Galileo Galilei Way,Broadway," Galileo Galilei Way & Broadway Cambridge, MA",42.364802,-71.089413,"(42.364802, -71.089413)",Galilei_Way_2
+3638,30527,03/20/2012 10:22:00 PM,Tuesday,Auto,Bicycle,1731,Massachusetts Ave,,"1731 Massachusetts Ave Cambridge, MA",42.384182,-71.119283,"(42.384182, -71.119283)",Massach_Ave_61
+3639,30528,03/20/2012 05:42:00 PM,Tuesday,Auto,Bicycle,125,MOUNT AUBURN ST,,"125 MOUNT AUBURN ST Cambridge, MA",42.373444,-71.122898,"(42.373444, -71.122898)",Mt-A_St_14
+3656,30580,03/23/2012 06:30:00 PM,,Auto,Bicycle,,Massachusetts Ave,Albany St," Massachusetts Ave & Albany St Cambridge, MA",42.360828,-71.096012,"(42.360828, -71.096012)",Albany_St_4
+3665,30550,03/26/2012 03:37:00 PM,Monday,Auto,Bicycle,,FRESH POND PKY,HURON AVE," FRESH POND PKY & HURON AVE Cambridge, MA",42.379976,-71.144533,"(42.379976, -71.144533)",Fresh-P_Pkwy_8
+3671,30555,03/28/2012 08:04:00 AM,Wednesday,Auto,Bicycle,,Massachusetts Ave,Russell St," Massachusetts Ave & Russell St Cambridge, MA",42.391769,-71.12387,"(42.391769, -71.12387)",Russell_St_1
+3677,30564,03/30/2012 03:49:00 PM,Friday,Auto,Bicycle,265,Allston St,MAGAZINE ST,"265 Allston St Cambridge, MA",42.360118,-71.110633,"(42.360118, -71.110633)",Allston_St_7
+3678,30565,03/30/2012 10:02:00 PM,Friday,Auto,Bicycle,1124,Cambridge St,,"1124 Cambridge St Cambridge, MA",42.372999,-71.09592,"(42.372999, -71.09592)",Cambrid_St_23
+3691,30573,04/02/2012 12:20:00 PM,Monday,Auto,Bicycle,,Cambridge St,SUMNER RD," Cambridge St & SUMNER RD Cambridge, MA",42.375266,-71.112729,"(42.375266, -71.112729)",Sumner_Rd_1
+3694,30578,04/03/2012 03:00:00 PM,Tuesday,Auto,Bicycle,,Massachusetts Ave,Vassar St," Massachusetts Ave & Vassar St Cambridge, MA",42.360154,-71.094882,"(42.360154, -71.094882)",Vassar_St_5
+3699,30587,04/04/2012 05:39:00 PM,Wednesday,Auto,Bicycle,243,Broadway,,"243 Broadway Cambridge, MA",42.367278,-71.095586,"(42.367278, -71.095586)",Broadwa_13
+3700,30588,04/04/2012 07:08:00 PM,Wednesday,Auto,Bicycle,,Bishop Allen Dr,Columbia St," Bishop Allen Dr & Columbia St Cambridge, MA",42.364154,-71.099474,"(42.364154, -71.099474)",Columbi_St_2
+3705,30594,04/05/2012 12:15:00 PM,Thursday,Auto,Bicycle,710,MAIN ST,,"710 MAIN ST Cambridge, MA",42.362968,-71.095019,"(42.362968, -71.095019)",Main_St_10
+3709,30598,04/07/2012 12:59:00 AM,Saturday,Bicycle,Parked Vehicle,,Western Ave,Massachusetts Ave," Western Ave & Massachusetts Ave Cambridge, MA",42.365574,-71.103991,"(42.365574, -71.103991)",Prospec_St_1
+3710,30599,04/07/2012 06:56:00 PM,Saturday,Auto,Bicycle,,Alewife Brook Pky,MATIGNON RD," Alewife Brook Pky & MATIGNON RD Cambridge, MA",42.40261,-71.134446,"(42.40261, -71.134446)",Matigno_Rd_2
+3718,30604,04/09/2012 11:04:00 PM,Monday,Auto,Bicycle,,MAIN ST,Portland St," MAIN ST & Portland St Cambridge, MA",42.362974,-71.093634,"(42.362974, -71.093634)",Portlan_St_2
+3726,30612,04/13/2012 12:00:00 PM,,Auto,Bicycle,,Portland St,Hampshire St," Portland St & Hampshire St Cambridge, MA",42.366295,-71.091782,"(42.366295, -71.091782)",Cardina-M_Ave_1
+3731,30616,04/13/2012 09:00:00 AM,,Auto,Bicycle,24,ELIOT ST,,"24 ELIOT ST Cambridge, MA",42.371721,-71.121246,"(42.371721, -71.121246)",Eliot_St_1
+3741,30628,04/19/2012 05:29:00 PM,,Auto,Bicycle,,Gore St,SEVENTH ST," Gore St & SEVENTH ST Cambridge, MA",42.372557,-71.085138,"(42.372557, -71.085138)",Gore_St_8
+3744,30633,04/20/2012 01:27:00 PM,Friday,Auto,Bicycle,1617,Massachusetts Ave,,"1617 Massachusetts Ave Cambridge, MA",42.380355,-71.119452,"(42.380355, -71.119452)",Everett_St_1
+3747,30644,04/20/2012 04:14:00 PM,Thursday,Auto,Bicycle,,Massachusetts Ave,STATE ST," Massachusetts Ave & STATE ST Cambridge, MA",42.362647,-71.099069,"(42.362647, -71.099069)",State_St_4
+3755,30655,04/21/2012 03:56:00 PM,Saturday,Auto,Bicycle,,Broadway,QUINCY ST," Broadway & QUINCY ST Cambridge, MA",42.374832,-71.114477,"(42.374832, -71.114477)",Broadwa_46
+3766,30653,04/24/2012 09:59:00 AM,Tuesday,Auto,Bicycle,332,Broadway,,"332 Broadway Cambridge, MA",42.369444,-71.102336,"(42.369444, -71.102336)",Broadwa_22
+3775,30689,04/26/2012 02:48:00 PM,Thursday,Auto,Bicycle,,MAGAZINE ST,GRANITE ST," MAGAZINE ST & GRANITE ST Cambridge, MA",42.356865,-71.113557,"(42.356865, -71.113557)",Riversi_Rd_1
+3779,30668,04/27/2012 07:12:00 PM,Friday,Auto,Bicycle,,JFK St,MEMORIAL DR," JFK St & MEMORIAL DR Cambridge, MA",42.369792,-71.122448,"(42.369792, -71.122448)",Memoria_Dr_38
+3780,30768,04/27/2012 11:35:00 AM,Friday,Auto,Bicycle,,MAIN ST,Broadway," MAIN ST & Broadway Cambridge, MA",42.362071,-71.082667,"(42.362071, -71.082667)",Main_St_2
+3802,30693,05/03/2012 05:04:00 PM,Thursday,Auto,Bicycle,1414,Cambridge St,,"1414 Cambridge St Cambridge, MA",42.373728,-71.101571,"(42.373728, -71.101571)",Cambrid_St_32
+3813,30229,05/05/2012 07:21:00 AM,Thursday,Auto,Bicycle,98,Hampshire St,,"98 Hampshire St Cambridge, MA",42.368998,-71.095299,"(42.368998, -71.095299)",Hampshi_St_7
+3818,30706,05/05/2012 03:04:00 PM,Saturday,Auto,Bicycle,,Concord Ave,Craigie St," Concord Ave & Craigie St Cambridge, MA",42.379415,-71.125713,"(42.379415, -71.125713)",Concord_Ave_3
+3819,30707,05/06/2012 02:00:00 PM,Sunday,Auto,Bicycle,44,JFK St,MOUNT AUBURN ST,"44 JFK St Cambridge, MA",42.37238,-71.120156,"(42.37238, -71.120156)",JFK_St_4
+3826,30715,05/07/2012 05:00:00 PM,Monday,Auto,Bicycle,,HURON AVE,Appleton St," HURON AVE & Appleton St Cambridge, MA",42.381521,-71.134102,"(42.381521, -71.134102)",Huron_Ave_20
+3836,30723,05/09/2012 10:25:00 AM,Wednesday,Auto,Bicycle,,Portland St,Hampshire St," Portland St & Hampshire St Cambridge, MA",42.366295,-71.091782,"(42.366295, -71.091782)",Cardina-M_Ave_1
+3847,30737,05/10/2012 11:35:00 AM,Thursday,Taxi,Bicycle,16,GARDEN ST,,"16 GARDEN ST Cambridge, MA",42.377301,-71.12322,"(42.377301, -71.12322)",Garden_St_5
+3857,30746,05/14/2012 08:49:00 AM,Monday,Auto,Bicycle,,MOUNT AUBURN ST,Aberdeen Ct," MOUNT AUBURN ST & Aberdeen Ct Cambridge, MA",42.375274,-71.145841,"(42.375274, -71.145841)",Aberdee_Ave_1
+3858,30747,05/14/2012 09:14:00 AM,Monday,Auto,Bicycle,,Cambridge St,Sixth St," Cambridge St & Sixth St Cambridge, MA",42.371655,-71.08479,"(42.371655, -71.08479)",Sixth_St_10
+3859,30749,05/14/2012 12:00:00 PM,Monday,Auto,Bicycle,,Third St,Kendall Sq," Third St & Kendall Sq Cambridge, MA",42.363934,-71.083405,"(42.363934, -71.083405)",Third_St_4
+3868,30756,05/16/2012 08:32:00 AM,Wednesday,Auto,Bicycle,292,Cambridge St,,"292 Cambridge St Cambridge, MA",42.371047,-71.080799,"(42.371047, -71.080799)",Cambrid_St_4
+3870,30758,05/16/2012 02:39:00 PM,Wednesday,Auto,Bicycle,2032,Massachusetts Ave,,"2032 Massachusetts Ave Cambridge, MA",42.390704,-71.122163,"(42.390704, -71.122163)",Massach_Ave_80
+3875,30763,05/17/2012 08:39:00 AM,Thursday,Auto,Bicycle,,Massachusetts Ave,LINNAEAN ST," Massachusetts Ave & LINNAEAN ST Cambridge, MA",42.384872,-71.119394,"(42.384872, -71.119394)",Massach_Ave_64
+3877,30765,05/17/2012 01:16:00 PM,Thursday,Auto,Bicycle,,PLYMPTON ST,MOUNT AUBURN ST," PLYMPTON ST & MOUNT AUBURN ST Cambridge, MA",42.371412,-71.117053,"(42.371412, -71.117053)",Plympto_St_4
+3880,30773,05/18/2012 07:05:00 AM,Friday,Van,Bicycle,1008,Massachusetts Ave,,"1008 Massachusetts Ave Cambridge, MA",42.369244,-71.111345,"(42.369244, -71.111345)",Massach_Ave_30
+3883,30776,05/18/2012 06:01:00 PM,Friday,Auto,Bicycle,119,Hampshire St,,"119 Hampshire St Cambridge, MA",42.369954,-71.096061,"(42.369954, -71.096061)",Columbi_St_13
+3886,30793,05/18/2012 06:30:00 PM,Friday,Bicycle,Auto,,Norfolk St,Broadway," Norfolk St & Broadway Cambridge, MA",42.36852,-71.099001,"(42.36852, -71.099001)",Broadwa_17
+3889,30781,05/19/2012 01:15:00 PM,Saturday,Auto,Bicycle,77,Massachusetts Ave,,"77 Massachusetts Ave Cambridge, MA",42.359128,-71.093339,"(42.359128, -71.093339)",Massach_Ave_2
+3902,30830,05/21/2012 02:19:00 PM,Monday,Auto,Bicycle,,MAIN ST,Windsor St," MAIN ST & Windsor St Cambridge, MA",42.363207,-71.0967,"(42.363207, -71.0967)",Main_St_11
+3907,30800,05/23/2012 08:28:00 AM,Wednesday,Auto,Bicycle,,Hampshire St,Portland St," Hampshire St & Portland St Cambridge, MA",42.366295,-71.091782,"(42.366295, -71.091782)",Cardina-M_Ave_1
+3910,30803,05/23/2012 08:29:00 PM,Wednesday,Auto,Bicycle,1432,Massachusetts Ave,,"1432 Massachusetts Ave Cambridge, MA",42.374087,-71.119074,"(42.374087, -71.119074)",Massach_Ave_43
+3917,30807,05/24/2012 05:58:00 PM,Thursday,Auto,Bicycle,,QUINCY ST,KIRKLAND ST," QUINCY ST & KIRKLAND ST Cambridge, MA",42.376636,-71.114081,"(42.376636, -71.114081)",Kirklan_St_3
+3918,30808,05/24/2012 06:01:00 PM,Thursday,Auto,Bicycle,1001,Cambridge St,,"1001 Cambridge St Cambridge, MA",42.373039,-71.093565,"(42.373039, -71.093565)",Cambrid_St_21
+3921,30813,05/25/2012 08:15:00 AM,Friday,Auto,Bicycle,,Columbia St,Cambridge St," Columbia St & Cambridge St Cambridge, MA",42.372912,-71.094512,"(42.372912, -71.094512)",Cambrid_St_21
+3942,30835,05/30/2012 11:39:00 AM,Wednesday,Auto,Bicycle,,GARDEN ST,Berkeley St," GARDEN ST & Berkeley St Cambridge, MA",42.377655,-71.123165,"(42.377655, -71.123165)",Garden_St_5
+3943,30829,05/31/2012 07:19:00 AM,Thursday,Auto,Bicycle,,Cambridge St,FULKERSON ST," Cambridge St & FULKERSON ST Cambridge, MA",42.37192,-71.086872,"(42.37192, -71.086872)",Cambrid_St_9
+3945,30837,05/31/2012 08:15:00 AM,Thursday,Auto,Bicycle,,HURON AVE,FAYERWEATHER ST," HURON AVE & FAYERWEATHER ST Cambridge, MA",42.381305,-71.137337,"(42.381305, -71.137337)",Huron_Ave_18
+3948,30840,05/31/2012 04:09:00 PM,Thursday,Auto,Bicycle,,MAIN ST,Vassar St," MAIN ST & Vassar St Cambridge, MA",42.362709,-71.089933,"(42.362709, -71.089933)",Main_St_7
+3950,30842,05/31/2012 09:50:00 PM,Thursday,Taxi,Bicycle,581,Massachusetts Ave,,"581 Massachusetts Ave Cambridge, MA",42.365007,-71.102735,"(42.365007, -71.102735)",Massach_Ave_17
+3952,30843,06/01/2012 06:33:00 AM,Friday,Auto,Bicycle,,MOUNT AUBURN ST,HOMER AVE," MOUNT AUBURN ST & HOMER AVE Cambridge, MA",42.374967,-71.148015,"(42.374967, -71.148015)",Mt-A_St_41
+3958,30849,06/01/2012 05:49:00 PM,Friday,Auto,Bicycle,2501,Massachusetts Ave,,"2501 Massachusetts Ave Cambridge, MA",42.399482,-71.132359,"(42.399482, -71.132359)",Clarend_Ave_1
+3981,30873,06/06/2012 12:00:00 AM,Wednesday,Auto,Bicycle,,Bay St,GREEN ST," Bay St & GREEN ST Cambridge, MA",42.368307,-71.110738,"(42.368307, -71.110738)",Bay_St_3
+3986,30879,06/07/2012 05:35:00 PM,Thursday,Auto,Bicycle,1673,Cambridge St,Thorndike St,"1673 Cambridge St Cambridge, MA",42.375155,-71.110852,"(42.375155, -71.110852)",Cambrid_St_44
+3988,30881,06/07/2012 08:17:00 PM,Thursday,Auto,Bicycle,16,PRESCOTT ST,,"16 PRESCOTT ST Cambridge, MA",42.373239,-71.113737,"(42.373239, -71.113737)",Prescot_St_1
+3991,30884,06/08/2012 03:29:00 PM,Friday,Truck,Bicycle,,Second St,Charles St," Second St & Charles St Cambridge, MA",42.367444,-71.079382,"(42.367444, -71.079382)",Charles_St_1
+3994,30888,06/09/2012 02:12:00 PM,Saturday,Auto,Bicycle,,Franklin St,Bay St," Franklin St & Bay St Cambridge, MA",42.367757,-71.111097,"(42.367757, -71.111097)",Frankli_St_13
+3999,30892,06/10/2012 06:53:00 PM,Sunday,Auto,Bicycle,1621,Cambridge St,,"1621 Cambridge St Cambridge, MA",42.374873,-71.109046,"(42.374873, -71.109046)",Cambrid_St_43
+4002,30896,06/11/2012 06:24:00 PM,Monday,Auto,Bicycle,23,Bishop Allen Dr,,"23 Bishop Allen Dr Cambridge, MA",42.363951,-71.098964,"(42.363951, -71.098964)",School_St_3
+4016,30910,06/14/2012 08:23:00 PM,Thursday,Auto,Bicycle,260,HARVARD ST,,"260 HARVARD ST Cambridge, MA",42.368342,-71.102218,"(42.368342, -71.102218)",Harvard_St_14
+4017,30911,06/14/2012 09:30:00 PM,Thursday,Taxi,Bicycle,,Broadway,Third St," Broadway & Third St Cambridge, MA",42.362667,-71.084325,"(42.362667, -71.084325)",Third_St_1
+4027,30922,06/18/2012 06:49:00 PM,Monday,Taxi,Bicycle,,Broadway,Ames St," Broadway & Ames St Cambridge, MA",42.363981,-71.087416,"(42.363981, -71.087416)",Broadwa_3
+4032,30927,06/20/2012 05:41:00 PM,Wednesday,Auto,Bicycle,,Massachusetts Ave,HANCOCK ST," Massachusetts Ave & HANCOCK ST Cambridge, MA",42.36838,-71.108783,"(42.36838, -71.108783)",Hancock_St_4
+4039,30935,06/22/2012 03:40:00 PM,Friday,Auto,Bicycle,,Massachusetts Ave,EVERETT ST," Massachusetts Ave & EVERETT ST Cambridge, MA",42.380006,-71.119917,"(42.380006, -71.119917)",Massach_Ave_53
+4053,30947,06/26/2012 11:20:00 AM,Tuesday,Auto,Bicycle,,Massachusetts Ave,LINNAEAN ST," Massachusetts Ave & LINNAEAN ST Cambridge, MA",42.384872,-71.119394,"(42.384872, -71.119394)",Massach_Ave_64
+4065,30957,06/28/2012 03:04:00 PM,Thursday,Auto,Bicycle,,Massachusetts Ave,PLEASANT ST," Massachusetts Ave & PLEASANT ST Cambridge, MA",42.366408,-71.105392,"(42.366408, -71.105392)",Massach_Ave_20
+4071,30961,06/29/2012 08:49:00 PM,Friday,Auto,Bicycle,14,Chauncy St,,"14 Chauncy St Cambridge, MA",42.37961,-71.122055,"(42.37961, -71.122055)",Chauncy_St_3
+4075,30967,06/29/2012 05:45:00 PM,,Auto,Bicycle,26,GARDEN ST,,"26 GARDEN ST Cambridge, MA",42.378143,-71.123817,"(42.378143, -71.123817)",Garden_St_6
+4089,30979,07/03/2012 08:00:00 AM,,Auto,Bicycle,,Cambridge St,SUMNER RD," Cambridge St & SUMNER RD Cambridge, MA",42.375266,-71.112729,"(42.375266, -71.112729)",Sumner_Rd_1
+4090,30980,07/03/2012 03:00:00 PM,,Auto,Bicycle,5,Dewolfe St,,"5 Dewolfe St Cambridge, MA",42.371035,-71.116169,"(42.371035, -71.116169)",DeWolfe_St_5
+4092,30982,07/03/2012 06:04:00 PM,,Auto,Bicycle,,Columbia St,Broadway," Columbia St & Broadway Cambridge, MA",42.367871,-71.09736,"(42.367871, -71.09736)",Columbi_St_10
+4113,30999,07/10/2012 07:50:00 AM,,Auto,Bicycle,,MAIN ST,Portland St," MAIN ST & Portland St Cambridge, MA",42.362974,-71.093634,"(42.362974, -71.093634)",Portlan_St_2
+4116,31002,07/11/2012 07:06:00 AM,,Bicycle,Miscellaneous,,Massachusetts Ave,RICHARD AVE," Massachusetts Ave & RICHARD AVE Cambridge, MA",42.39995,-71.133778,"(42.39995, -71.133778)",Richard_Ave_1
+4117,31005,07/11/2012 02:00:00 PM,,Auto,Bicycle,,Cambridge St,QUINCY ST," Cambridge St & QUINCY ST Cambridge, MA",42.375474,-71.114321,"(42.375474, -71.114321)",Quincy_St_3
+4130,31017,07/14/2012 03:42:00 PM,Saturday,Auto,Bicycle,,Inman St,West Pl," Inman St & West Pl Cambridge, MA",42.369969,-71.10389,"(42.369969, -71.10389)",West_Pl_2
+4144,31033,07/19/2012 08:39:00 PM,Thursday,Auto,Bicycle,,Columbia St,MAIN ST," Columbia St & MAIN ST Cambridge, MA",42.363446,-71.0998,"(42.363446, -71.0998)",Main_St_16
+4145,31036,07/19/2012 06:05:00 PM,Thursday,Auto,Bicycle,,Hampshire St,PORTSMOUTH ST," Hampshire St & PORTSMOUTH ST Cambridge, MA",42.368423,-71.094372,"(42.368423, -71.094372)",Portsmo_St_1
+4159,31048,07/24/2012 07:12:00 PM,Tuesday,Auto,Bicycle,2055,Massachusetts Ave,,"2055 Massachusetts Ave Cambridge, MA",42.391393,-71.122276,"(42.391393, -71.122276)",Hadley_St_1
+4162,31053,07/25/2012 03:49:00 PM,Wednesday,Auto,Bicycle,,Dewolfe St,GRANITE ST," Dewolfe St & GRANITE ST Cambridge, MA",42.369895,-71.116822,"(42.369895, -71.116822)",DeWolfe_St_4
+4165,31055,07/26/2012 01:09:00 PM,Thursday,Auto,Bicycle,,GARDEN ST,HURON AVE," GARDEN ST & HURON AVE Cambridge, MA",42.383868,-71.129312,"(42.383868, -71.129312)",Huron_Ave_33
+4178,31072,07/29/2012 11:55:00 PM,Sunday,Auto,Bicycle,,MOUNT AUBURN ST,HOLYOKE ST," MOUNT AUBURN ST & HOLYOKE ST Cambridge, MA",42.37197,-71.118574,"(42.37197, -71.118574)",Holyoke_St_4
+4189,31079,07/31/2012 02:29:00 PM,Tuesday,Auto,Bicycle,120,Massachusetts Ave,,"120 Massachusetts Ave Cambridge, MA",42.359768,-71.094767,"(42.359768, -71.094767)",Massach_Ave_2
+4190,31080,07/31/2012 05:28:00 PM,Tuesday,Auto,Bicycle,,Massachusetts Ave,REMINGTON ST," Massachusetts Ave & REMINGTON ST Cambridge, MA",42.370822,-71.113887,"(42.370822, -71.113887)",Remingt_St_1
+4202,31091,08/02/2012 09:00:00 AM,Tuesday,Auto,Bicycle,,MOUNT AUBURN ST,MEMORIAL DR," MOUNT AUBURN ST & MEMORIAL DR Cambridge, MA",42.386721,-71.14101,"(42.386721, -71.14101)",Concord_Ave_21
+4206,31094,08/03/2012 09:59:00 AM,Friday,Bus (Other),Bicycle,65,Landsdowne St,,"65 Landsdowne St Cambridge, MA",42.360615,-71.100335,"(42.360615, -71.100335)",Landsdo_St_2
+4211,31099,08/04/2012 11:29:00 AM,Saturday,Auto,Bicycle,,FIRST ST,Charles St," FIRST ST & Charles St Cambridge, MA",42.367229,-71.077734,"(42.367229, -71.077734)",Charles_St_1
+4216,31104,08/05/2012 09:00:00 PM,Sunday,Auto,Bicycle,,Sparks St,Brattle St," Sparks St & Brattle St Cambridge, MA",42.377845,-71.130167,"(42.377845, -71.130167)",Brattle_St_30
+4220,31108,08/06/2012 04:09:00 PM,Monday,Auto,Bicycle,1651,Massachusetts Ave,,"1651 Massachusetts Ave Cambridge, MA",42.381442,-71.119433,"(42.381442, -71.119433)",Wendell_St_2
+4226,31113,08/07/2012 04:53:00 PM,Tuesday,Auto,Bicycle,,Broadway,Inman St," Broadway & Inman St Cambridge, MA",42.370072,-71.102933,"(42.370072, -71.102933)",Inman_St_7
+4240,31128,08/09/2012 05:25:00 PM,Thursday,Auto,Bicycle,,MAIN ST,Windsor St," MAIN ST & Windsor St Cambridge, MA",42.363207,-71.0967,"(42.363207, -71.0967)",Main_St_11
+4246,31136,08/10/2012 05:49:00 PM,Friday,Auto,Bicycle,,HURON AVE,RESERVOIR ST," HURON AVE & RESERVOIR ST Cambridge, MA",42.381423,-71.135808,"(42.381423, -71.135808)",Reservo_St_4
+4257,31143,08/13/2012 09:18:00 AM,Monday,Auto,Bicycle,,Massachusetts Ave,Shepard St," Massachusetts Ave & Shepard St Cambridge, MA",42.381853,-71.119723,"(42.381853, -71.119723)",Massach_Ave_56
+4261,31146,08/14/2012 03:10:00 PM,Tuesday,Auto,Bicycle,,GREEN ST,Bay St," GREEN ST & Bay St Cambridge, MA",42.368307,-71.110738,"(42.368307, -71.110738)",Bay_St_3
+4268,31159,08/15/2012 07:44:00 PM,Wednesday,Auto,Bicycle,,Massachusetts Ave,PROSPECT ST," Massachusetts Ave & PROSPECT ST Cambridge, MA",42.365574,-71.103991,"(42.365574, -71.103991)",Prospec_St_1
+4274,31165,08/17/2012 08:00:00 PM,Friday,Auto,Bicycle,711,HURON AVE,,"711 HURON AVE Cambridge, MA",42.381331,-71.15475,"(42.381331, -71.15475)",Huron_Ave_12
+4282,31169,08/20/2012 08:29:00 AM,Monday,Auto,Bicycle,,Massachusetts Ave,EXETER PARK," Massachusetts Ave & EXETER PARK Cambridge, MA",42.384803,-71.119405,"(42.384803, -71.119405)",Massach_Ave_62
+4285,31176,08/20/2012 06:11:00 PM,Monday,Auto,Bicycle,,Cambridge St,ELLERY ST," Cambridge St & ELLERY ST Cambridge, MA",42.374698,-71.108336,"(42.374698, -71.108336)",Cambrid_St_41
+4287,31177,08/21/2012 10:56:00 AM,Tuesday,Auto,Bicycle,,Massachusetts Ave,MEMORIAL DR," Massachusetts Ave & MEMORIAL DR Cambridge, MA",42.357364,-71.092567,"(42.357364, -71.092567)",Memoria_Dr_17
+4292,31183,08/22/2012 10:30:00 AM,Wednesday,Auto,Bicycle,438,Massachusetts Ave,,"438 Massachusetts Ave Cambridge, MA",42.363518,-71.100859,"(42.363518, -71.100859)",Massach_Ave_11
+4294,31185,08/22/2012 02:29:00 PM,Wednesday,Auto,Bicycle,165,Hampshire St,,"165 Hampshire St Cambridge, MA",42.371856,-71.098366,"(42.371856, -71.098366)",Hampshi_St_12
+4295,31186,08/22/2012 11:16:00 PM,Wednesday,Taxi,Bicycle,,Putnam Ave,Western Ave," Putnam Ave & Western Ave Cambridge, MA",42.364484,-71.113893,"(42.364484, -71.113893)",Western_Ave_3
+4307,31196,08/27/2012 08:00:00 AM,Monday,Auto,Bicycle,,Cambridge St,SUMNER RD," Cambridge St & SUMNER RD Cambridge, MA",42.375266,-71.112729,"(42.375266, -71.112729)",Sumner_Rd_1
+4309,31198,08/27/2012 09:34:00 AM,Monday,Auto,Bicycle,,Massachusetts Ave,HANCOCK ST," Massachusetts Ave & HANCOCK ST Cambridge, MA",42.36838,-71.108783,"(42.36838, -71.108783)",Hancock_St_4
+4329,31232,08/30/2012 11:04:00 AM,Sunday,Taxi,Bicycle,,DIVINITY AVE,KIRKLAND ST," DIVINITY AVE & KIRKLAND ST Cambridge, MA",42.376694,-71.113814,"(42.376694, -71.113814)",Kirklan_St_4
+4333,31223,09/01/2012 02:15:00 PM,Saturday,Auto,Bicycle,,Massachusetts Ave,HUDSON ST," Massachusetts Ave & HUDSON ST Cambridge, MA",42.382235,-71.119682,"(42.382235, -71.119682)",Massach_Ave_57
+4348,31239,09/05/2012 07:32:00 AM,Wednesday,Auto,Bicycle,,Hampshire St,Portland St," Hampshire St & Portland St Cambridge, MA",42.366295,-71.091782,"(42.366295, -71.091782)",Cardina-M_Ave_1
+4356,31248,09/05/2012 07:11:00 PM,Wednesday,Auto,Bicycle,,KIRKLAND ST,IRVING ST," KIRKLAND ST & IRVING ST Cambridge, MA",42.377363,-71.110643,"(42.377363, -71.110643)",Kirklan_St_10
+4359,31252,09/07/2012 12:00:00 PM,Friday,Auto,Bicycle,,MARION ST,JEFFERSON ST," MARION ST & JEFFERSON ST Cambridge, MA",42.373001,-71.088785,"(42.373001, -71.088785)",Jeffers_St_1
+4364,31267,09/07/2012 07:30:00 AM,Friday,Auto,Bicycle,,Putnam Ave,Brookline St," Putnam Ave & Brookline St Cambridge, MA",42.357369,-71.108023,"(42.357369, -71.108023)",Brookli_St_7
+4367,31258,09/08/2012 06:30:00 PM,Saturday,Auto,Bicycle,1668,Massachusetts Ave,,"1668 Massachusetts Ave Cambridge, MA",42.382011,-71.119891,"(42.382011, -71.119891)",Massach_Ave_56
+4391,31282,09/14/2012 01:34:00 PM,Friday,Auto,Bicycle,141,PROSPECT ST,,"141 PROSPECT ST Cambridge, MA",42.368735,-71.10163,"(42.368735, -71.10163)",Prospec_St_4
+4398,31293,09/15/2012 04:09:00 PM,Saturday,Auto,Bicycle,2055,Massachusetts Ave,,"2055 Massachusetts Ave Cambridge, MA",42.391393,-71.122276,"(42.391393, -71.122276)",Hadley_St_1
+4399,31294,09/15/2012 10:38:00 AM,Saturday,Auto,Bicycle,,DOVER ST,Massachusetts Ave," DOVER ST & Massachusetts Ave Cambridge, MA",42.394524,-71.127012,"(42.394524, -71.127012)",Dover_St_1
+4404,31362,09/17/2012 09:49:00 AM,,Auto,Bicycle,,Massachusetts Ave,PEARL ST," Massachusetts Ave & PEARL ST Cambridge, MA",42.36471,-71.102567,"(42.36471, -71.102567)",Massach_Ave_16
+4414,31304,09/18/2012 08:51:00 PM,Tuesday,Auto,Bicycle,1035,Cambridge St,Columbia St,"1035 Cambridge St Cambridge, MA",42.373494,-71.093704,"(42.373494, -71.093704)",Columbi_St_18
+4419,31309,09/19/2012 11:45:00 AM,Wednesday,Taxi,Bicycle,,Hampshire St,Norfolk St," Hampshire St & Norfolk St Cambridge, MA",42.371015,-71.09753,"(42.371015, -71.09753)",Norfolk_St_13
+4420,31308,09/20/2012 08:29:00 AM,Thursday,Auto,Bicycle,,Hampshire St,Portland St," Hampshire St & Portland St Cambridge, MA",42.366295,-71.091782,"(42.366295, -71.091782)",Cardina-M_Ave_1
+4421,31310,09/20/2012 05:04:00 PM,Thursday,Auto,Bicycle,,Broadway,Ware St," Broadway & Ware St Cambridge, MA",42.373833,-71.112444,"(42.373833, -71.112444)",Broadwa_40
+4424,31337,09/20/2012 08:48:00 PM,Thursday,Auto,Bicycle,100,Putnam Ave,,"100 Putnam Ave Cambridge, MA",42.367022,-71.113316,"(42.367022, -71.113316)",Putnam_Ave_21
+4425,31313,09/21/2012 08:49:00 AM,Friday,Auto,Bicycle,211,Massachusetts Ave,,"211 Massachusetts Ave Cambridge, MA",42.361422,-71.096684,"(42.361422, -71.096684)",Massach_Ave_4
+4429,31316,09/21/2012 12:30:00 PM,Friday,Auto,Bicycle,,GARDEN CT,LINNAEAN ST," GARDEN CT & LINNAEAN ST Cambridge, MA",42.362705,-71.089949,"(42.362705, -71.089949)",Main_St_8
+4441,31328,09/23/2012 11:29:00 PM,Sunday,Auto,Bicycle,,PROSPECT ST,Bishop Allen Dr," PROSPECT ST & Bishop Allen Dr Cambridge, MA",42.366343,-71.10316,"(42.366343, -71.10316)",Prospec_St_2
+4444,31330,09/24/2012 01:15:00 PM,Monday,Auto,Bicycle,,Cardinal Medeiros Ave,PLYMOUTH ST," Cardinal Medeiros Ave & PLYMOUTH ST Cambridge, MA",42.368373,-71.090596,"(42.368373, -71.090596)",Cardina-M_Ave_5
+4445,31331,09/24/2012 04:19:00 PM,Monday,Auto,Bicycle,1967,Massachusetts Ave,,"1967 Massachusetts Ave Cambridge, MA",42.390066,-71.120466,"(42.390066, -71.120466)",Allen_St_1
+4449,31336,09/25/2012 09:14:00 AM,Tuesday,Auto,Bicycle,,Hampshire St,ELM ST," Hampshire St & ELM ST Cambridge, MA",42.37048,-71.096879,"(42.37048, -71.096879)",Elm_St_6
+4450,31341,09/25/2012 03:40:00 PM,Tuesday,Auto,Bicycle,,Massachusetts Ave,Washburn Ave," Massachusetts Ave & Washburn Ave Cambridge, MA",42.398824,-71.131961,"(42.398824, -71.131961)",Washbur_Ave_1
+4457,31345,09/27/2012 06:20:00 AM,Friday,Auto,Bicycle,,MOUNT AUBURN ST,Brattle St," MOUNT AUBURN ST & Brattle St Cambridge, MA",42.375282,-71.145695,"(42.375282, -71.145695)",Brattle_St_9
+4477,31365,10/01/2012 05:25:00 PM,Monday,Auto,Bicycle,438,Massachusetts Ave,,"438 Massachusetts Ave Cambridge, MA",42.363518,-71.100859,"(42.363518, -71.100859)",Massach_Ave_11
+4479,31366,10/02/2012 02:29:00 PM,Tuesday,Auto,Bicycle,,Massachusetts Ave,Chauncy St," Massachusetts Ave & Chauncy St Cambridge, MA",42.379972,-71.119945,"(42.379972, -71.119945)",Massach_Ave_52
+4486,31374,10/04/2012 08:49:00 AM,Thursday,Auto,Bicycle,,MILL ST,PLYMPTON ST," MILL ST & PLYMPTON ST Cambridge, MA",42.37025,-71.117751,"(42.37025, -71.117751)",Plympto_St_3
+4493,31380,10/04/2012 09:34:00 PM,Thursday,Auto,Bicycle,,Broadway,Hampshire St," Broadway & Hampshire St Cambridge, MA",42.365435,-71.091112,"(42.365435, -71.091112)",Broadwa_6
+4505,31391,10/06/2012 09:24:00 PM,Saturday,Auto,Bicycle,,Brookline St,Franklin St," Brookline St & Franklin St Cambridge, MA",42.362868,-71.102435,"(42.362868, -71.102435)",Brookli_St_21
+4530,31416,10/10/2012 04:30:00 PM,Wednesday,Auto,Bicycle,,Concord Ave,SMITH PL," Concord Ave & SMITH PL Cambridge, MA",42.390113,-71.150662,"(42.390113, -71.150662)",Smith_Pl_1
+4534,31420,10/11/2012 11:32:00 AM,Thursday,Auto,Bicycle,33,OXFORD AVE,,"33 OXFORD AVE Cambridge, MA",42.376849,-71.156032,"(42.376849, -71.156032)",Oxford_Ave_1
+4541,31428,10/12/2012 05:00:00 PM,Friday,Auto,Bicycle,,Massachusetts Ave,ESSEX ST," Massachusetts Ave & ESSEX ST Cambridge, MA",42.36508,-71.10318,"(42.36508, -71.10318)",Essex_St_1
+4549,31433,10/14/2012 05:29:00 PM,Sunday,Auto,Bicycle,1008,Cambridge St,Columbia St,"1008 Cambridge St Cambridge, MA",42.372725,-71.093866,"(42.372725, -71.093866)",Cambrid_St_21
+4556,31440,10/17/2012 05:46:00 PM,Wednesday,Auto,Bicycle,,Cambridge St,Windsor St," Cambridge St & Windsor St Cambridge, MA",42.37275,-71.093288,"(42.37275, -71.093288)",Cambrid_St_20
+4558,31443,10/17/2012 06:24:00 PM,Wednesday,Auto,Bicycle,,Hampshire St,ELM ST," Hampshire St & ELM ST Cambridge, MA",42.37048,-71.096879,"(42.37048, -71.096879)",Elm_St_6
+4561,31446,10/18/2012 03:59:00 PM,Thursday,Auto,Bicycle,,Banks St,MOUNT AUBURN ST," Banks St & MOUNT AUBURN ST Cambridge, MA",42.37049,-71.114464,"(42.37049, -71.114464)",Mt-A_St_2
+4573,31456,10/20/2012 02:49:00 PM,Sunday,Auto,Bicycle,1452,Cambridge St,,"1452 Cambridge St Cambridge, MA",42.373876,-71.102956,"(42.373876, -71.102956)",Cambrid_St_33
+4577,31460,10/21/2012 03:30:00 PM,Sunday,Auto,Bicycle,,Cambridge St,HIGHLAND AVE," Cambridge St & HIGHLAND AVE Cambridge, MA",42.374233,-71.104741,"(42.374233, -71.104741)",Cambrid_St_35
+4593,31477,10/24/2012 08:29:00 AM,Wednesday,Auto,Bicycle,,Massachusetts Ave,White St," Massachusetts Ave & White St Cambridge, MA",42.388676,-71.119242,"(42.388676, -71.119242)",Somervi_Ave_2
+4596,31479,10/25/2012 09:34:00 AM,Thursday,Auto,Bicycle,,Cambridge St,FELTON ST," Cambridge St & FELTON ST Cambridge, MA",42.375202,-71.112233,"(42.375202, -71.112233)",Cambrid_St_45
+4599,31482,10/25/2012 01:57:00 PM,Thursday,Auto,Bicycle,,Tremont St,Hampshire St," Tremont St & Hampshire St Cambridge, MA",42.371501,-71.098121,"(42.371501, -71.098121)",Tremont_St_3
+4600,31483,10/25/2012 08:38:00 PM,Thursday,Auto,Bicycle,,Massachusetts Ave,STATE ST," Massachusetts Ave & STATE ST Cambridge, MA",42.362647,-71.099069,"(42.362647, -71.099069)",State_St_4
+4607,31491,10/26/2012 06:59:00 PM,Friday,Auto,Bicycle,,Cambridge St,FULKERSON ST," Cambridge St & FULKERSON ST Cambridge, MA",42.37192,-71.086872,"(42.37192, -71.086872)",Cambrid_St_9
+4615,31501,10/30/2012 07:30:00 PM,Tuesday,Auto,Bicycle,,JFK St,Winthrop Sq," JFK St & Winthrop Sq Cambridge, MA",42.372154,-71.120489,"(42.372154, -71.120489)",JFK_St_4
+4619,31505,10/31/2012 05:26:00 PM,Wednesday,Auto,Bicycle,,Massachusetts Ave,STATE ST," Massachusetts Ave & STATE ST Cambridge, MA",42.362647,-71.099069,"(42.362647, -71.099069)",State_St_4
+4632,31517,11/02/2012 03:00:00 PM,Friday,Auto,Bicycle,450,Massachusetts Ave,,"450 Massachusetts Ave Cambridge, MA",42.363476,-71.1011,"(42.363476, -71.1011)",Massach_Ave_12
+4642,31531,11/05/2012 06:26:00 PM,Monday,Auto,Bicycle,,Columbia St,Hampshire St," Columbia St & Hampshire St Cambridge, MA",42.369917,-71.096192,"(42.369917, -71.096192)",Columbi_St_13
+4673,31564,11/14/2012 07:19:00 AM,Wednesday,Auto,Bicycle,,Cambridge St,Hampshire St," Cambridge St & Hampshire St Cambridge, MA",42.373729,-71.100837,"(42.373729, -71.100837)",Hampshi_St_18
+4674,31565,11/14/2012 09:04:00 AM,Wednesday,Taxi,Bicycle,,Hampshire St,Inman St," Hampshire St & Inman St Cambridge, MA",42.373475,-71.100531,"(42.373475, -71.100531)",Hampshi_St_16
+4675,31566,11/14/2012 05:51:00 PM,Wednesday,Auto,Bicycle,671,MAIN ST,,"671 MAIN ST Cambridge, MA",42.363349,-71.094314,"(42.363349, -71.094314)",Main_St_10
+4679,31568,11/15/2012 10:35:00 AM,Thursday,Auto,Bicycle,1035,Cambridge St,,"1035 Cambridge St Cambridge, MA",42.373494,-71.093704,"(42.373494, -71.093704)",Columbi_St_18
+4687,31580,11/17/2012 11:49:00 AM,Saturday,Auto,Bicycle,1698,Massachusetts Ave,,"1698 Massachusetts Ave Cambridge, MA",42.383026,-71.119832,"(42.383026, -71.119832)",Massach_Ave_58
+4699,31587,11/20/2012 08:45:00 AM,Tuesday,Auto,Bicycle,,Massachusetts Ave,GARFIELD ST," Massachusetts Ave & GARFIELD ST Cambridge, MA",42.383788,-71.119514,"(42.383788, -71.119514)",Garfiel_St_1
+4702,31591,11/20/2012 02:10:00 PM,Tuesday,Auto,Bicycle,363,Windsor St,,"363 Windsor St Cambridge, MA",42.370053,-71.094422,"(42.370053, -71.094422)",Windsor_St_12
+4707,31598,11/22/2012 08:06:00 PM,Thursday,Auto,Bicycle,,Massachusetts Ave,Shepard St," Massachusetts Ave & Shepard St Cambridge, MA",42.381853,-71.119723,"(42.381853, -71.119723)",Massach_Ave_56
+4715,31607,11/26/2012 04:56:00 PM,Monday,Auto,Bicycle,,Concord Ave,FAYERWEATHER ST," Concord Ave & FAYERWEATHER ST Cambridge, MA",42.384591,-71.135792,"(42.384591, -71.135792)",Fayerwe_St_8
+4721,31613,11/27/2012 06:11:00 PM,Tuesday,Auto,Bicycle,,Putnam Ave,Sidney St," Putnam Ave & Sidney St Cambridge, MA",42.356627,-71.10673,"(42.356627, -71.10673)",Sidney_St_5
+4725,31616,11/28/2012 06:34:00 PM,Wednesday,Auto,Bicycle,305,Webster Ave,,"305 Webster Ave Cambridge, MA",42.373528,-71.0944,"(42.373528, -71.0944)",Webster_Ave_10
+4734,31626,11/30/2012 03:14:00 PM,Friday,Auto,Bicycle,,MAIN ST,Vassar St," MAIN ST & Vassar St Cambridge, MA",42.362709,-71.089933,"(42.362709, -71.089933)",Main_St_7
+4746,31635,12/03/2012 06:55:00 PM,Monday,Auto,Bicycle,,Broadway,Galileo Galilei Way," Broadway & Galileo Galilei Way Cambridge, MA",42.364812,-71.089386,"(42.364812, -71.089386)",Galilei_Way_2
+4755,31647,12/06/2012 08:15:00 AM,,Bicycle,Pedestrian,,Vassar St,Massachusetts Ave," Vassar St & Massachusetts Ave Cambridge, MA",42.360154,-71.094882,"(42.360154, -71.094882)",Vassar_St_5
+4761,31654,12/07/2012 06:20:00 PM,,Auto,Bicycle,,PLYMPTON ST,MILL ST," PLYMPTON ST & MILL ST Cambridge, MA",42.37025,-71.117751,"(42.37025, -71.117751)",Plympto_St_3
+4779,31668,12/10/2012 09:30:00 AM,Monday,Auto,Bicycle,,MAIN ST,Ames St," MAIN ST & Ames St Cambridge, MA",42.362579,-71.088165,"(42.362579, -71.088165)",Main_St_6
+4781,31670,12/10/2012 03:36:00 PM,Monday,Auto,Bicycle,6,Concord Ave,,"6 Concord Ave Cambridge, MA",42.39091,-71.157563,"(42.39091, -71.157563)",Concord_Ave_30
+4789,31679,12/12/2012 05:32:00 PM,Wednesday,Auto,Bicycle,229,Vassar St,,"229 Vassar St Cambridge, MA",42.357355,-71.100904,"(42.357355, -71.100904)",Vassar_St_4
+4809,31706,12/18/2012 07:50:00 AM,,Auto,Bicycle,,Cambridge St,LINE ST," Cambridge St & LINE ST Cambridge, MA",42.374028,-71.103097,"(42.374028, -71.103097)",Cambrid_St_33
+4823,31714,12/21/2012 10:34:00 PM,,Auto,Bicycle,,Brattle St,Willard St," Brattle St & Willard St Cambridge, MA",42.37681,-71.127649,"(42.37681, -71.127649)",Brattle_St_18
+4855,28571,01/02/2013 09:20:00 PM,Wednesday,Auto,Bicycle,,Cambridge St,Columbia St," Cambridge St & Columbia St Cambridge, MA",42.372912,-71.094512,"(42.372912, -71.094512)",Cambrid_St_21
+4889,28615,01/15/2013 11:35:00 AM,Tuesday,Auto,Bicycle,1334,Cambridge St,,"1334 Cambridge St Cambridge, MA",42.373493,-71.099759,"(42.373493, -71.099759)",Cambrid_St_29
+4937,28661,01/28/2013 11:29:00 AM,Monday,Auto,Bicycle,,Broadway,ELLERY PL," Broadway & ELLERY PL Cambridge, MA",42.372752,-71.109728,"(42.372752, -71.109728)",Ellery_St_5
+4947,28672,01/30/2013 10:19:00 PM,Wednesday,Bicycle,Taxi,,Cambridge St,ELM ST," Cambridge St & ELM ST Cambridge, MA",42.373017,-71.095346,"(42.373017, -71.095346)",Elm_St_8
+4956,28685,02/01/2013 06:29:00 PM,Friday,Taxi,Bicycle,215,Hampshire St,,"215 Hampshire St Cambridge, MA",42.37336,-71.100217,"(42.37336, -71.100217)",Hampshi_St_16
+4969,28691,02/03/2013 12:49:00 AM,Sunday,Taxi,Bicycle,1431,Cambridge St,,"1431 Cambridge St Cambridge, MA",42.374017,-71.102314,"(42.374017, -71.102314)",Cambrid_St_33
+4980,28709,02/06/2013 05:48:00 PM,Wednesday,Auto,Bicycle,,Hampshire St,Bristol St," Hampshire St & Bristol St Cambridge, MA",42.367952,-71.093803,"(42.367952, -71.093803)",Hampshi_St_4
+5043,28772,02/19/2013 07:59:00 PM,Tuesday,Auto,Bicycle,,Columbia St,Broadway," Columbia St & Broadway Cambridge, MA",42.367871,-71.09736,"(42.367871, -71.09736)",Columbi_St_10
+5059,28786,02/22/2013 08:45:00 AM,Friday,Auto,Bicycle,,Brattle St,Sparks St," Brattle St & Sparks St Cambridge, MA",42.377845,-71.130167,"(42.377845, -71.130167)",Brattle_St_30
+5073,28803,02/25/2013 12:59:00 PM,Monday,Auto,Bicycle,,KIRKLAND ST,SUMNER RD," KIRKLAND ST & SUMNER RD Cambridge, MA",42.377006,-71.112334,"(42.377006, -71.112334)",Kirklan_St_6
+5111,28841,03/06/2013 11:39:00 AM,Wednesday,Auto,Bicycle,112-,Bishop Allen Dr,,"112- Bishop Allen Dr Cambridge, MA",42.365824,-71.102402,"(42.365824, -71.102402)",Essex_St_1
+5138,28873,03/12/2013 02:15:00 PM,Tuesday,Auto,Bicycle,,Concord Ave,Blanchard Rd," Concord Ave & Blanchard Rd Cambridge, MA",42.390977,-71.157285,"(42.390977, -71.157285)",Blancha_Rd_3
+5143,28874,03/14/2013 08:15:00 AM,Thursday,Auto,Bicycle,,Massachusetts Ave,Tyler Ct," Massachusetts Ave & Tyler Ct Cambridge, MA",42.398476,-71.131522,"(42.398476, -71.131522)",Massach_Ave_103
+5146,28878,03/14/2013 07:30:00 PM,Thursday,Auto,Bicycle,,Massachusetts Ave,Waterhouse St," Massachusetts Ave & Waterhouse St Cambridge, MA",42.37787,-71.120647,"(42.37787, -71.120647)",Waterho_St_4
+5158,28883,03/17/2013 06:56:00 PM,Sunday,Auto,Bicycle,,PROSPECT ST,Hampshire St," PROSPECT ST & Hampshire St Cambridge, MA",42.372202,-71.098975,"(42.372202, -71.098975)",Prospec_St_8
+5171,28902,03/21/2013 07:40:00 AM,Thursday,Auto,Bicycle,,Rindge Ave,Clifton St," Rindge Ave & Clifton St Cambridge, MA",42.393702,-71.136228,"(42.393702, -71.136228)",Rindge_Ave_16
+5172,28903,03/21/2013 09:00:00 AM,Thursday,Auto,Bicycle,1000,Cambridge St,,"1000 Cambridge St Cambridge, MA",42.372653,-71.093451,"(42.372653, -71.093451)",Windsor_St_16
+5194,28927,03/29/2013 09:04:00 AM,Friday,Auto,Bicycle,,Cambridge St,Third St," Cambridge St & Third St Cambridge, MA",42.37102,-71.079848,"(42.37102, -71.079848)",Third_St_15
+5205,28937,04/02/2013 09:45:00 PM,Tuesday,Auto,Bicycle,,Cambridge St,ROBERTS RD," Cambridge St & ROBERTS RD Cambridge, MA",42.37476,-71.108824,"(42.37476, -71.108824)",Cambrid_St_42
+5233,28968,04/07/2013 07:41:00 PM,Sunday,Auto,Bicycle,,Massachusetts Ave,LINNAEAN ST," Massachusetts Ave & LINNAEAN ST Cambridge, MA",42.384872,-71.119394,"(42.384872, -71.119394)",Massach_Ave_64
+5259,28989,04/14/2013 06:20:00 PM,Sunday,Auto,Bicycle,229,HARVARD ST,,"229 HARVARD ST Cambridge, MA",42.367787,-71.099953,"(42.367787, -71.099953)",Harvard_St_11
+5276,29009,04/18/2013 07:25:00 PM,Thursday,Auto,Bicycle,,Massachusetts Ave,STATE ST," Massachusetts Ave & STATE ST Cambridge, MA",42.362647,-71.099069,"(42.362647, -71.099069)",State_St_4
+5279,29012,04/20/2013 03:00:00 PM,Saturday,Auto,Bicycle,1736,Massachusetts Ave,,"1736 Massachusetts Ave Cambridge, MA",42.384483,-71.119625,"(42.384483, -71.119625)",Massach_Ave_62
+5283,29016,04/21/2013 05:35:00 PM,Sunday,Auto,Bicycle,1821,Massachusetts Ave,,"1821 Massachusetts Ave Cambridge, MA",42.369202,-71.110689,"(42.369202, -71.110689)",Dana_St_1
+5286,29017,04/22/2013 10:25:00 AM,Monday,Auto,Bicycle,,Inman St,Inman Pl," Inman St & Inman Pl Cambridge, MA",42.369692,-71.103194,"(42.369692, -71.103194)",Inman_St_6
+5292,29026,04/24/2013 05:39:00 PM,Wednesday,Auto,Bicycle,,Ash St,Brattle St," Ash St & Brattle St Cambridge, MA",42.375936,-71.124467,"(42.375936, -71.124467)",Brattle_St_8
+5296,29286,04/24/2013 05:39:00 PM,Wednesday,Auto,Bicycle,,Ash St,Brattle St," Ash St & Brattle St Cambridge, MA",42.375936,-71.124467,"(42.375936, -71.124467)",Brattle_St_8
+5297,29028,04/25/2013 09:00:00 AM,Thursday,Auto,Bicycle,,Hampshire St,Tremont St," Hampshire St & Tremont St Cambridge, MA",42.371501,-71.098121,"(42.371501, -71.098121)",Tremont_St_3
+5308,29042,04/26/2013 05:58:00 PM,Friday,Auto,Bicycle,350,MAIN ST,,"350 MAIN ST Cambridge, MA",42.362388,-71.087276,"(42.362388, -71.087276)",Main_St_6
+5335,29070,05/02/2013 07:16:00 PM,Thursday,Bus (Other),Bicycle,,MAIN ST,Vassar St," MAIN ST & Vassar St Cambridge, MA",42.362709,-71.089933,"(42.362709, -71.089933)",Main_St_7
+5348,29081,05/04/2013 04:15:00 PM,Saturday,Auto,Bicycle,,SPRINGFIELD ST,Cambridge St," SPRINGFIELD ST & Cambridge St Cambridge, MA",42.373689,-71.100529,"(42.373689, -71.100529)",Springf_St_1
+5358,29087,05/07/2013 08:00:00 PM,Tuesday,Auto,Bicycle,2443,Massachusetts Ave,,"2443 Massachusetts Ave Cambridge, MA",42.398142,-71.130844,"(42.398142, -71.130844)",Massach_Ave_102
+5359,29090,05/07/2013 12:46:00 PM,Tuesday,Taxi,Bicycle,6,Cambridge Ctr,Broadway,"6 Cambridge Ctr Cambridge, MA",42.364014,-71.088093,"(42.364014, -71.088093)",Broadwa_4
+5374,29107,05/10/2013 07:27:00 PM,Friday,Bicycle,Taxi,204,PROSPECT ST,,"204 PROSPECT ST Cambridge, MA",42.370337,-71.100118,"(42.370337, -71.100118)",Prospec_St_5
+5381,29110,05/12/2013 08:38:00 PM,Sunday,Auto,Bicycle,,Hampshire St,Portland St," Hampshire St & Portland St Cambridge, MA",42.366295,-71.091782,"(42.366295, -71.091782)",Cardina-M_Ave_1
+5386,29116,05/13/2013 06:56:00 PM,Monday,Auto,Bicycle,1001,Cambridge St,,"1001 Cambridge St Cambridge, MA",42.373039,-71.093565,"(42.373039, -71.093565)",Cambrid_St_21
+5387,29117,05/13/2013 06:59:00 PM,Monday,Auto,Bicycle,,Hampshire St,Tremont St," Hampshire St & Tremont St Cambridge, MA",42.371501,-71.098121,"(42.371501, -71.098121)",Tremont_St_3
+5392,29120,05/14/2013 03:45:00 PM,Tuesday,Auto,Bicycle,675,Concord Ave,,"675 Concord Ave Cambridge, MA",42.39033,-71.15013,"(42.39033, -71.15013)",Concord_Ave_26
+5393,29121,05/14/2013 05:00:00 PM,Tuesday,Auto,Bicycle,826,Cambridge St,,"826 Cambridge St Cambridge, MA",42.372195,-71.090329,"(42.372195, -71.090329)",Cambrid_St_16
+5397,29126,05/14/2013 05:46:00 PM,Tuesday,Bicycle,Pedestrian,1401,Massachusetts Ave,,"1401 Massachusetts Ave Cambridge, MA",42.369202,-71.110689,"(42.369202, -71.110689)",Dana_St_1
+5409,29143,05/17/2013 09:56:00 AM,Friday,Auto,Bicycle,1629,Cambridge St,,"1629 Cambridge St Cambridge, MA",42.374913,-71.109348,"(42.374913, -71.109348)",Cambrid_St_43
+5412,29146,05/17/2013 07:53:00 PM,Friday,Auto,Bicycle,,Hampshire St,ELM ST," Hampshire St & ELM ST Cambridge, MA",42.37048,-71.096879,"(42.37048, -71.096879)",Elm_St_6
+5424,29156,05/21/2013 08:35:00 AM,Tuesday,Auto,Bicycle,,Third St,Rogers St," Third St & Rogers St Cambridge, MA",42.366388,-71.082001,"(42.366388, -71.082001)",Third_St_8
+5426,29159,05/21/2013 08:01:00 AM,Tuesday,Auto,Bicycle,1945,Massachusetts Ave,,"1945 Massachusetts Ave Cambridge, MA",42.38975,-71.120095,"(42.38975, -71.120095)",Massach_Ave_76
+5438,29170,05/23/2013 10:50:00 AM,Thursday,Auto,Bicycle,,PROSPECT ST,HARVARD ST," PROSPECT ST & HARVARD ST Cambridge, MA",42.368301,-71.101743,"(42.368301, -71.101743)",Prospec_St_4
+5439,29171,05/23/2013 08:55:00 AM,Thursday,Auto,Bicycle,,GARDEN ST,Walden St," GARDEN ST & Walden St Cambridge, MA",42.385523,-71.132217,"(42.385523, -71.132217)",Walden_St_7
+5440,29172,05/23/2013 09:59:00 AM,Thursday,Taxi,Bicycle,,Massachusetts Ave,Trowbridge St," Massachusetts Ave & Trowbridge St Cambridge, MA",42.370095,-71.112929,"(42.370095, -71.112929)",Trowbri_St_1
+5447,29182,05/24/2013 01:30:00 PM,Friday,Auto,Bicycle,,Cambridge St,Hampshire St," Cambridge St & Hampshire St Cambridge, MA",42.373729,-71.100837,"(42.373729, -71.100837)",Hampshi_St_18
+5448,29183,05/24/2013 05:29:00 PM,Friday,Auto,Bicycle,1608,Cambridge St,,"1608 Cambridge St Cambridge, MA",42.374621,-71.108615,"(42.374621, -71.108615)",Cambrid_St_42
+5465,29200,05/28/2013 11:20:00 PM,Tuesday,Auto,Bicycle,,Massachusetts Ave,Beech St," Massachusetts Ave & Beech St Cambridge, MA",42.390294,-71.120996,"(42.390294, -71.120996)",Beech_St_1
+5479,29213,06/01/2013 07:19:00 AM,Saturday,Auto,Bicycle,,Massachusetts Ave,SOMERVILLE AVE," Massachusetts Ave & SOMERVILLE AVE Cambridge, MA",42.388965,-71.119695,"(42.388965, -71.119695)",Somervi_Ave_2
+5480,29216,06/01/2013 07:50:00 PM,Saturday,Auto,Bicycle,287,PROSPECT ST,,"287 PROSPECT ST Cambridge, MA",42.37251,-71.099131,"(42.37251, -71.099131)",Hampshi_St_14
+5501,29236,06/05/2013 05:54:00 PM,Tuesday,Auto,Bicycle,,MOUNT AUBURN ST,HOMER AVE," MOUNT AUBURN ST & HOMER AVE Cambridge, MA",42.374967,-71.148015,"(42.374967, -71.148015)",Mt-A_St_41
+5502,29240,06/05/2013 09:30:00 PM,Wednesday,Auto,Bicycle,,Cambridge St,HARDING ST," Cambridge St & HARDING ST Cambridge, MA",42.372409,-71.090656,"(42.372409, -71.090656)",Cambrid_St_16
+5521,29258,06/08/2013 04:21:00 PM,Saturday,Auto,Bicycle,,Broadway,West Pl," Broadway & West Pl Cambridge, MA",42.37034,-71.103615,"(42.37034, -71.103615)",Broadwa_24
+5522,29264,06/09/2013 03:17:00 PM,Sunday,Auto,Bicycle,,Massachusetts Ave,SOMERVILLE AVE," Massachusetts Ave & SOMERVILLE AVE Cambridge, MA",42.388965,-71.119695,"(42.388965, -71.119695)",Somervi_Ave_2
+5525,29259,06/10/2013 05:32:00 PM,Monday,Auto,Bicycle,,Washington Ave,Columbia St," Washington Ave & Columbia St Cambridge, MA",42.365402,-71.098765,"(42.365402, -71.098765)",Columbi_St_5
+5528,29262,06/10/2013 06:30:00 PM,Monday,Auto,Bicycle,,Third St,Cambridge St," Third St & Cambridge St Cambridge, MA",42.37102,-71.079848,"(42.37102, -71.079848)",Third_St_15
+5537,29272,06/12/2013 10:06:00 PM,Wednesday,Auto,Bicycle,,Franklin St,Putnam Ave," Franklin St & Putnam Ave Cambridge, MA",42.368574,-71.113515,"(42.368574, -71.113515)",Frankli_St_14
+5539,29274,06/13/2013 03:50:00 PM,Thursday,Auto,Bicycle,359,Broadway,,"359 Broadway Cambridge, MA",42.370608,-71.103869,"(42.370608, -71.103869)",Broadwa_25
+5548,29287,06/17/2013 02:45:00 PM,Monday,Auto,Bicycle,,MAIN ST,Ames St," MAIN ST & Ames St Cambridge, MA",42.362579,-71.088165,"(42.362579, -71.088165)",Main_St_6
+5551,29290,06/17/2013 05:12:00 PM,Monday,Auto,Bicycle,4,Blanchard Rd,,"4 Blanchard Rd Cambridge, MA",42.386868,-71.157865,"(42.386868, -71.157865)",Blancha_Rd_1
+5553,29292,06/17/2013 09:15:00 PM,Monday,Auto,Bicycle,,Massachusetts Ave,Cameron Ave," Massachusetts Ave & Cameron Ave Cambridge, MA",42.39744,-71.130266,"(42.39744, -71.130266)",Cameron_Ave_1
+5558,29297,06/19/2013 08:03:00 AM,Wednesday,Auto,Bicycle,2450,Massachusetts Ave,,"2450 Massachusetts Ave Cambridge, MA",42.368925,-71.110257,"(42.368925, -71.110257)",Bay_St_3
+5567,29306,06/21/2013 09:10:00 AM,Friday,Auto,Bicycle,,MOUNT AUBURN ST,Brattle St," MOUNT AUBURN ST & Brattle St Cambridge, MA",42.375282,-71.145695,"(42.375282, -71.145695)",Brattle_St_9
+5568,29307,06/21/2013 01:34:00 PM,Friday,Auto,Bicycle,1847,Massachusetts Ave,,"1847 Massachusetts Ave Cambridge, MA",42.387755,-71.119116,"(42.387755, -71.119116)",Massach_Ave_72
+5572,29311,06/23/2013 05:51:00 PM,Sunday,Auto,Bicycle,161,Washington Ave,,"161 Washington Ave Cambridge, MA",42.3649,-71.09615,"(42.3649, -71.09615)",Washing_St_1
+5582,29321,06/24/2013 11:49:00 PM,Monday,Taxi,Bicycle,,PROSPECT ST,Cambridge St," PROSPECT ST & Cambridge St Cambridge, MA",42.37338,-71.09814,"(42.37338, -71.09814)",Prospec_St_10
+5584,29323,06/25/2013 09:20:00 AM,Tuesday,Auto,Bicycle,1728,Massachusetts Ave,,"1728 Massachusetts Ave Cambridge, MA",42.384132,-71.119664,"(42.384132, -71.119664)",Massach_Ave_61
+5598,29334,06/27/2013 08:36:00 AM,Tuesday,Auto,Bicycle,,Massachusetts Ave,Vassar St," Massachusetts Ave & Vassar St Cambridge, MA",42.360154,-71.094882,"(42.360154, -71.094882)",Vassar_St_5
+5630,29366,07/08/2013 05:39:00 PM,Monday,Taxi,Bicycle,,Massachusetts Ave,FOREST ST," Massachusetts Ave & FOREST ST Cambridge, MA",42.38538,-71.119336,"(42.38538, -71.119336)",Forest_St_4
+5636,29373,07/10/2013 07:50:00 AM,Wednesday,Auto,Bicycle,99,SHERMAN ST,,"99 SHERMAN ST Cambridge, MA",42.388711,-71.133179,"(42.388711, -71.133179)",Sherman_St_6
+5637,29374,07/10/2013 09:01:00 AM,Wednesday,Auto,Bicycle,,Vassar St,Massachusetts Ave," Vassar St & Massachusetts Ave Cambridge, MA",42.360154,-71.094882,"(42.360154, -71.094882)",Vassar_St_5
+5643,29380,07/12/2013 04:43:00 PM,Friday,Auto,Bicycle,204,PROSPECT ST,,"204 PROSPECT ST Cambridge, MA",42.370337,-71.100118,"(42.370337, -71.100118)",Prospec_St_5
+5657,29392,07/17/2013 06:17:00 PM,Wednesday,Auto,Bicycle,1001,Cambridge St,,"1001 Cambridge St Cambridge, MA",42.373039,-71.093565,"(42.373039, -71.093565)",Cambrid_St_21
+5661,29397,07/18/2013 10:28:00 AM,Thursday,Auto,Bicycle,,Broadway,Portland St," Broadway & Portland St Cambridge, MA",42.365792,-71.09207,"(42.365792, -71.09207)",Portlan_St_5
+5662,29398,07/18/2013 04:06:00 PM,Thursday,Auto,Bicycle,,Webster Ave,Columbia St," Webster Ave & Columbia St Cambridge, MA",42.373214,-71.094426,"(42.373214, -71.094426)",Webster_Ave_10
+5666,29406,07/19/2013 04:02:00 PM,Friday,Auto,Bicycle,223,Western Ave,,"223 Western Ave Cambridge, MA",42.364788,-71.110961,"(42.364788, -71.110961)",Western_Ave_6
+5670,29405,07/20/2013 02:12:00 PM,Saturday,Auto,Bicycle,202,Hampshire St,,"202 Hampshire St Cambridge, MA",42.373109,-71.100254,"(42.373109, -71.100254)",Hampshi_St_16
+5671,29408,07/20/2013 12:10:00 PM,Saturday,Auto,Bicycle,,Putnam Ave,River St," Putnam Ave & River St Cambridge, MA",42.362257,-71.113547,"(42.362257, -71.113547)",Putnam_Ave_15
+5674,29409,07/21/2013 12:14:00 PM,Sunday,Auto,Bicycle,,MAGAZINE ST,Putnam Ave," MAGAZINE ST & Putnam Ave Cambridge, MA",42.359115,-71.111084,"(42.359115, -71.111084)",Magazin_St_7
+5677,29418,07/21/2013 03:10:00 PM,Sunday,Auto,Bicycle,,Wheeler St,Concord Ave," Wheeler St & Concord Ave Cambridge, MA",42.388628,-71.144098,"(42.388628, -71.144098)",Concord_Ave_23
+5682,29414,07/22/2013 05:22:00 PM,Monday,Auto,Bicycle,163,Hampshire St,,"163 Hampshire St Cambridge, MA",42.371782,-71.098295,"(42.371782, -71.098295)",Hampshi_St_12
+5684,29420,07/22/2013 05:23:00 PM,Monday,Auto,Bicycle,,Massachusetts Ave,LINNAEAN ST," Massachusetts Ave & LINNAEAN ST Cambridge, MA",42.384872,-71.119394,"(42.384872, -71.119394)",Massach_Ave_64
+5687,29424,07/23/2013 09:42:00 PM,Tuesday,Auto,Bicycle,,Massachusetts Ave,Trowbridge St," Massachusetts Ave & Trowbridge St Cambridge, MA",42.370095,-71.112929,"(42.370095, -71.112929)",Trowbri_St_1
+5689,29440,07/23/2013 04:09:00 PM,Tuesday,Auto,Bicycle,1000,Massachusetts Ave,,"1000 Massachusetts Ave Cambridge, MA",42.368945,-71.110924,"(42.368945, -71.110924)",Massach_Ave_30
+5691,29428,07/24/2013 09:00:00 AM,Wednesday,Auto,Bicycle,139,MAIN ST,,"139 MAIN ST Cambridge, MA",42.362222,-71.082262,"(42.362222, -71.082262)",Broad_Canal_Way_1
+5710,29446,07/30/2013 05:23:00 PM,Tuesday,Auto,Bicycle,411,Broadway,Scouting Way,"411 Broadway Cambridge, MA",42.372528,-71.108791,"(42.372528, -71.108791)",Broadwa_36
+5713,29451,07/31/2013 06:59:00 PM,Saturday,Auto,Bicycle,,GARFIELD ST,OXFORD AVE," GARFIELD ST & OXFORD AVE Cambridge, MA",42.383665,-71.116114,"(42.383665, -71.116114)",Oxford_St_8
+5717,29452,08/01/2013 08:35:00 AM,Thursday,Bus (Other),Bicycle,,GARDEN ST,Bond St," GARDEN ST & Bond St Cambridge, MA",42.381403,-71.126133,"(42.381403, -71.126133)",Garden_St_11
+5723,29458,08/02/2013 10:43:00 AM,Tuesday,Auto,Bicycle,2240,Massachusetts Ave,,"2240 Massachusetts Ave Cambridge, MA",42.393839,-71.126611,"(42.393839, -71.126611)",Massach_Ave_90
+5730,29465,08/03/2013 11:48:00 AM,Saturday,Auto,Bicycle,,KIRKLAND ST,OXFORD AVE," KIRKLAND ST & OXFORD AVE Cambridge, MA",42.376308,-71.115696,"(42.376308, -71.115696)",Oxford_St_1
+5734,29469,08/05/2013 08:15:00 PM,Monday,Auto,Bicycle,,Cambridge St,Hampshire St," Cambridge St & Hampshire St Cambridge, MA",42.373729,-71.100837,"(42.373729, -71.100837)",Hampshi_St_18
+5751,29485,08/08/2013 06:39:00 PM,Thursday,Auto,Bicycle,,Broadway,Trowbridge Pl," Broadway & Trowbridge Pl Cambridge, MA",42.373196,-71.110836,"(42.373196, -71.110836)",Broadwa_38
+5773,29507,08/14/2013 08:29:00 AM,Wednesday,Auto,Bicycle,,Massachusetts Ave,Rice St," Massachusetts Ave & Rice St Cambridge, MA",42.395333,-71.127921,"(42.395333, -71.127921)",Massach_Ave_95
+5775,29509,08/14/2013 01:12:00 PM,Wednesday,Auto,Bicycle,193,Hampshire St,,"193 Hampshire St Cambridge, MA",42.372944,-71.099708,"(42.372944, -71.099708)",Hampshi_Ct_1
+5776,29510,08/14/2013 01:34:00 PM,Wednesday,Auto,Bicycle,440,Massachusetts Ave,,"440 Massachusetts Ave Cambridge, MA",42.363548,-71.100911,"(42.363548, -71.100911)",Massach_Ave_11
+5777,29511,08/14/2013 04:05:00 PM,Wednesday,Auto,Bicycle,,MOUNT AUBURN ST,GERRY ST," MOUNT AUBURN ST & GERRY ST Cambridge, MA",42.37388,-71.124372,"(42.37388, -71.124372)",Mt-A_St_21
+5782,29518,08/16/2013 06:42:00 AM,Friday,Auto,Bicycle,,MOUNT AUBURN ST,HOMER AVE," MOUNT AUBURN ST & HOMER AVE Cambridge, MA",42.374967,-71.148015,"(42.374967, -71.148015)",Mt-A_St_41
+5788,29524,08/17/2013 09:23:00 AM,Saturday,Auto,Bicycle,,Massachusetts Ave,Russell St," Massachusetts Ave & Russell St Cambridge, MA",42.391769,-71.12387,"(42.391769, -71.12387)",Russell_St_1
+5797,29534,08/21/2013 09:49:00 AM,Wednesday,Auto,Bicycle,,HARVARD ST,Trowbridge St," HARVARD ST & Trowbridge St Cambridge, MA",42.371454,-71.112005,"(42.371454, -71.112005)",Trowbri_St_2
+5799,29536,08/21/2013 09:46:00 AM,Wednesday,Auto,Bicycle,,Massachusetts Ave,Sidney St," Massachusetts Ave & Sidney St Cambridge, MA",42.36295,-71.09958,"(42.36295, -71.09958)",Massach_Ave_10
+5807,29555,08/22/2013 12:40:00 PM,Thursday,Auto,Bicycle,1621,Cambridge St,,"1621 Cambridge St Cambridge, MA",42.374873,-71.109046,"(42.374873, -71.109046)",Cambrid_St_43
+5809,29545,08/23/2013 10:05:00 AM,Friday,Auto,Bicycle,32,QUINCY ST,,"32 QUINCY ST Cambridge, MA",42.374178,-71.114444,"(42.374178, -71.114444)",Quincy_St_1
+5813,29553,08/23/2013 08:29:00 PM,Friday,Auto,Bicycle,,Massachusetts Ave,DUNSTER ST," Massachusetts Ave & DUNSTER ST Cambridge, MA",42.373333,-71.118581,"(42.373333, -71.118581)",Massach_Ave_41
+5823,29560,08/27/2013 08:00:00 PM,Tuesday,Auto,Bicycle,2150,Massachusetts Ave,,"2150 Massachusetts Ave Cambridge, MA",42.392158,-71.124614,"(42.392158, -71.124614)",Massach_Ave_85
+5827,29692,08/28/2013 02:00:00 PM,Saturday,Auto,Bicycle,,HURLEY ST,Third St," HURLEY ST & Third St Cambridge, MA",42.3683,-71.080574,"(42.3683, -71.080574)",Hurley_St_3
+5833,29571,08/30/2013 03:59:00 PM,Friday,Bicycle,Parked Vehicle,1783,Massachusetts Ave,,"1783 Massachusetts Ave Cambridge, MA",42.385988,-71.119062,"(42.385988, -71.119062)",Newport_Rd_1
+5852,29585,09/05/2013 09:49:00 AM,Thursday,Truck,Bicycle,1039,Massachusetts Ave,,"1039 Massachusetts Ave Cambridge, MA",42.36993,-71.112459,"(42.36993, -71.112459)",Massach_Ave_31
+5853,29593,09/05/2013 10:00:00 AM,Thursday,Auto,Bicycle,,Hampshire St,Inman St," Hampshire St & Inman St Cambridge, MA",42.373475,-71.100531,"(42.373475, -71.100531)",Hampshi_St_16
+5863,29600,09/08/2013 05:19:00 PM,Sunday,Auto,Bicycle,,Gore St,RUFO RD," Gore St & RUFO RD Cambridge, MA",42.372598,-71.085238,"(42.372598, -71.085238)",Rufo_Rd_1
+5865,29608,09/08/2013 01:09:00 PM,Sunday,Auto,Bicycle,2327,Massachusetts Ave,Woodbridge St,"2327 Massachusetts Ave Cambridge, MA",42.395899,-71.128316,"(42.395899, -71.128316)",Massach_Ave_96
+5877,29620,09/10/2013 01:03:00 PM,Tuesday,Taxi,Bicycle,2161,Massachusetts Ave,,"2161 Massachusetts Ave Cambridge, MA",42.392537,-71.124399,"(42.392537, -71.124399)",Milton_St_1
+5879,29622,09/10/2013 06:42:00 PM,Tuesday,Auto,Bicycle,,Massachusetts Ave,EXETER PARK," Massachusetts Ave & EXETER PARK Cambridge, MA",42.384803,-71.119405,"(42.384803, -71.119405)",Massach_Ave_62
+5886,29631,09/12/2013 03:40:00 PM,Thursday,Auto,Bicycle,326,Broadway,,"326 Broadway Cambridge, MA",42.369442,-71.101723,"(42.369442, -71.101723)",Broadwa_21
+5892,29643,09/13/2013 05:10:00 PM,Saturday,Auto,Bicycle,,HURON AVE,FAYERWEATHER ST," HURON AVE & FAYERWEATHER ST Cambridge, MA",42.381305,-71.137337,"(42.381305, -71.137337)",Huron_Ave_18
+5908,29654,09/19/2013 12:04:00 PM,Thursday,Auto,Bicycle,,Kirkland Rd,MYRTLE AVE," Kirkland Rd & MYRTLE AVE Cambridge, MA",42.377979,-71.107811,"(42.377979, -71.107811)",Kirklan_St_15
+5909,29655,09/19/2013 09:20:00 AM,Thursday,Auto,Bicycle,,Putnam Ave,MOUNT AUBURN ST," Putnam Ave & MOUNT AUBURN ST Cambridge, MA",42.370091,-71.113336,"(42.370091, -71.113336)",Mt-A_St_1
+5920,29666,09/23/2013 08:15:00 AM,Monday,Auto,Bicycle,,MASSACHUSETTS  AVE BRDG,DOUGLASS ST," MASSACHUSETTS  AVE BRDG & DOUGLASS ST Cambridge, MA",42.363888,-71.101207,"(42.363888, -71.101207)",Massach_Ave_14
+5924,29663,09/24/2013 09:59:00 AM,Saturday,Auto,Bicycle,,OXFORD AVE,PRENTISS ST," OXFORD AVE & PRENTISS ST Cambridge, MA",42.384312,-71.116095,"(42.384312, -71.116095)",Oxford_St_8
+5940,29681,09/26/2013 05:29:00 PM,Thursday,Auto,Bicycle,,Brookline St,GRANITE ST," Brookline St & GRANITE ST Cambridge, MA",42.355082,-71.110329,"(42.355082, -71.110329)",Brookli_St_3
+5952,29702,09/30/2013 05:19:00 PM,Monday,Auto,Bicycle,15,Vassar St,,"15 Vassar St Cambridge, MA",42.362495,-71.090356,"(42.362495, -71.090356)",Vassar_St_5
+5964,29715,10/02/2013 07:50:00 AM,Wednesday,Auto,Bicycle,96,Concord Ave,,"96 Concord Ave Cambridge, MA",42.381294,-71.129389,"(42.381294, -71.129389)",Concord_Ave_7
+5974,29726,10/03/2013 06:00:00 PM,Thursday,Auto,Bicycle,,Cambridge St,Warren St," Cambridge St & Warren St Cambridge, MA",42.372102,-71.088276,"(42.372102, -71.088276)",Cambrid_St_12
+5977,29727,10/04/2013 06:26:00 PM,Friday,Auto,Bicycle,,Massachusetts Ave,Windsor St," Massachusetts Ave & Windsor St Cambridge, MA",42.361389,-71.096953,"(42.361389, -71.096953)",Windsor_St_1
+5990,29739,10/05/2013 11:58:00 PM,Saturday,Auto,Bicycle,,MOUNT AUBURN ST,HOLYOKE ST," MOUNT AUBURN ST & HOLYOKE ST Cambridge, MA",42.37197,-71.118574,"(42.37197, -71.118574)",Holyoke_St_4
+5999,29746,10/07/2013 12:11:00 PM,Monday,Auto,Bicycle,130,Waverly St,,"130 Waverly St Cambridge, MA",42.356412,-71.105314,"(42.356412, -71.105314)",Waverly_St_5
+6003,29754,10/09/2013 06:10:00 PM,Wednesday,Auto,Bicycle,,JFK St,SOUTH ST," JFK St & SOUTH ST Cambridge, MA",42.371633,-71.120922,"(42.371633, -71.120922)",JFK_St_3
+6004,29755,10/10/2013 08:00:00 AM,Thursday,Auto,Bicycle,,Massachusetts Ave,Rindge Ave," Massachusetts Ave & Rindge Ave Cambridge, MA",42.392615,-71.124874,"(42.392615, -71.124874)",Massach_Ave_86
+6005,29756,10/10/2013 08:00:00 AM,Thursday,Auto,Bicycle,,GARDEN ST,Bond St," GARDEN ST & Bond St Cambridge, MA",42.381403,-71.126133,"(42.381403, -71.126133)",Garden_St_11
+6007,29758,10/10/2013 12:55:00 PM,Thursday,Taxi,Bicycle,,Rindge Ave,MONTGOMERY ST," Rindge Ave & MONTGOMERY ST Cambridge, MA",42.393507,-71.133107,"(42.393507, -71.133107)",Rindge_Ave_13
+6009,29760,10/10/2013 06:46:00 PM,Thursday,Auto,Bicycle,1637,Massachusetts Ave,,"1637 Massachusetts Ave Cambridge, MA",42.381028,-71.119515,"(42.381028, -71.119515)",Mellen_St_1
+6010,29774,10/10/2013 05:19:00 PM,Thursday,Auto,Bicycle,189,Hampshire St,,"189 Hampshire St Cambridge, MA",42.372839,-71.099443,"(42.372839, -71.099443)",Hampshi_St_14
+6012,29761,10/11/2013 09:00:00 AM,Friday,Auto,Bicycle,,Concord Ave,Chilton St," Concord Ave & Chilton St Cambridge, MA",42.384918,-71.136532,"(42.384918, -71.136532)",Chilton_St_3
+6018,29797,10/11/2013 09:49:00 PM,Friday,Auto,Bicycle,306,Webster Ave,,"306 Webster Ave Cambridge, MA",42.373602,-71.094629,"(42.373602, -71.094629)",Webster_Ave_10
+6026,30041,10/13/2013 05:00:00 PM,Friday,Auto,Bicycle,,Fern St,Concord Ave," Fern St & Concord Ave Cambridge, MA",42.385955,-71.138872,"(42.385955, -71.138872)",Fern_St_1
+6031,29776,10/15/2013 05:38:00 PM,Tuesday,Auto,Bicycle,,Broadway,Norfolk St," Broadway & Norfolk St Cambridge, MA",42.36852,-71.099001,"(42.36852, -71.099001)",Broadwa_17
+6033,29780,10/16/2013 06:23:00 PM,Wednesday,Auto,Bicycle,,Concord Ave,FAYERWEATHER ST," Concord Ave & FAYERWEATHER ST Cambridge, MA",42.384591,-71.135792,"(42.384591, -71.135792)",Fayerwe_St_8
+6036,29783,10/17/2013 03:56:00 PM,Thursday,Pedestrian,Bicycle,,Hampshire St,Cambridge St," Hampshire St & Cambridge St Cambridge, MA",42.373729,-71.100837,"(42.373729, -71.100837)",Hampshi_St_18
+6039,29787,10/17/2013 06:30:00 PM,Thursday,Auto,Bicycle,,Concord Ave,Craigie St," Concord Ave & Craigie St Cambridge, MA",42.379415,-71.125713,"(42.379415, -71.125713)",Concord_Ave_3
+6048,29812,10/19/2013 01:02:00 PM,Saturday,Auto,Bicycle,402,Rindge Ave,,"402 Rindge Ave Cambridge, MA",42.393109,-71.140016,"(42.393109, -71.140016)",Alewife-B_Pkwy_2
+6058,29803,10/22/2013 09:00:00 AM,Tuesday,Auto,Bicycle,,Third St,SPRING ST," Third St & SPRING ST Cambridge, MA",42.368965,-71.080324,"(42.368965, -71.080324)",Spring_St_3
+6060,29805,10/22/2013 11:29:00 AM,Tuesday,Auto,Bicycle,147,Columbia St,,"147 Columbia St Cambridge, MA",42.36685,-71.098035,"(42.36685, -71.098035)",Columbi_St_8
+6063,29808,10/22/2013 10:30:00 AM,Tuesday,Bicycle,Parked Vehicle,,Western Ave,HEWS ST," Western Ave & HEWS ST Cambridge, MA",42.364554,-71.113083,"(42.364554, -71.113083)",Western_Ave_4
+6066,29814,10/23/2013 03:55:00 PM,Wednesday,Auto,Bicycle,,Massachusetts Ave,Upland Rd," Massachusetts Ave & Upland Rd Cambridge, MA",42.388173,-71.119415,"(42.388173, -71.119415)",Massach_Ave_73
+6089,29835,10/25/2013 08:39:00 AM,Saturday,Auto,Bicycle,,Broadway,LEE ST," Broadway & LEE ST Cambridge, MA",42.370823,-71.104839,"(42.370823, -71.104839)",Broadwa_27
+6093,29856,10/25/2013 02:45:00 PM,Friday,Auto,Bicycle,,Massachusetts Ave,Vassar St," Massachusetts Ave & Vassar St Cambridge, MA",42.360154,-71.094882,"(42.360154, -71.094882)",Vassar_St_5
+6099,29842,10/27/2013 06:24:00 PM,Sunday,Auto,Bicycle,,Hampshire St,Tremont St," Hampshire St & Tremont St Cambridge, MA",42.371501,-71.098121,"(42.371501, -71.098121)",Tremont_St_3
+6101,29848,10/27/2013 06:49:00 PM,Sunday,Auto,Bicycle,,MOUNT AUBURN ST,Dewolfe St," MOUNT AUBURN ST & Dewolfe St Cambridge, MA",42.371077,-71.116118,"(42.371077, -71.116118)",DeWolfe_St_6
+6108,29857,10/29/2013 12:17:00 PM,Tuesday,Auto,Bicycle,1781,Massachusetts Ave,Lancaster St,"1781 Massachusetts Ave Cambridge, MA",42.369202,-71.110689,"(42.369202, -71.110689)",Dana_St_1
+6110,29859,10/29/2013 05:48:00 PM,Tuesday,Auto,Bicycle,,Massachusetts Ave,GOLD STAR RD," Massachusetts Ave & GOLD STAR RD Cambridge, MA",42.398306,-71.131306,"(42.398306, -71.131306)",Gold-S_Rd_1
+6118,29866,10/30/2013 08:00:00 PM,Wednesday,Auto,Bicycle,,GREEN ST,Brookline St," GREEN ST & Brookline St Cambridge, MA",42.363417,-71.101935,"(42.363417, -71.101935)",Brookli_St_22
+6138,29887,11/04/2013 05:45:00 PM,Monday,Auto,Bicycle,,Albany St,Massachusetts Ave," Albany St & Massachusetts Ave Cambridge, MA",42.360828,-71.096012,"(42.360828, -71.096012)",Albany_St_4
+6139,29888,11/05/2013 11:55:00 AM,Tuesday,Auto,Bicycle,,Massachusetts Ave,Vassar St," Massachusetts Ave & Vassar St Cambridge, MA",42.360154,-71.094882,"(42.360154, -71.094882)",Vassar_St_5
+6140,29889,11/05/2013 05:04:00 PM,Tuesday,Auto,Bicycle,45,Sidney St,,"45 Sidney St Cambridge, MA",42.361916,-71.101423,"(42.361916, -71.101423)",Frankli_St_2
+6144,29893,11/06/2013 07:40:00 AM,Wednesday,Auto,Bicycle,,PROSPECT ST,Bishop Allen Dr," PROSPECT ST & Bishop Allen Dr Cambridge, MA",42.366343,-71.10316,"(42.366343, -71.10316)",Prospec_St_2
+6157,29909,11/08/2013 03:13:00 PM,Friday,Auto,Bicycle,1,Brattle Sq,,"1 Brattle Sq Cambridge, MA",42.373137,-71.121296,"(42.373137, -71.121296)",Eliot_St_4
+6158,29910,11/08/2013 03:58:00 PM,Friday,Bicycle,Auto,,Cambridge St,IRVING ST," Cambridge St & IRVING ST Cambridge, MA",42.375056,-71.1111,"(42.375056, -71.1111)",Cambrid_St_44
+6160,29912,11/08/2013 07:28:00 PM,Friday,Auto,Bicycle,,MOUNT AUBURN ST,ELIOT ST," MOUNT AUBURN ST & ELIOT ST Cambridge, MA",42.372869,-71.1214,"(42.372869, -71.1214)",Eliot_St_4
+6161,29913,11/08/2013 10:06:00 PM,Friday,Auto,Bicycle,,Massachusetts Ave,Vassar St," Massachusetts Ave & Vassar St Cambridge, MA",42.360154,-71.094882,"(42.360154, -71.094882)",Vassar_St_5
+6171,29954,11/19/2013 09:30:00 AM,Tuesday,Taxi,Bicycle,,Vassar St,MAIN ST," Vassar St & MAIN ST Cambridge, MA",42.362709,-71.089933,"(42.362709, -71.089933)",Main_St_7
+6173,29904,11/11/2013 01:40:00 PM,Monday,Auto,Bicycle,212,Hampshire St,,"212 Hampshire St Cambridge, MA",42.373323,-71.100533,"(42.373323, -71.100533)",Inman_St_9
+6178,29927,11/13/2013 10:54:00 AM,Wednesday,Auto,Bicycle,,Hampshire St,PROSPECT ST," Hampshire St & PROSPECT ST Cambridge, MA",42.372202,-71.098975,"(42.372202, -71.098975)",Prospec_St_8
+6189,29971,11/15/2013 08:10:00 AM,Friday,Motorcycle,Bicycle,,SOMERVILLE AVE,White St," SOMERVILLE AVE & White St Cambridge, MA",42.388566,-71.11904,"(42.388566, -71.11904)",White_St_1
+6191,29941,11/17/2013 06:04:00 PM,Sunday,Auto,Bicycle,325,Vassar St,,"325 Vassar St Cambridge, MA",42.354934,-71.105695,"(42.354934, -71.105695)",Vassar_St_1
+6194,29945,11/18/2013 06:40:00 AM,Monday,Auto,Bicycle,,Massachusetts Ave,PEARL ST," Massachusetts Ave & PEARL ST Cambridge, MA",42.36471,-71.102567,"(42.36471, -71.102567)",Massach_Ave_16
+6196,29947,11/18/2013 04:47:00 PM,Monday,Auto,Bicycle,,MIDDLESEX ST,Rindge Ave," MIDDLESEX ST & Rindge Ave Cambridge, MA",42.393382,-71.131032,"(42.393382, -71.131032)",Rindge_Ave_10
+6212,29963,11/20/2013 09:13:00 AM,Wednesday,Auto,Bicycle,,Massachusetts Ave,Rice St," Massachusetts Ave & Rice St Cambridge, MA",42.395333,-71.127921,"(42.395333, -71.127921)",Massach_Ave_95
+6214,29964,11/21/2013 09:10:00 AM,Thursday,Auto,Bicycle,190,Albany St,,"190 Albany St Cambridge, MA",42.359275,-71.099342,"(42.359275, -71.099342)",Albany_St_2
+6235,29983,11/26/2013 12:01:00 AM,Tuesday,Auto,Bicycle,,Massachusetts Ave,Vassar St," Massachusetts Ave & Vassar St Cambridge, MA",42.360154,-71.094882,"(42.360154, -71.094882)",Vassar_St_5
+6262,30016,12/03/2013 05:12:00 PM,Tuesday,Auto,Bicycle,,Cardinal Medeiros Ave,Michael Way," Cardinal Medeiros Ave & Michael Way Cambridge, MA",42.369754,-71.089806,"(42.369754, -71.089806)",Cardina-M_Ave_10
+6269,30024,12/06/2013 07:40:00 PM,Friday,Truck,Bicycle,,Massachusetts Ave,Vassar St," Massachusetts Ave & Vassar St Cambridge, MA",42.360154,-71.094882,"(42.360154, -71.094882)",Vassar_St_5
+6287,30043,12/11/2013 06:14:00 PM,Wednesday,Auto,Bicycle,975,Cambridge St,,"975 Cambridge St Cambridge, MA",42.372832,-71.092966,"(42.372832, -71.092966)",Cambrid_St_20
+6329,30090,12/20/2013 05:57:00 PM,Friday,Auto,Bicycle,297,Broadway,,"297 Broadway Cambridge, MA",42.368828,-71.099429,"(42.368828, -71.099429)",Broadwa_18
+6400,30163,01/06/2014 05:30:00 PM,Monday,Auto,Bicycle,,Cambridge St,OAK ST,"Cambridge St & OAK ST Cambridge, MA",42.3735771,-71.0996628,"(42.3735771, -71.0996628)",Cambrid_St_28
+6465,31749,02/06/2014 09:15:00 AM,Thursday,Auto,Bicycle,,Cambridge St,Windsor St,"Cambridge St & Windsor St Cambridge, MA",42.3727493,-71.0932846,"(42.3727493, -71.0932846)",Cambrid_St_20
+6549,31838,02/20/2014 01:15:00 PM,Thursday,Auto,Bicycle,,GRANITE ST,PEARL ST,"GRANITE ST & PEARL ST Cambridge, MA",42.3559914,-71.1120148,"(42.3559914, -71.1120148)",Pearl_St_1
+6554,31843,02/20/2014 11:50:00 AM,Thursday,Auto,Bicycle,,Massachusetts Ave,Windsor St,"Massachusetts Ave & Windsor St Cambridge, MA",42.3613892,-71.0969543,"(42.3613892, -71.0969543)",Windsor_St_1
+6597,31888,02/28/2014 06:05:00 AM,Friday,Auto,Bicycle,1575,Cambridge St,,"1575 Cambridge St Cambridge, MA",42.3745842,-71.10746,"(42.3745842, -71.10746)",Cambrid_St_40
+6632,31924,03/12/2014 08:57:00 AM,Wednesday,Auto,Bicycle,,Hampshire St,Union St,"Hampshire St & Union St Cambridge, MA",42.3693619,-71.09552,"(42.3693619, -71.09552)",Hampshi_St_7
+6667,31962,03/20/2014 07:45:00 AM,Thursday,Auto,Bicycle,,HARVEY ST,Jackson St,"HARVEY ST & Jackson St Cambridge, MA",42.3974724,-71.1353302,"(42.3974724, -71.1353302)",Harvey_St_5
+6670,31965,03/20/2014 03:20:00 PM,Thursday,Auto,Bicycle,2130,Massachusetts Ave,,"2130 Massachusetts Ave Cambridge, MA",42.3917809,-71.123909,"(42.3917809, -71.123909)",Massach_Ave_85
+6686,31981,04/03/2014 08:45:00 AM,Thursday,Auto,Bicycle,57,SHERMAN ST,,"57 SHERMAN ST Cambridge, MA",42.3870888,-71.1315994,"(42.3870888, -71.1315994)",Sherman_St_5
+6694,31989,04/04/2014 07:05:00 PM,Friday,Auto,Bicycle,,KIRKLAND ST,MYRTLE AVE,"KIRKLAND ST & MYRTLE AVE Cambridge, MA",42.3779678,-71.1078262,"(42.3779678, -71.1078262)",Kirklan_St_15
+6696,31991,04/07/2014 08:40:00 AM,Monday,Auto,Bicycle,,Broadway,Hampshire St,"Broadway & Hampshire St Cambridge, MA",42.3654366,-71.0911102,"(42.3654366, -71.0911102)",Broadwa_6
+6703,31997,04/07/2014 08:40:00 AM,Monday,Auto,Bicycle,,Broadway,Hampshire St,"Broadway & Hampshire St Cambridge, MA",42.3654366,-71.0911102,"(42.3654366, -71.0911102)",Broadwa_6
+6718,32013,04/09/2014 12:19:00 PM,Wednesday,Auto,Bicycle,,Massachusetts Ave,Vassar St,"Massachusetts Ave & Vassar St Cambridge, MA",42.3601532,-71.0948792,"(42.3601532, -71.0948792)",Vassar_St_5
+6724,32019,04/10/2014 07:58:00 PM,Thursday,Auto,Bicycle,,Brookline St,Tudor St,"Brookline St & Tudor St Cambridge, MA",42.3607063,-71.1044998,"(42.3607063, -71.1044998)",Tudor_St_1
+6744,32039,04/14/2014 08:43:00 PM,Monday,Auto,Bicycle,,Massachusetts Ave,Temple St,"Massachusetts Ave & Temple St Cambridge, MA",42.3659744,-71.1046753,"(42.3659744, -71.1046753)",Massach_Ave_20
+6750,32045,04/18/2014 09:10:00 AM,Friday,Auto,Bicycle,,HURON AVE,Appleton St,"HURON AVE & Appleton St Cambridge, MA",42.3815231,-71.1341019,"(42.3815231, -71.1341019)",Appleto_St_6
+6771,32066,04/24/2014 07:48:00 AM,Thursday,Auto,Bicycle,,Brattle St,MASON ST,"Brattle St & MASON ST Cambridge, MA",42.375988,-71.1246109,"(42.375988, -71.1246109)",Mason_St_1
+6772,32067,04/24/2014 10:50:00 AM,Thursday,Auto,Bicycle,,Broadway,DAVIS ST,"Broadway & DAVIS ST Cambridge, MA",42.3660202,-71.0926437,"(42.3660202, -71.0926437)",Broadwa_7
+6778,32073,04/24/2014 05:00:00 PM,Thursday,Auto,Bicycle,,Massachusetts Ave,Russell St,"Massachusetts Ave & Russell St Cambridge, MA",42.391758,-71.1238861,"(42.391758, -71.1238861)",Russell_St_1
+6808,32103,05/06/2014 08:05:00 AM,Tuesday,Auto,Bicycle,838,Massachusetts Ave,,"838 Massachusetts Ave Cambridge, MA",42.3673058,-71.1068344,"(42.3673058, -71.1068344)",Massach_Ave_24
+6812,32108,05/06/2014 08:54:00 AM,Tuesday,Auto,Bicycle,,Columbia St,Hampshire St,"Columbia St & Hampshire St Cambridge, MA",42.369915,-71.0961914,"(42.369915, -71.0961914)",Hampshi_St_8
+6824,32122,05/02/2014 09:05:00 AM,Friday,Auto,Bicycle,335,Broadway,,"335 Broadway Cambridge, MA",42.3699226,-71.1025543,"(42.3699226, -71.1025543)",Broadwa_22
+6831,32129,05/06/2014 08:35:00 AM,Tuesday,Auto,Bicycle,,Cambridge St,PROSPECT ST,"Cambridge St & PROSPECT ST Cambridge, MA",42.3733788,-71.0981369,"(42.3733788, -71.0981369)",Prospec_St_10
+6846,32146,05/09/2014 08:10:00 AM,Friday,Taxi,Bicycle,,Broadway,Cambridge Ctr,"Broadway & Cambridge Ctr Cambridge, MA",42.3756142,-71.1157303,"(42.3756142, -71.1157303)",Cambrid_St_49
+6871,32169,05/15/2014 02:10:00 PM,Thursday,Bicycle,Parked Vehicle,2100,Massachusetts Ave,,"2100 Massachusetts Ave Cambridge, MA",42.3917465,-71.1238632,"(42.3917465, -71.1238632)",Massach_Ave_84
+6888,32186,05/18/2014 03:00:00 PM,Sunday,Auto,Bicycle,,Brattle St,Longfellow Park,"Brattle St & Longfellow Park Cambridge, MA",42.3764877,-71.1267242,"(42.3764877, -71.1267242)",Brattle_St_18
+6891,32189,05/19/2014 07:30:00 PM,Monday,Auto,Bicycle,,Western Ave,Putnam Ave,"Western Ave & Putnam Ave Cambridge, MA",42.3644829,-71.1138916,"(42.3644829, -71.1138916)",Western_Ave_3
+6917,32214,05/17/2014 08:38:00 PM,Saturday,Auto,Bicycle,,Massachusetts Ave,ROSELAND ST,"Massachusetts Ave & ROSELAND ST Cambridge, MA",42.3868217,-71.1191788,"(42.3868217, -71.1191788)",Roselan_St_2
+6945,32242,05/31/2014 11:48:00 PM,Saturday,Taxi,Bicycle,,Ames St,MEMORIAL DR,"Ames St & MEMORIAL DR Cambridge, MA",42.3592377,-71.0871658,"(42.3592377, -71.0871658)",Memoria_Dr_19
+6952,32249,05/28/2014 06:16:00 PM,Wednesday,Auto,Bicycle,1430,Massachusetts Ave,,"1430 Massachusetts Ave Cambridge, MA",42.3739471,-71.118927,"(42.3739471, -71.118927)",Massach_Ave_43
+6959,32256,06/01/2014 01:30:00 PM,Sunday,Auto,Bicycle,,Hampshire St,Columbia St,"Hampshire St & Columbia St Cambridge, MA",42.369915,-71.0961914,"(42.369915, -71.0961914)",Hampshi_St_8
+6963,32260,06/02/2014 06:51:00 PM,Monday,Auto,Bicycle,1,MAIN ST,,"1 MAIN ST Cambridge, MA",42.3629036,-71.0926971,"(42.3629036, -71.0926971)",Main_St_9
+6965,32262,06/02/2014 07:10:00 PM,Monday,Auto,Bicycle,926,Massachusetts Ave,,"926 Massachusetts Ave Cambridge, MA",42.3684883,-71.109024,"(42.3684883, -71.109024)",Massach_Ave_28
+6968,32265,06/03/2014 01:30:00 PM,Tuesday,Auto,Bicycle,,Brookline St,EMILY ST,"Brookline St & EMILY ST Cambridge, MA",42.3602104,-71.1050262,"(42.3602104, -71.1050262)",Brookli_St_13
+6979,32276,06/03/2014 06:38:00 PM,Tuesday,Bicycle,Bicycle,36,Willow St,,"36 Willow St Cambridge, MA",42.3708534,-71.0927963,"(42.3708534, -71.0927963)",Willow_St_2
+6982,32279,06/07/2014 05:08:00 PM,Saturday,Bicycle,Parked Vehicle,49,Inman St,,"49 Inman St Cambridge, MA",42.3693848,-71.1034012,"(42.3693848, -71.1034012)",Inman_St_4
+6998,32296,06/14/2014 08:39:00 PM,Friday,Auto,Bicycle,,KIRKLAND ST,QUINCY ST,"KIRKLAND ST & QUINCY ST Cambridge, MA",42.3766365,-71.1140823,"(42.3766365, -71.1140823)",Kirklan_St_3
+7004,32302,06/12/2014 04:46:00 PM,Thursday,Auto,Bicycle,,PROSPECT ST,HARVARD ST,"PROSPECT ST & HARVARD ST Cambridge, MA",42.3683014,-71.1017456,"(42.3683014, -71.1017456)",Prospec_St_4
+7014,32312,06/17/2014 12:15:00 PM,Tuesday,Auto,Bicycle,,MOUNT AUBURN ST,HOLYOKE ST,"MOUNT AUBURN ST & HOLYOKE ST Cambridge, MA",42.3719711,-71.118576,"(42.3719711, -71.118576)",Holyoke_St_4
+7041,32339,06/24/2014 07:45:00 AM,Tuesday,Auto,Bicycle,,Massachusetts Ave,Bay St,"Massachusetts Ave & Bay St Cambridge, MA",42.3689919,-71.1102676,"(42.3689919, -71.1102676)",Massach_Ave_28
+7042,32340,06/24/2014 09:57:00 PM,Tuesday,Auto,Bicycle,,Bristol St,Webster Ave,"Bristol St & Webster Ave Cambridge, MA",42.368309,-71.0928574,"(42.368309, -71.0928574)",Webster_Ave_4
+7073,32371,07/01/2014 11:56:00 AM,Tuesday,Auto,Bicycle,,Hampshire St,Broadway,"Hampshire St & Broadway Cambridge, MA",42.3654366,-71.0911102,"(42.3654366, -71.0911102)",Broadwa_6
+7078,32376,07/03/2014 12:30:00 PM,Thursday,Taxi,Bicycle,75,Ames St,,"75 Ames St Cambridge, MA",42.3639374,-71.0874405,"(42.3639374, -71.0874405)",Ames_St_4
+7080,32378,07/03/2014 09:56:00 AM,Thursday,Taxi,Bicycle,,Broadway,Dana St,"Broadway & Dana St Cambridge, MA",42.3723183,-71.1086197,"(42.3723183, -71.1086197)",Dana_St_7
+7089,32387,07/08/2014 08:40:00 PM,Tuesday,Auto,Bicycle,195,Hampshire St,,"195 Hampshire St Cambridge, MA",42.3729401,-71.0998764,"(42.3729401, -71.0998764)",Hampshi_Ct_1
+7091,32389,07/09/2014 11:44:00 AM,Wednesday,Truck,Bicycle,,Massachusetts Ave,HARVARD ST,"Massachusetts Ave & HARVARD ST Cambridge, MA",42.3725471,-71.1159973,"(42.3725471, -71.1159973)",Harvard_St_26
+7100,32398,07/11/2014 01:50:00 PM,Friday,Auto,Bicycle,,MAIN ST,Broadway,"MAIN ST & Broadway Cambridge, MA",42.362072,-71.0826645,"(42.362072, -71.0826645)",Main_St_2
+7104,32402,07/12/2014 01:02:00 PM,Saturday,Auto,Bicycle,200,Broadway,,"200 Broadway Cambridge, MA",42.3660316,-71.0926666,"(42.3660316, -71.0926666)",Broadwa_8
+7106,32404,07/14/2014 01:47:00 AM,Monday,Auto,Bicycle,,PROSPECT ST,HARVARD ST,"PROSPECT ST & HARVARD ST Cambridge, MA",42.3683014,-71.1017456,"(42.3683014, -71.1017456)",Prospec_St_4
+7108,32406,07/14/2014 09:00:00 AM,Monday,Taxi,Bicycle,77,Massachusetts Ave,,"77 Massachusetts Ave Cambridge, MA",42.3592186,-71.0937195,"(42.3592186, -71.0937195)",Massach_Ave_2
+7126,32424,07/18/2014 09:30:00 PM,Friday,Auto,Bicycle,,Portland St,Hampshire St,"Portland St & Hampshire St Cambridge, MA",42.3662949,-71.0917816,"(42.3662949, -71.0917816)",Cardina-M_Ave_1
+7131,32429,07/09/2014 07:43:00 PM,Wednesday,Auto,Bicycle,,KIRKLAND ST,MYRTLE AVE,"KIRKLAND ST & MYRTLE AVE Cambridge, MA",42.3779678,-71.1078262,"(42.3779678, -71.1078262)",Kirklan_St_15
+7148,32447,07/16/2014 10:46:00 PM,Wednesday,Bicycle,Pedestrian,,Western Ave,MEMORIAL DR,"Western Ave & MEMORIAL DR Cambridge, MA",42.3643036,-71.1160736,"(42.3643036, -71.1160736)",Memoria_Dr_32
+7152,32451,06/12/2014 04:46:00 PM,Thursday,Auto,Bicycle,,PROSPECT ST,HARVARD ST,"PROSPECT ST & HARVARD ST Cambridge, MA",42.3683014,-71.1017456,"(42.3683014, -71.1017456)",Prospec_St_4
+7162,32462,07/27/2014 11:40:00 AM,Wednesday,Auto,Bicycle,,Windsor St,MAIN ST,"Windsor St & MAIN ST Cambridge, MA",42.3632088,-71.0967026,"(42.3632088, -71.0967026)",Windsor_St_4
+7169,32469,07/28/2014 01:47:00 PM,Monday,Auto,Bicycle,,Putnam Ave,Magee St,"Putnam Ave & Magee St Cambridge, MA",42.366394,-71.1135559,"(42.366394, -71.1135559)",Magee_St_1
+7189,32489,07/30/2014 05:18:00 PM,Wednesday,Auto,Bicycle,222,Broadway,,"222 Broadway Cambridge, MA",42.3665237,-71.0939255,"(42.3665237, -71.0939255)",Broadwa_10
+7194,32494,07/31/2014 08:45:00 AM,Thursday,Auto,Bicycle,,Binney St,FIFTH ST,"Binney St & FIFTH ST Cambridge, MA",42.3659401,-71.0844345,"(42.3659401, -71.0844345)",Binney_St_4
+7198,32498,07/31/2014 10:36:00 PM,Thursday,Auto,Bicycle,,PEARL ST,Franklin St,"PEARL ST & Franklin St Cambridge, MA",42.3636513,-71.1037369,"(42.3636513, -71.1037369)",Frankli_St_5
+7201,32502,08/03/2014 07:43:00 PM,Sunday,Taxi,Bicycle,,Bishop Allen Dr,PROSPECT ST,"Bishop Allen Dr & PROSPECT ST Cambridge, MA",42.3663445,-71.103157,"(42.3663445, -71.103157)",Prospec_St_2
+7205,32506,08/06/2014 10:28:00 AM,Wednesday,Auto,Bicycle,,Hampshire St,Tremont St,"Hampshire St & Tremont St Cambridge, MA",42.3715019,-71.0981216,"(42.3715019, -71.0981216)",Tremont_St_3
+7210,32511,08/07/2014 09:03:00 AM,Thursday,Auto,Bicycle,,Ames St,MAIN ST,"Ames St & MAIN ST Cambridge, MA",42.3625793,-71.0881653,"(42.3625793, -71.0881653)",Main_St_6
+7228,32529,08/12/2014 05:28:00 PM,Tuesday,Auto,Bicycle,,Hampshire St,Cambridge St,"Hampshire St & Cambridge St Cambridge, MA",42.3737297,-71.1008377,"(42.3737297, -71.1008377)",Hampshi_St_18
+7229,32530,08/12/2014 07:45:00 PM,Tuesday,Auto,Bicycle,349,Columbia St,,"349 Columbia St Cambridge, MA",42.3716431,-71.0952072,"(42.3716431, -71.0952072)",Columbi_St_14
+7253,32557,08/17/2014 09:21:00 PM,Sunday,Auto,Bicycle,,Brookline St,Franklin St,"Brookline St & Franklin St Cambridge, MA",42.3628693,-71.1024323,"(42.3628693, -71.1024323)",Brookli_St_21
+7257,32562,08/18/2014 05:33:00 PM,Monday,Auto,Bicycle,,MOUNT AUBURN ST,HAWTHORNE ST,"MOUNT AUBURN ST & HAWTHORNE ST Cambridge, MA",42.3744316,-71.1264191,"(42.3744316, -71.1264191)",Mt-A_St_24
+7258,32563,08/18/2014 11:12:00 PM,Monday,Auto,Bicycle,,Appian Way,Brattle St,"Appian Way & Brattle St Cambridge, MA",42.374855,-71.122345,"(42.374855, -71.122345)",Appian_Way_1
+7264,32569,08/19/2014 07:14:00 PM,Tuesday,Auto,Bicycle,17-1,Lilac Ct,Cardinal Medeiros Ave,"17-1 Lilac Ct Cambridge, MA",42.3674355,-71.0916443,"(42.3674355, -71.0916443)",Lilac_Ct_1
+7267,32573,08/20/2014 02:45:00 PM,Wednesday,Auto,Bicycle,,Massachusetts Ave,Sidney St,"Massachusetts Ave & Sidney St Cambridge, MA",42.3629494,-71.0995789,"(42.3629494, -71.0995789)",Massach_Ave_10
+7282,32588,08/25/2014 06:19:00 PM,Monday,Auto,Bicycle,325,Vassar St,,"325 Vassar St Cambridge, MA",42.3549843,-71.1053772,"(42.3549843, -71.1053772)",Vassar_St_1
+7283,32589,08/25/2014 06:29:00 PM,Monday,Taxi,Bicycle,,Massachusetts Ave,GARDEN ST,"Massachusetts Ave & GARDEN ST Cambridge, MA",42.3754883,-71.1199188,"(42.3754883, -71.1199188)",Massach_Ave_118
+7289,32595,08/27/2014 08:20:00 AM,Wednesday,Auto,Bicycle,,Massachusetts Ave,Walden St,"Massachusetts Ave & Walden St Cambridge, MA",42.3913727,-71.1232681,"(42.3913727, -71.1232681)",Massach_Ave_83
+7299,32605,08/29/2014 05:35:00 PM,Friday,Auto,Bicycle,,Willow St,PALERMO ST,"Willow St & PALERMO ST Cambridge, MA",42.3716888,-71.0923233,"(42.3716888, -71.0923233)",Willow_St_3
+7314,32619,09/03/2014 09:40:00 AM,Wednesday,Auto,Bicycle,,Broadway,Boardman Pl,"Broadway & Boardman Pl Cambridge, MA",42.3674927,-71.0963974,"(42.3674927, -71.0963974)",Broadwa_14
+7317,32624,09/05/2014 09:20:00 AM,Friday,Auto,Bicycle,,Hampshire St,Cambridge St,"Hampshire St & Cambridge St Cambridge, MA",42.3737297,-71.1008377,"(42.3737297, -71.1008377)",Hampshi_St_18
+7319,32627,09/02/2014 04:05:00 PM,Tuesday,Auto,Bicycle,,Massachusetts Ave,Vassar St,"Massachusetts Ave & Vassar St Cambridge, MA",42.3601532,-71.0948792,"(42.3601532, -71.0948792)",Vassar_St_5
+7323,32631,09/03/2014 11:47:00 AM,Wednesday,Auto,Bicycle,,QUINCY ST,Cambridge St,"QUINCY ST & Cambridge St Cambridge, MA",42.375473,-71.1143188,"(42.375473, -71.1143188)",Cambrid_St_48
+7328,32636,09/03/2014 02:30:00 PM,Wednesday,Auto,Bicycle,,Vassar St,MEMORIAL DR,"Vassar St & MEMORIAL DR Cambridge, MA",42.3534393,-71.1071396,"(42.3534393, -71.1071396)",Memoria_Dr_2
+7343,32655,09/09/2014 11:41:00 AM,Tuesday,Auto,Bicycle,,Cedar St,DUDLEY ST,"Cedar St & DUDLEY ST Cambridge, MA",42.3957939,-71.1308594,"(42.3957939, -71.1308594)",Dudley_St_8
+7345,32657,09/09/2014 07:08:00 PM,Tuesday,Auto,Bicycle,259,Massachusetts Ave,,"259 Massachusetts Ave Cambridge, MA",42.3617363,-71.0975418,"(42.3617363, -71.0975418)",Massach_Ave_6
+7347,32660,09/10/2014 04:05:00 PM,Wednesday,Truck,Bicycle,,HARVARD ST,Inman St,"HARVARD ST & Inman St Cambridge, MA",42.3689804,-71.1036682,"(42.3689804, -71.1036682)",Harvard_St_14
+7349,32662,09/10/2014 09:39:00 PM,Thursday,Auto,Bicycle,,Massachusetts Ave,PLEASANT ST,"Massachusetts Ave & PLEASANT ST Cambridge, MA",42.3664093,-71.1053925,"(42.3664093, -71.1053925)",Massach_Ave_20
+7357,32675,09/11/2014 06:29:00 PM,Thursday,Auto,Bicycle,,Hampshire St,Broadway,"Hampshire St & Broadway Cambridge, MA",42.3654366,-71.0911102,"(42.3654366, -71.0911102)",Broadwa_6
+7372,32692,09/16/2014 02:39:00 PM,Tuesday,Auto,Bicycle,,PROSPECT ST,Hampshire St,"PROSPECT ST & Hampshire St Cambridge, MA",42.3722038,-71.0989761,"(42.3722038, -71.0989761)",Prospec_St_8
+7373,32694,09/16/2014 09:37:00 PM,Tuesday,Auto,Bicycle,1033,Massachusetts Ave,,"1033 Massachusetts Ave Cambridge, MA",42.3695755,-71.1118851,"(42.3695755, -71.1118851)",Massach_Ave_31
+7376,32699,09/16/2014 10:53:00 PM,Tuesday,Auto,Bicycle,1101,Cambridge St,ELM ST,"1101 Cambridge St Cambridge, MA",42.3730469,-71.0955734,"(42.3730469, -71.0955734)",Cambrid_St_23
+7379,32702,09/22/2014 05:35:00 PM,Monday,Auto,Bicycle,,KIRKLAND ST,QUINCY ST,"KIRKLAND ST & QUINCY ST Cambridge, MA",42.3766365,-71.1140823,"(42.3766365, -71.1140823)",Kirklan_St_3
+7386,32711,09/26/2014 10:20:00 AM,Friday,Auto,Bicycle,,Massachusetts Ave,MARTIN ST,"Massachusetts Ave & MARTIN ST Cambridge, MA",42.3833466,-71.1195602,"(42.3833466, -71.1195602)",Massach_Ave_59
+7408,32732,09/24/2014 06:28:00 PM,Wednesday,Auto,Bicycle,,Sidney St,MAIN ST,"Sidney St & MAIN ST Cambridge, MA",42.3634148,-71.0994186,"(42.3634148, -71.0994186)",Main_St_14
+7413,32737,09/25/2014 11:20:00 AM,Thursday,Auto,Bicycle,,PLYMPTON ST,MILL ST,"PLYMPTON ST & MILL ST Cambridge, MA",42.3702507,-71.1177521,"(42.3702507, -71.1177521)",Plympto_St_3
+7420,32745,09/26/2014 08:08:00 PM,Friday,Auto,Bicycle,2154,Massachusetts Ave,Rindge Ave,"2154 Massachusetts Ave Cambridge, MA",42.3921967,-71.1244049,"(42.3921967, -71.1244049)",Massach_Ave_85
+7421,32746,09/27/2014 04:49:00 PM,Saturday,Auto,Bicycle,,Third St,SPRING ST,"Third St & SPRING ST Cambridge, MA",42.3689651,-71.0803223,"(42.3689651, -71.0803223)",Spring_St_3
+7428,32753,10/01/2014 05:55:00 PM,Wednesday,Auto,Bicycle,,Windsor St,Massachusetts Ave,"Windsor St & Massachusetts Ave Cambridge, MA",42.3613892,-71.0969543,"(42.3613892, -71.0969543)",Windsor_St_1
+7434,32760,10/03/2014 04:50:00 PM,Friday,Auto,Bicycle,,Massachusetts Ave,Vassar St,"Massachusetts Ave & Vassar St Cambridge, MA",42.3601532,-71.0948792,"(42.3601532, -71.0948792)",Vassar_St_5
+7444,32771,10/06/2014 09:00:00 AM,Monday,Auto,Bicycle,,Massachusetts Ave,Dana St,"Massachusetts Ave & Dana St Cambridge, MA",42.3691559,-71.110733,"(42.3691559, -71.110733)",Massach_Ave_29
+7446,32773,09/25/2014 11:20:00 AM,Thursday,Auto,Bicycle,,PLYMPTON ST,MILL ST,"PLYMPTON ST & MILL ST Cambridge, MA",42.3702507,-71.1177521,"(42.3702507, -71.1177521)",Plympto_St_3
+7448,32775,09/28/2014 07:50:00 PM,Sunday,Auto,Bicycle,,Hampshire St,Tremont St,"Hampshire St & Tremont St Cambridge, MA",42.3715019,-71.0981216,"(42.3715019, -71.0981216)",Tremont_St_3
+7452,32779,09/30/2014 06:50:00 PM,Tuesday,Auto,Bicycle,686,Cambridge St,,"686 Cambridge St Cambridge, MA",42.3720894,-71.0881882,"(42.3720894, -71.0881882)",Cambrid_St_12
+7461,32789,08/20/2014 05:44:00 PM,Wednesday,Auto,Bicycle,,Massachusetts Ave,Amherst St,"Massachusetts Ave & Amherst St Cambridge, MA",42.3581886,-71.0930862,"(42.3581886, -71.0930862)",Massach_Ave_1
+7463,32791,10/06/2014 09:03:00 PM,Monday,Auto,Bicycle,,SOMERVILLE AVE,White St,"SOMERVILLE AVE & White St Cambridge, MA",42.3885651,-71.1190414,"(42.3885651, -71.1190414)",White_St_1
+7468,32796,10/07/2014 06:45:00 PM,Tuesday,Auto,Bicycle,25,Aberdeen Ct,MOUNT AUBURN ST,"25 Aberdeen Ct Cambridge, MA",42.3757858,-71.1460495,"(42.3757858, -71.1460495)",Aberdee_Ave_2
+7469,32797,10/07/2014 07:22:00 PM,Tuesday,Auto,Bicycle,,Massachusetts Ave,Windsor St,"Massachusetts Ave & Windsor St Cambridge, MA",42.3613892,-71.0969543,"(42.3613892, -71.0969543)",Windsor_St_1
+7473,32801,09/12/2014 08:00:00 AM,Sunday,Auto,Bicycle,,Cambridge St,FELTON ST,"Cambridge St & FELTON ST Cambridge, MA",42.3752022,-71.112236,"(42.3752022, -71.112236)",Cambrid_St_45
+7477,32806,10/10/2014 06:51:00 PM,Friday,Auto,Bicycle,1256,Massachusetts Ave,,"1256 Massachusetts Ave Cambridge, MA",42.3726883,-71.1164017,"(42.3726883, -71.1164017)",Massach_Ave_38
+7480,32809,10/11/2014 01:19:00 PM,Saturday,Auto,Bicycle,,Windsor St,MAIN ST,"Windsor St & MAIN ST Cambridge, MA",42.3632088,-71.0967026,"(42.3632088, -71.0967026)",Windsor_St_4
+7485,32814,10/13/2014 01:47:00 PM,Monday,Auto,Bicycle,125,Vassar St,Massachusetts Ave,"125 Vassar St Cambridge, MA",42.3591537,-71.0969086,"(42.3591537, -71.0969086)",Vassar_St_4
+7487,32816,10/13/2014 10:30:00 PM,Monday,Auto,Bicycle,,Thorndike St,SEVENTH ST,"Thorndike St & SEVENTH ST Cambridge, MA",42.370369,-71.0858612,"(42.370369, -71.0858612)",Thorndi_St_7
+7492,32821,10/16/2014 12:00:00 PM,Thursday,Auto,Bicycle,,Hampshire St,PROSPECT ST,"Hampshire St & PROSPECT ST Cambridge, MA",42.3722038,-71.0989761,"(42.3722038, -71.0989761)",Prospec_St_8
+7495,32824,10/20/2014 12:40:00 PM,Monday,Auto,Bicycle,38,Putnam Ave,,"38 Putnam Ave Cambridge, MA",42.3687248,-71.1135101,"(42.3687248, -71.1135101)",Putnam_Ave_25
+7497,32825,10/22/2014 08:10:00 AM,Wednesday,Truck,Bicycle,211,Alewife Brook Pky,,"211 Alewife Brook Pky Cambridge, MA",42.3895264,-71.1426163,"(42.3895264, -71.1426163)",Alewife-B_Pkwy_1
+7507,32835,10/25/2014 05:11:00 PM,Saturday,Auto,Bicycle,,Massachusetts Ave,Sidney St,"Massachusetts Ave & Sidney St Cambridge, MA",42.3629494,-71.0995789,"(42.3629494, -71.0995789)",Massach_Ave_10
+7512,32840,10/30/2014 04:24:00 PM,Thursday,Auto,Bicycle,,Massachusetts Ave,MEMORIAL DR,"Massachusetts Ave & MEMORIAL DR Cambridge, MA",42.3573647,-71.0925674,"(42.3573647, -71.0925674)",Memoria_Dr_17
+7515,32843,10/30/2014 10:07:00 AM,Thursday,Auto,Bicycle,248,Broadway,Windsor St,"248 Broadway Cambridge, MA",42.3671188,-71.0954437,"(42.3671188, -71.0954437)",Broadwa_13
+7527,32855,10/27/2014 07:46:00 PM,Monday,Taxi,Bicycle,1384,Massachusetts Ave,,"1384 Massachusetts Ave Cambridge, MA",42.3734894,-71.1193008,"(42.3734894, -71.1193008)",Massach_Ave_43
+7528,32856,10/27/2014 05:42:00 PM,Monday,Auto,Bicycle,,HARVARD ST,Columbia St,"HARVARD ST & Columbia St Cambridge, MA",42.366993,-71.0978622,"(42.366993, -71.0978622)",Columbi_St_9
+7551,32881,11/04/2014 07:50:00 AM,Tuesday,Auto,Bicycle,,Massachusetts Ave,Rice St,"Massachusetts Ave & Rice St Cambridge, MA",42.3953323,-71.1279221,"(42.3953323, -71.1279221)",Massach_Ave_95
+7558,32889,09/11/2014 04:55:00 PM,Thursday,Auto,Bicycle,,Beech St,Massachusetts Ave,"Beech St & Massachusetts Ave Cambridge, MA",42.3902931,-71.1209946,"(42.3902931, -71.1209946)",Beech_St_1
+7559,32890,09/11/2014 05:33:00 PM,Thursday,Auto,Bicycle,,Cambridgeside Pl,Land Blvd,"Cambridgeside Pl & Land Blvd Cambridge, MA",42.3669815,-71.0754089,"(42.3669815, -71.0754089)",Land_Blv_6
+7563,32894,09/08/2014 05:30:00 PM,Monday,Auto,Bicycle,,Massachusetts Ave,Albany St,"Massachusetts Ave & Albany St Cambridge, MA",42.3608284,-71.0960159,"(42.3608284, -71.0960159)",Massach_Ave_4
+7566,32898,09/18/2014 09:19:00 AM,Thursday,Auto,Bicycle,,Cambridge St,Windsor St,"Cambridge St & Windsor St Cambridge, MA",42.3727493,-71.0932846,"(42.3727493, -71.0932846)",Cambrid_St_20
+7590,32923,11/08/2014 10:20:00 AM,Saturday,Auto,Bicycle,,GARDEN ST,Waterhouse St,"GARDEN ST & Waterhouse St Cambridge, MA",42.3773079,-71.1228638,"(42.3773079, -71.1228638)",Waterho_St_1
+7591,32924,11/07/2014 08:59:00 PM,Friday,Auto,Bicycle,1555,Massachusetts Ave,Waterhouse St,"1555 Massachusetts Ave Cambridge, MA",42.3788147,-71.1200562,"(42.3788147, -71.1200562)",Massach_Ave_49
+7594,32927,11/07/2014 07:45:00 AM,Friday,Auto,Bicycle,,Massachusetts Ave,Rindge Ave,"Massachusetts Ave & Rindge Ave Cambridge, MA",42.3926163,-71.1248703,"(42.3926163, -71.1248703)",Massach_Ave_86
+7632,32967,10/09/2014 06:24:00 AM,Thursday,Auto,Bicycle,,Inman St,Hampshire St,"Inman St & Hampshire St Cambridge, MA",42.3734741,-71.1005325,"(42.3734741, -71.1005325)",Hampshi_St_16
+7633,32968,10/09/2014 05:47:00 PM,Thursday,Auto,Bicycle,173,MOUNT AUBURN ST,,"173 MOUNT AUBURN ST Cambridge, MA",42.3744354,-71.1264801,"(42.3744354, -71.1264801)",Mt-A_St_25
+7674,33009,10/25/2014 01:28:00 AM,Saturday,Auto,Bicycle,35,Massachusetts Ave,White St,"35 Massachusetts Ave Cambridge, MA",42.3582993,-71.0931473,"(42.3582993, -71.0931473)",Massach_Ave_2
+7679,33014,10/30/2014 04:24:00 PM,Thursday,Auto,Bicycle,,Massachusetts Ave,MEMORIAL DR,"Massachusetts Ave & MEMORIAL DR Cambridge, MA",42.3573647,-71.0925674,"(42.3573647, -71.0925674)",Memoria_Dr_17
+7687,33022,11/12/2014 11:58:00 AM,Wednesday,Auto,Bicycle,505,GREEN ST,,"505 GREEN ST Cambridge, MA",42.3671265,-71.1082001,"(42.3671265, -71.1082001)",Green_St_11
+7690,33025,11/13/2014 10:23:00 AM,Thursday,Auto,Bicycle,1310,Cambridge St,,"1310 Cambridge St Cambridge, MA",42.3735733,-71.0996475,"(42.3735733, -71.0996475)",Cambrid_St_28
+7692,33027,11/13/2014 06:55:00 PM,Thursday,Auto,Bicycle,,ELM ST,Cambridge St,"ELM ST & Cambridge St Cambridge, MA",42.3730164,-71.0953445,"(42.3730164, -71.0953445)",Elm_St_8
+7698,33034,11/14/2014 10:27:00 AM,Friday,Auto,Bicycle,,Cambridge St,OAKLAND ST,"Cambridge St & OAKLAND ST Cambridge, MA",42.3735123,-71.0991516,"(42.3735123, -71.0991516)",Oakland_St_1
+7715,33050,11/18/2014 08:10:00 AM,Tuesday,Auto,Bicycle,,Massachusetts Ave,PEARL ST,"Massachusetts Ave & PEARL ST Cambridge, MA",42.3647118,-71.1025696,"(42.3647118, -71.1025696)",Massach_Ave_16
+7732,33067,11/21/2014 09:01:00 PM,Friday,Auto,Bicycle,,Sellers St,Massachusetts Ave,"Sellers St & Massachusetts Ave Cambridge, MA",42.3671951,-71.1066589,"(42.3671951, -71.1066589)",Massach_Ave_23
+7745,33081,11/24/2014 07:28:00 PM,Monday,Auto,Bicycle,,Massachusetts Ave,Washburn Ave,"Massachusetts Ave & Washburn Ave Cambridge, MA",42.3988228,-71.131958,"(42.3988228, -71.131958)",Massach_Ave_104
+7800,33139,12/02/2014 06:04:00 PM,Tuesday,Auto,Bicycle,,Cambridge St,Trowbridge St,"Cambridge St & Trowbridge St Cambridge, MA",42.3749199,-71.1100616,"(42.3749199, -71.1100616)",Trowbri_St_5
+7803,33142,12/04/2014 05:18:00 PM,Thursday,Auto,Bicycle,,KIRKLAND ST,MYRTLE AVE,"KIRKLAND ST & MYRTLE AVE Cambridge, MA",42.3779678,-71.1078262,"(42.3779678, -71.1078262)",Kirklan_St_15
+7811,33151,12/07/2014 03:41:00 PM,Sunday,Auto,Bicycle,,Massachusetts Ave,Blanche St,"Massachusetts Ave & Blanche St Cambridge, MA",42.362648,-71.0990677,"(42.362648, -71.0990677)",State_St_4
+7826,33167,12/11/2014 08:00:00 AM,Thursday,Auto,Bicycle,,Broadway,Portland St,"Broadway & Portland St Cambridge, MA",42.3657913,-71.0920715,"(42.3657913, -71.0920715)",Broadwa_6
+7828,33169,12/11/2014 07:50:00 PM,Thursday,Auto,Bicycle,,Columbia St,Webster Ave,"Columbia St & Webster Ave Cambridge, MA",42.3732147,-71.094429,"(42.3732147, -71.094429)",Webster_Ave_10
+7845,33185,12/15/2014 07:29:00 PM,Monday,Auto,Bicycle,1899,Massachusetts Ave,SOMERVILLE AVE,"1899 Massachusetts Ave Cambridge, MA",42.3885727,-71.1195374,"(42.3885727, -71.1195374)",Massach_Ave_73
+7848,33188,12/16/2014 09:50:00 AM,Tuesday,Auto,Bicycle,,MOUNT AUBURN ST,Dewolfe St,"MOUNT AUBURN ST & Dewolfe St Cambridge, MA",42.3710785,-71.1161194,"(42.3710785, -71.1161194)",DeWolfe_St_6
+7850,33191,12/16/2014 09:50:00 AM,Tuesday,Auto,Bicycle,,MOUNT AUBURN ST,Dewolfe St,"MOUNT AUBURN ST & Dewolfe St Cambridge, MA",42.3710785,-71.1161194,"(42.3710785, -71.1161194)",DeWolfe_St_6
+7862,33203,12/18/2014 12:42:00 AM,Thursday,Auto,Bicycle,,Hampshire St,Cardinal Medeiros Ave,"Hampshire St & Cardinal Medeiros Ave Cambridge, MA",42.3662949,-71.0917816,"(42.3662949, -71.0917816)",Cardina-M_Ave_1
+7868,33209,12/19/2014 04:30:00 PM,Friday,Auto,Bicycle,25,Dewolfe St,,"25 Dewolfe St Cambridge, MA",42.369606,-71.1169891,"(42.369606, -71.1169891)",DeWolfe_St_3
+7878,33219,12/23/2014 06:02:00 PM,Tuesday,Auto,Bicycle,,HARVARD ST,Portland St,"HARVARD ST & Portland St Cambridge, MA",42.3648453,-71.0926056,"(42.3648453, -71.0926056)",Portlan_St_4
+7897,33241,12/30/2014 04:20:00 PM,Tuesday,Auto,Bicycle,,Cambridge St,Hampshire St,"Cambridge St & Hampshire St Cambridge, MA",42.3737297,-71.1008377,"(42.3737297, -71.1008377)",Hampshi_St_18

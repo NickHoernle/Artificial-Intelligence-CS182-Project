@@ -238,7 +238,7 @@ class map_structure:
         while not fringe.isEmpty():
             node = fringe.pop()
             discovered_nodes.add(node)
-
+            
             #at the goal node
             if node.id == end.id:
                 if return_expanded_nodes:
@@ -426,9 +426,11 @@ class map_structure:
 
             # generate all successor nodes
             successor_nodes = np.array([get_node((node, connection)) for (node, connection) in successor_connections])
-
+            
             # evaluate costs of all successors
             all_successor_costs = np.array([[self.cost(start_node, successor_node, cost_function, heuristic) for start_node in starting_points] for successor_node in successor_nodes])
+            
+            
             successor_costs = np.array([np.sum(c) for c in all_successor_costs])
             # successor_costs = np.array([(max(c) - min(c)) for c in all_successor_costs])
 

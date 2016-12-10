@@ -256,17 +256,17 @@ def get_safe_road_cost(road_list, connection_list, intersection_graph, connectio
     distance = 0
     for connection_id in connection_list:
         multiplier = 10000
-        weight = connection_dict[connection_id].get_accidents() + 1
-        distance += (max(multiplier*connection_dict[connection_id].get_distance(), 1))**weight
+        weight = 5*connection_dict[connection_id].get_accidents() + 1
+        distance += (max(multiplier*connection_dict[connection_id].get_distance(), 1))*weight
     return distance
 
 def get_safe_road_cost_with_elevation(road_list, connection_list, intersection_graph, connection_dict):
     distance = 0
     for connection_id in connection_list:
         multiplier = 10000
-        weight = connection_dict[connection_id].get_accidents() + 1
-        distance += (max(multiplier*connection_dict[connection_id].get_distance(), 1))**weight
-        distance += connection_dict[connection_id].delta_elevation
+        weight = 5*connection_dict[connection_id].get_accidents() + 1
+        distance += (max(multiplier*connection_dict[connection_id].get_distance(), 1))*weight
+        distance += np.abs(connection_dict[connection_id].delta_elevation)
     return distance
 
 def null_heuristic(node, goal, intersection_graph, connection_dict):
@@ -293,7 +293,12 @@ def a_star_search(start, end, intersection_graph, connection_dict, get_road_cost
     while not fringe.isEmpty():
         node = fringe.pop()
         discovered_nodes.add(node)
-
+        
+        
+        try:
+            node_id =  node.id
+        except ValueError:
+            print 'error', node
         #at the goal node
         if node.id == end.id:
             return route_to_goal[node.id]
