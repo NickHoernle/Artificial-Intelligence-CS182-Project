@@ -1,7 +1,6 @@
 \documentclass[11pt]{article}
-\usepackage{common}
-\usepackage{graphicx}
-\title{Project Template}
+\usepackage{common,graphicx,subfig,hyperref}
+\title{CS182 Artificial Intelligence Project \\ \Large{Safe Cycling Route Planning}}
 \author{Anna Sophie Hilgard, Nick Hoernle, and Nikhila Ravi}
 \begin{document}
 \maketitle{}
@@ -9,7 +8,7 @@
 
 \section{Introduction}
 
-The goal of our project is to create a routing system for bicycle trips that takes into account more than just distance. Current map applications like Google often route cyclists through busy streets and intersections, resulting in unnecessarily dangerous trip and sometimes accidents. The algorithm we chose to use for this problem is A* search with a variety of cost functions and heuristics incorporating distance, safety of a given route, and changes in elevation (also important for biking but not information Google maps currently considers).
+The goal of our project is to create a routing system for bicycle trips that takes into account more than just distance. Current map applications like Google often route cyclists through busy streets and intersections, resulting in unnecessarily dangerous trips and sometimes accidents. The algorithm we chose to use for this problem is A* search with a variety of cost functions and heuristics incorporating distance, safety of a given route, and changes in elevation (also important for biking but not information Google maps currently considers).
 
 Additionally, we considered the problem of finding a central meeting place for two or more cyclists starting from different positions. To solve this optimization problem, we used k-beam search and simulated annealing.
 
@@ -21,21 +20,45 @@ Problem-specific adaptations were largely limited to the collection and interpre
 
 \section{Background and Related Work}
 
-While our problem was fairly straightforward, we did do some research to get ideas for potential cost attributes and data sources. Our initial formulation of the problem, for example, did not include elevation differencing, but reading previous studies led us to believe that this was an important criterion. \cite{pmbr}.
+While our problem was fairly straightforward, we did do some research to get ideas for potential cost attributes and data sources. Our initial formulation of the problem, for example, did not include elevation differencing, but reading previous studies led us to believe that this was an important criterion \cite{pmbr}.
 
 \section{Problem Specification}
+\subsection{Cost Functions}
+The problem that we are solving is of the general class of graph search problems. Given a strongly connected graph, we seek to minimize some cost function:
+\begin{equation}
+cost = \sum_{i=0}^n cost(path_i)
+\end{equation}
+given that:
+\begin{itemize}
+\item $path_0 \in Connections_{\text{(starting node)}}$
+\item $path_i, path_{i+1} \in Connections_{node_j}$
+% \item $path_i, path_{i-1} \in Connections_{node_k}$
+\item $path_n \in Connections_{\text{(target node - 1)}}$
+\end{itemize}
 
-The problem that we are solving is of the general class of graph search problems. Given a strongly connected graph, we seek to minimize some cost function $cost(\sum_{i=0}^n path_i)$ \\given that  $path_0 \in Connections_{starting node}$ \\$path_i, path_{i+1} \in Connections_{node_j}$ for some j, \\$path_i, path_{i-1} \in Connections_{node_k}$ for some k, and \\$path_n \in Connections_{target node}$
+\noindent Specifically for our problem, we created three different cost functions:
+\begin{align}\label{cost_fns}
+cost_{distance\_only}(path_i) &= length_i \\
+cost_{distance\_safety}(path_i) &= (\alpha \times length_i) \times  (\beta \times accidents_i) \\
+cost_{distance\_safety\_elevation}(path_i) &= (\alpha \times length_i) \times  (\beta \times accidents_i) + abs(\Delta elevation_i)
+\end{align}
 
-Specifically for our problem, we created three different cost functions:\\
-Distance only: $cost(path_i)= length_i$ \\
-Distance and safety only: $cost(path_i)  = \alpha* length_i * \beta * accidents_i$ \\
-Distance, safety, and elevation: $cost(path_i) = \alpha* length_i * \beta * accidents_i + abs(\Delta elevation_i)$ \\
 
-Where $\alpha$ and $\beta$ are multipliers to bring each of these values within what we find to be an appropriate range to generate reasonable results.
+\noindent Where $\alpha$ and $\beta$ are scaling multipliers to weight the relavitve magnitudes of the different cost measurements (e.g. if length should be scaled to 500m and $\delta elevation$ in meters). In the optimization portion of our project, we seek to minimize the total cost to all parties:
+\begin{equation}
+min(\sum_j^n cost_j)
+\end{equation}
+where $cost_j$ is the cost to participant j.
 
-In the optimization portion of our project, we seek to minimize the total cost to all parties:\\
-$min(\sum_j^n cost_j)$ where  $cost_j$ is the cost to participant j.
+\subsection{Heuristic Functions}
+We used three main heuristic functions for testing the A* algorithm. We firstly used a null heuristic that we use as a baseline to compare the other heuristics against. We used a simple euclidean distance heuristic that measures the distance from the current node i to the goal node as an admissible and consistent heuristic. Finally we used a heuristic that makes a simple delta elevation estimate from the current goal to the end goal and a minimum of the number of accidents on the connections from the current goal. This `combined heuristic' also included the euclidean distance element and a linear combination of these values was used.
+\begin{align}\label{heuristic_fns}
+heuristic_{null}(node_i) &= 0 \\
+heuristic_{euclidean\_distance}(node_i) &= euclidean\_distance(node_i, goal)\\
+\begin{split}
+heuristic_{combined}(node_i) &= (\alpha \times euclidean\_distance(node_i, goal) \\ &\times  (\beta \times min(accidents\_node_i)) \\&+ abs(elevation\_difference(node_i, goal))
+\end{split}
+\end{align}
 
 \section{Approach}
 
@@ -126,20 +149,49 @@ Data Structures: Our primary data structures are an intersection graph, which is
 
 
 \section{Experiments}
-Analysis, evaluation, and critique of the algorithm and your
-implementation. Include a description of the testing data you used and
-a discussion of examples that illustrate major features of your
-system. Testing is a critical part of system construction, and the
-scope of your testing will be an important component in our
-evaluation. Discuss what you learned from the implementation.
+% Analysis, evaluation, and critique of the algorithm and your
+% implementation. Include a description of the testing data you used and
+% a discussion of examples that illustrate major features of your
+% system. Testing is a critical part of system construction, and the
+% scope of your testing will be an important component in our
+% evaluation. Discuss what you learned from the implementation.
+We aimed to test:
 \begin{itemize}
+\item The effect of the varying cost functions on the routes that were found.
+\item The effect of the $A^{*}$ heuristic on the speed of search (and consistency of the route)
+\item The efficiency and effectiveness of the resulting search
+\end{itemize}
 
-\item{Analysis:} To test our algorithms, we built graphs on GIS data from both Cambridge, MA and San Francisco, CA (supplemented with elevation and crash data collected from other sources as necessary). We ran both the single-path and meeting point algorithms for a variety of cost functions and start and end points and were pleased to see that the paths generated by our algorithms when taking into account safety and elevation factors do indeed seem to avoid busy intersections and steep hills in a reasonable way.
+\subsection{Data Collection, Extraction and Preprocessing}
+We tested our implementation on data from the cities of Cambridge, MA and San Francisco, CA. GIS location data is available on the local government websites in the form of a pandas geojson dataframe and was easily read into a pandas dataframe object using the geopandas library \footnote{\url{http://geopandas.org/}}.
+\par
+As discussed above, these geolocation data are used to create a set of nodes with coordinate positions and a number of connections which define the roads and the intersections that those roads are connected to. The data from Cambridge contained routing errors were some intersections were connected to other incorrect intersections resulting in roads that spanned the entire graph rather than simply connecting the two nearest neighboring intersections. The solution to this was to use the $geometry$ data within the Pandas geolocation dataframe and the $shapely$ \footnote{https://pypi.python.org/pypi/Shapely} graphing library to compare the actual road length to our interpolated distance for the road. If the interpolated distance was incorrect by more than a factor of 10, we made the assumption that the nodes were incorrectly tagged in the data and we dropped the connection attribute. The elevation and crash data was independently collected from the different government websites and the intersection id's were used to map this data into the `intersection' and `connection' graphs and dictionaries.
+\par The resulting connected graphs for `Cambridge' and `San Francisco' are shown in figure \ref{connected_graphs}
 
-\begin{figure}[H]
+\begin{figure}%
+    \centering
+    \subfloat[San Francisco]{{\includegraphics[width=7cm]{san_fran_map} }}%
+    \qquad
+    \subfloat[Cambridge]{{\includegraphics[width=7cm]{cambridge_map} }}%
+    \caption{Connected graphs of the San Francisco and Cambridge maps with a route shown on the map (using only distance as the cost metric on the Cambridge but distance and safety on the San Francisco map).}
+    \label{connected_graphs}%
+\end{figure}
+
+\subsection{Testing $A^{*}$ Search}
+We randomly selected nodes within the two graphs and ran A* search to find the optimal route through the map. The figure \ref{connected_san_fran} shows an example of A* finding an optimal route under two different costs.
+\par
+We then ran an iteration of 100 simulations for each cost function (\ref{cost_fns}) and each heuristic function (\ref{heuristic_fns}). Specifically the null and euclidean heuristics are both expected to find the optimal route. The euclidean heuristic should explore fewer nodes than the null heuristic. When the cost function is simple distance or simple distance and safety, the combined heuristic is neither admissible nor is it consistent as it is penalizing nodes for a cost that is not encoded in the algorithm. We expect to see this algorithm find a `longer than necessary optimal path'. However, when the cost function also encodes all of these costs, we now expect the combined heuristic to out perform the other heuristics on all accounts. Please refer to \nameref{results} for a further discussion on the above.
+
+\begin{figure}
+\label{connected_san_fran}
+\center
 \caption{Paths between nodes in San Francisco. Blue path optimizes for distance only, green path avoids previous bicycle accidents, and red path minimizes altitude changes. Overlaid with an altitude plot of San Francisco, we can clearly see the red path avoiding a hill.}
 \includegraphics[width=0.6\textwidth]{sf_new_plot_2.png}
 \end{figure}
+
+\begin{itemize}
+
+\item{Analysis:} To test our algorithms, we built graphs on GIS data from both Cambridge, MA and San Francisco, CA (supplemented with elevation and crash data collected from other sources as necessary). We ran both the single-path and meeting point algorithms for a variety of cost functions and start and end points and were pleased to see that the paths generated by our algorithms when taking into account safety and elevation factors do indeed seem to avoid busy intersections and steep hills in a reasonable way.
 
 \item{Evaluation:} We went through a few iterations of tuning the parameters in our cost function to get the appearance of the graphs to mimic what we think we'd want as cyclists. Because the cost in our problem is qualitative rather than explicitly quantitative, we were largely forced to estimate parameters based on what we thought would be reasonable rather than deriving them from empirical data of some sort. That said, we all felt that with our final parameters the algorithm was doing a reasonable job at generating routes we would want.
 
@@ -161,7 +213,7 @@ evaluation. Discuss what you learned from the implementation.
 \end{table}
 
 
-\subsection{Results}
+\subsection{Results}\label{results}
 
 Comparison of routes found by three different cost functions to A* with three different heuristics: \\
 
@@ -202,7 +254,7 @@ In future work, we could develop faster algorithms by using pruning procedures o
 
 \section{System Description}
 
-The easiest way to use our system is to open the provided iPython notebook and run each of the cells. All of the supporting functions can be found in \texttt{final\_project.py}.
+The easiest way to use our system is to open the provided iPython notebook and run each of the cells. All of the supporting functions can be found in $final\_project.py$.\footnote{$final\_project.py$: \url{https://github.com/NickHoernle/Artificial-Intelligence-CS182-Project/blob/master/final_project.py}}\footnote{$final\_project.ipynb$: \url{https://github.com/NickHoernle/Artificial-Intelligence-CS182-Project/blob/master/final_project.ipynb}}
 
 \section{Group Makeup}
 
