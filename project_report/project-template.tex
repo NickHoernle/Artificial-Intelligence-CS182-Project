@@ -1,19 +1,29 @@
 \documentclass[11pt]{article}
 \usepackage{common,graphicx,subfig,hyperref}
+
+\pagenumbering{roman}
 \title{CS182 Artificial Intelligence Project \\ \Large{Safe Cycling Route Planning}}
 \author{Anna Sophie Hilgard, Nick Hoernle, and Nikhila Ravi}
 \begin{document}
 \maketitle{}
 
+% % Some new environments for fancy cross-referencing
+% \newenvironment{a_star_algorithm}[1][htb]
+%   {\renewcommand{\algorithmcfname}{$A^{*} Star Algorithm$}% Update algorithm name
+%    \begin{algorithm}[#1]
+%   }{\end{algorithm}}
+
+
 \setlength{\parindent}{2em}
 \setlength{\parskip}{1em}
 \renewcommand{\baselinestretch}{1.3}
+\pagenumbering{arabic}
 
 \section{Introduction}
 
-Biker safety and biker safety awareness has been a topical issue for a number of years with the biker death toll at an unacceptably high rate (13 deaths in the past 5 years in Boston alone (**count of accidents in Cambridge - do we have a date attached here??**)). Current map applications like Google often route cyclists through busy streets and intersections, resulting in unnecessarily dangerous trips. The purpose of this project has been to explore AI graph search and local search algorithms to optimize a bike routing algorithm not only for `distance minimization', but also for `path safety' and `elevation comfort'. We explore the use of A* graph search under different cost and heuristic metrics to obtain a fast, yet reliable graph search between any two nodes on the intersection graph. Furthermore, we explore the use of local search to optimize for the ideal meeting point between two or more cyclists.
+Biker safety and biker safety awareness has been a topical issue for a number of years with the biker death toll at an unacceptably high rate (13 deaths in the past 5 years in Boston alone (**count of accidents in Cambridge - do we have a date attached here??**)). Current map applications like Google often route cyclists through busy streets and intersections, resulting in unnecessarily dangerous trips. The purpose of this project has been to explore AI graph search and local search algorithms to optimize a bike routing algorithm not only for `distance minimization', but also for `path safety' and `elevation comfort'. We explore the use of $A^{*}$ graph search under different cost and heuristic metrics to obtain a fast, yet reliable graph search between any two nodes on the intersection graph. Furthermore, we explore the use of local search to optimize for the ideal meeting point between two or more cyclists.
 
-% \par The algorithm we chose to use for this problem is A* search with a variety of cost functions and heuristics incorporating distance, safety of a given route, and changes in elevation (also important for biking but not information Google maps currently considers).
+% \par The algorithm we chose to use for this problem is $A^{*}$ search with a variety of cost functions and heuristics incorporating distance, safety of a given route, and changes in elevation (also important for biking but not information Google maps currently considers).
 
 % \par The graph search problem is directly analogous to techniques and ideas from the class: using intersections as nodes in the graph and road segments connecting intersections as paths, we are able to construct the city maps as directed graphs. From there, we can use data generated from a variety of sources to come up with approximate costs associated with paths and related heuristics at nodes.
 
@@ -26,9 +36,9 @@ Biker safety and biker safety awareness has been a topical issue for a number of
 While our problem was fairly straightforward, we did do some research to get ideas for potential cost attributes and data sources. Our initial formulation of the problem, for example, did not include elevation differencing, but reading previous studies led us to believe that this was an important criterion \cite{pmbr}.
 
 \section{Problem Specification}
-The graph of intersections and nodes forms a highly connected state space (Cambridge has 1831 nodes, San Francisco has 18410 nodes, and each node typically has a branching factor of 4). While it is possible, searching the entire state space for San Francisco would involve considerable computation, on the order of $4^{18410}$ possible routes to explore, and this search space grows exponentially with additional nodes. Since our aim is to design a scalable algorithm, this was simply not feasible.
+The graph of intersections and nodes forms a highly connected state space (Cambridge has 1831 nodes, San Francisco has 18410 nodes, and each node typically has a branching factor of 4). While it is possible, searching the entire state space for San Francisco would involve considerable computation, on the order of $4^{18410}$ possible routes to explore, and this search space grows exponentially with additional nodes.
 \par To compound this search space problem, we aimed to determine central meeting areas for a number of cyclists to use as a fair and safe meeting place. The search problem here is therefore not only to determine the best route from a start node to a goal but also to determine the best goal node, optimizing for minimal cost for all cyclists.
-\par Initially, we implement an A* search algorithm. We then used that A* search as a baseline for determining the route from any starting point to some goal node and we run a local search layer on top of this to find the best meeting intersection between a number of cyclists. We tailored three cost functions and three heuristics for comparing the performance of the A* and Local Search (which depend on the A* algorithm).
+\par Initially, we implement an $A^{*}$ search algorithm. We then used that $A^{*}$ search as a baseline for determining the route from any starting point to some goal node and we run a local search layer on top of this to find the best meeting intersection between a number of cyclists. We tailored three cost functions and three heuristics for comparing the performance of the $A^{*}$ and Local Search (which depend on the $A^{*}$ algorithm).
 
 \subsection{Cost Functions}
 The problem that we are solving is of the general class of graph search problems. Given a strongly connected graph, we seek to minimize some cost function:
@@ -38,7 +48,7 @@ cost = \sum_{i=0}^n cost(path_i)
 given that:
 \begin{itemize}
 \item $path_0 \in Connections_{\text{(starting node)}}$
-\item $path_i, path_{i+1} \in Connections_{node_j}$
+\item $path_i, path_{i+1} \in Connections_{node_i}$
 % \item $path_i, path_{i-1} \in Connections_{node_k}$
 \item $path_n \in Connections_{\text{(target node - 1)}}$
 \end{itemize}
@@ -51,21 +61,12 @@ cost_{distance\_safety\_elevation}(path_i) &= (\alpha \times length_i) \times  (
 \end{align}
 
 
-\noindent Where $\alpha$ and $\beta$ are scaling multipliers to weight the relavitve magnitudes of the different cost measurements (e.g. if length should be scaled to 500m and $\delta elevation$ in meters). In the optimization portion of our project, we seek to minimize the total cost to all parties:
+\noindent Where $\alpha$ and $\beta$ are scaling multipliers to weight the relative magnitudes of the different cost measurements. We used a value of $\alpha = 10000$ to scale the coordinate based length measurement to a number on the same magnitude of $\Delta elevation$. $\beta$ was set to 5 to penalize the roads with accidents highly in the algorithm. These values can be tuned empirically.\par
+\noindent In the optimization portion of our project, we seek to minimize the total cost to all parties:
 \begin{equation}
 min(\sum_j^n cost_j)
 \end{equation}
 where $cost_j$ is the cost to participant j.
-
-\subsection{Heuristic Functions}
-We used three main heuristic functions for testing the A* algorithm. We firstly used a null heuristic that we use as a baseline to compare the other heuristics against. We used a simple euclidean distance heuristic that measures the distance from the current node i to the goal node as an admissible and consistent heuristic. Finally we used a heuristic that makes a simple delta elevation estimate from the current goal to the end goal and a minimum of the number of accidents on the connections from the current goal. This `combined heuristic' also included the euclidean distance element and a linear combination of these values was used.
-\begin{align}\label{heuristic_fns}
-heuristic_{null}(node_i) &= 0 \\
-heuristic_{euclidean\_distance}(node_i) &= euclidean\_distance(node_i, goal)\\
-\begin{split}
-heuristic_{combined}(node_i) &= (\alpha \times euclidean\_distance(node_i, goal) \\ &\times  (\beta \times min(accidents\_node_i)) \\&+ abs(elevation\_difference(node_i, goal))
-\end{split}
-\end{align}
 
 \section{Approach}
 \subsection{Data Structures}
@@ -88,11 +89,32 @@ As discussed above, these geolocation data are used to create a set of nodes wit
     \label{connected_graphs}%
 \end{figure}
 
-\subsection{A^{*} Search}
+\subsection{$A^{*}$ Search}
+$A^{*}$ is an adaptive graph search algorithm that is able to take different cost and heuristic functions as parameters and then traverses the graph based on the output of these functions. $A^{*}$ search was chosen over the uniform cost alternative due to the efficient graph search under a good heuristic. We note that while a simple heuristic is to use the Euclidean distance to the goal node, incorporating accident and elevation data is non-trivial and may lead to inconsistent heuristic functions.\par
+Please refer to Appendix \ref{algorithms}, \nameref{a_star_algo} for a formal outline of the algorithm.
+
+\subsubsection{Heuristic Functions}
+We used three main heuristic functions for testing the $A^{*}$ algorithm. We firstly used a null heuristic that we use as a baseline to compare the other heuristics against. We used a simple euclidean distance heuristic that measures the distance from the current node i to the goal node as an admissible and consistent heuristic. Finally we used a heuristic that makes a simple delta elevation estimate from the current goal to the end goal and a minimum of the number of accidents on the connections from the current goal. This `combined heuristic' also included the euclidean distance element and a linear combination of these values was used.
+\begin{align}\label{heuristic_fns}
+heuristic_{null}(node_i) &= 0 \\
+heuristic_{euclidean\_distance}(node_i) &= euclidean\_distance(node_i, goal)\\
+\begin{split}
+heuristic_{combined}(node_i) &= (\alpha \times euclidean\_distance(node_i, goal) \\ &\times  (\beta \times min(accidents\_node_i)) \\&+ abs(elevation\_difference(node_i, goal))
+\end{split}
+\end{align}
 
 \subsection{Local Search: Simulated Annealing}
+The Simulated Annealing Search involved initializing a centroid and iteratively hill climbing the space around that centroid to find a local optimum point. Initially, a temperature attribute is set high, such that the hill climbing algorithm accepts non-optimal nodes with a high probability. As the algorithm proceeds, and converges on a local optimum, the temperature is decreased such that the hill climbing becomes more deterministic.
+\par
+As the state space of the search graph is large, and the distance metric is highly interpretable, we opted to initialize the first centroid at the intersection that represents the Euclidean mean between all cyclists. Our aim was to initialize the centroid within the vicinity of an optimal meeting point and allow the high initial temperature to counteract any potential local optimum intersections that may have been encountered.
+\par
+Please refer to Appendix \ref{algorithms}, \nameref{annealing_algo} for a formal outline of the algorithm.
 
 \subsection{Local Search: K-Beam Search}
+
+K Beam search involved initializing a number of centroids within the state space of the graph and iteratively hill climbing from the K best centroids to find a local optimum.
+\par
+Please refer to Appendix \ref{algorithms}, \nameref{k_beam_algo} for a formal outline of the algorithm.
 
 \section{Experiments}
 % Analysis, evaluation, and critique of the algorithm and your
@@ -109,7 +131,7 @@ We aimed to test:
 \end{itemize}
 
 \subsection{Testing $A^{*}$ Search}
-We randomly selected nodes within the two graphs and ran A* search to find the optimal route through the map. The figure \ref{connected_san_fran} shows an example of A* finding an optimal route under two different costs.
+We randomly selected nodes within the two graphs and ran $A^{*}$ search to find the optimal route through the map. The figure \ref{connected_san_fran} shows an example of $A^{*}$ finding an optimal route under two different costs.
 
 \begin{figure}
 \label{connected_san_fran}
@@ -138,9 +160,7 @@ We then ran an iteration of 100 simulations for each cost function (\ref{cost_fn
 % \end{table}
 
 \subsection{Testing Local Search}
-The Simulated Annealing Search involved initializing a centroid and iteratively hill climbing the space around that centroid to find a local optimum point. Initially, a temperature attribute is set high, such that the hill climbing algorithm accepts non-optimal nodes with a high probability. As the algorithm proceeds, and converges on a local optimum, the temperature is decreased such that the hill climbing becomes more deterministic.
-\par
-As the state space of the search graph is large, and the distance metric is highly interpretable, we opted to initialize the first centroid at the intersection that represents the Euclidean mean between all cyclists. Our aim was to initialize the centroid within the vicinity of an optimal meeting point and allow the high initial temperature to counteract any potential local optimum intersections that may have been encountered.
+
 \par
 K Beam search involved initializing a number of centroids within the state space of the graph and iteratively hill climbing from the K best centroids to find a local optimum.
 \par
@@ -148,7 +168,11 @@ We ran Simulated Annealing and K-Beam Search on a number of different iterations
 
 \section{Results}\label{results}
 
-Comparison of routes found by three different cost functions to A* with three different heuristics: \\
+\subsection{$A^{*}$ Search Results}
+
+\subsection{Local Search Results}
+
+Comparison of routes found by three different cost functions to $A^{*}$ with three different heuristics: \\
 
 \begin{figure}[H]
 \caption{Basic road cost under three different heuristics. Here we would expect the combined heuristic to significantly underperform the null heuristic and euclidean heuristic in terms of distance as the heuristic does not properly model the cost function. Therefore the heuristic is both inadmissible and inconsistent for this problem. }
@@ -204,7 +228,7 @@ The easiest way to use our system is to open the provided iPython notebook and r
 \begin{enumerate}
 \item Nick Hoernle
 \begin{enumerate}
-\item Creation of graph dictionary structure and A*search algorithm
+\item Creation of graph dictionary structure and $A^{*}$search algorithm
 \item Simulated annealing
 \end{enumerate}
 \item Nikhila Ravi
@@ -221,6 +245,7 @@ The easiest way to use our system is to open the provided iPython notebook and r
 
 \section{Algorithms}\label{algorithms}
 \begin{algorithm}[H]
+  \caption{$A^{*}$ Search Algorithm}\label{a_star_algo}
   \begin{algorithmic}
     \Function{A-Star-Search}{$graph, start node, target node$}
     \State{$node \gets $a node with $ \textsc{state}=start node$}
@@ -251,6 +276,7 @@ The easiest way to use our system is to open the provided iPython notebook and r
 \end{algorithm}
 
 \begin{algorithm}[H]
+  \caption{Simulated Annealing Algorithm}\label{annealing_algo}
   \begin{algorithmic}
     \Function{Simulated Annealing Meeting Spot}{$graph, startingpts, cost, heuristic$}
     \If{$\textbf{length}(startingpts)<2$}
@@ -273,10 +299,10 @@ The easiest way to use our system is to open the provided iPython notebook and r
     \EndWhile
     \EndFunction{}
   \end{algorithmic}
-  \caption{Simulated Annealing Meeting Spot}
 \end{algorithm}
 
 \begin{algorithm}[H]
+  \caption{K Beam Search Algorithm}\label{k_beam_algo}
   \begin{algorithmic}
     \Function{K-Beam Search Meeting Spot}{$k, graph, startingpts, cost, heuristic$}
     \If{$\textbf{length}(startingpts)<2$}
@@ -298,7 +324,6 @@ The easiest way to use our system is to open the provided iPython notebook and r
     \EndWhile
     \EndFunction{}
   \end{algorithmic}
-  \caption{K-Beam Search Meeting Spot}
 \end{algorithm}
 
 \bibliographystyle{plain} 
