@@ -36,7 +36,10 @@ class node:
     #make connection_ids the road centerline IDs
     def add_connection(self, connection_id):
         if connection_id not in self.connections:
-            self.connections.add(connection_id)
+            if type(connection_id) == int or type(connection_id) == str:
+                self.connections.add(connection_id)
+            else:
+                
 
     def set_elevation(self, elevation):
         self.elevation = elevation
@@ -318,7 +321,7 @@ class map_structure:
             # it is important that these delta elevation and distance metrics are
             # of the same order of magnitude. It is possibly worth investigating
             # some standardisation of these terms
-            distance += connection.delta_elevation
+            distance += np.abs(connection.delta_elevation)
         return distance
 
     ########################################################
@@ -339,7 +342,7 @@ class map_structure:
     def combined_heuristic(self, node, goal):
         accident_heuristic = np.min([0]+[self.road_connections[c].get_accidents() for c in node.get_connections()]) + 1
         distance = euclidean_distance(node.get_x_y(), goal.get_x_y())
-        elevation = goal.get_elevation() - node.get_elevation()
+        elevation = np.abs(goal.get_elevation() - node.get_elevation())
         multiplier = 10000
         return (distance*multiplier + elevation)*(accident_heuristic+1)
 
@@ -426,11 +429,10 @@ class map_structure:
 
             # generate all successor nodes
             successor_nodes = np.array([get_node((node, connection)) for (node, connection) in successor_connections])
-            
+
             # evaluate costs of all successors
             all_successor_costs = np.array([[self.cost(start_node, successor_node, cost_function, heuristic) for start_node in starting_points] for successor_node in successor_nodes])
-            
-            
+
             successor_costs = np.array([np.sum(c) for c in all_successor_costs])
             # successor_costs = np.array([(max(c) - min(c)) for c in all_successor_costs])
 
