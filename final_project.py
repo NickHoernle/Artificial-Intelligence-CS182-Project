@@ -36,10 +36,7 @@ class node:
     #make connection_ids the road centerline IDs
     def add_connection(self, connection_id):
         if connection_id not in self.connections:
-            if type(connection_id) == int or type(connection_id) == str:
-                self.connections.add(connection_id)
-            else:
-                
+            self.connections.add(connection_id)
 
     def set_elevation(self, elevation):
         self.elevation = elevation
@@ -241,7 +238,7 @@ class map_structure:
         while not fringe.isEmpty():
             node = fringe.pop()
             discovered_nodes.add(node)
-            
+
             #at the goal node
             if node.id == end.id:
                 if return_expanded_nodes:
@@ -321,7 +318,7 @@ class map_structure:
             # it is important that these delta elevation and distance metrics are
             # of the same order of magnitude. It is possibly worth investigating
             # some standardisation of these terms
-            distance += np.abs(connection.delta_elevation)
+            distance += np.abs(5*connection.delta_elevation)
         return distance
 
     ########################################################
@@ -340,11 +337,11 @@ class map_structure:
 
     # heuristic for the accidents, elevation of a node and for the euclidean distance
     def combined_heuristic(self, node, goal):
-        accident_heuristic = np.min([0]+[self.road_connections[c].get_accidents() for c in node.get_connections()]) + 1
+        accident_heuristic = np.min([0]+[self.road_connections[c].get_accidents() for c in node.get_connections()])+1
         distance = euclidean_distance(node.get_x_y(), goal.get_x_y())
         elevation = np.abs(goal.get_elevation() - node.get_elevation())
         multiplier = 10000
-        return (distance*multiplier + elevation)*(accident_heuristic+1)
+        return (distance*multiplier)*(accident_heuristic * 5) + 5*elevation
 
 
     ########################################################
