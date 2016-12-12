@@ -280,9 +280,12 @@ class map_structure:
     # route via a-star, given a cost function and a heuristic
     def cost(self, start_node, centroid, cost_function, heuristic):
         search_result = self.a_star_search(start_node, centroid, cost_function, heuristic)
-        nodes = search_result['nodes']
-        connections = search_result['connections']
-        return cost_function(nodes, connections)
+        if search_result:
+            nodes = search_result['nodes']
+            connections = search_result['connections']
+            return cost_function(nodes, connections)
+        else:
+            return None
 
     # a cost function that simply adds the total distance of that specific path
     # to the goal node
