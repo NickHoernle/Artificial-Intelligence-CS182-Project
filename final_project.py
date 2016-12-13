@@ -280,12 +280,9 @@ class map_structure:
     # route via a-star, given a cost function and a heuristic
     def cost(self, start_node, centroid, cost_function, heuristic):
         search_result = self.a_star_search(start_node, centroid, cost_function, heuristic)
-        if search_result:
-            nodes = search_result['nodes']
-            connections = search_result['connections']
-            return cost_function(nodes, connections)
-        else:
-            return None
+        nodes = search_result['nodes']
+        connections = search_result['connections']
+        return cost_function(nodes, connections)
 
     # a cost function that simply adds the total distance of that specific path
     # to the goal node
@@ -321,7 +318,7 @@ class map_structure:
             # it is important that these delta elevation and distance metrics are
             # of the same order of magnitude. It is possibly worth investigating
             # some standardisation of these terms
-            distance += connection.delta_elevation
+            distance += np.abs(5*connection.delta_elevation)
         return distance
 
     ########################################################
@@ -340,11 +337,11 @@ class map_structure:
 
     # heuristic for the accidents, elevation of a node and for the euclidean distance
     def combined_heuristic(self, node, goal):
-        accident_heuristic = np.min([0]+[self.road_connections[c].get_accidents() for c in node.get_connections()]) + 1
+        accident_heuristic = np.min([0]+[self.road_connections[c].get_accidents() for c in node.get_connections()])+1
         distance = euclidean_distance(node.get_x_y(), goal.get_x_y())
-        elevation = goal.get_elevation() - node.get_elevation()
+        elevation = np.abs(goal.get_elevation() - node.get_elevation())
         multiplier = 10000
-        return (distance*multiplier + elevation)*(accident_heuristic+1)
+        return (distance*multiplier)*(accident_heuristic * 5) + 5*elevation
 
 
     ########################################################
