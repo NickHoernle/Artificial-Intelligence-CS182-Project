@@ -49,7 +49,7 @@ We were able to use open source geolocation data from Cambridge and San Francisc
 
 We tested the implementation of our graph structure and search algorithms on data from the cities of Cambridge, MA and San Francisco, CA. GIS location data was available on the local government websites in the form of a pandas geojson dataframe and was easily read into a pandas dataframe object using the geopandas library \footnote{\url{http://geopandas.org/}}.
 \par
-As discussed above, these geolocation data are used to create a set of nodes with coordinate positions and a number of connections which define the roads and the intersections that those roads are connected to. The data from Cambridge contained routing errors where some intersections were connected to other incorrect intersections resulting in roads that spanned the entire graph rather than simply connecting the two nearest neighboring intersections. The solution to this was to use the $geometry$ data within the Pandas geolocation dataframe and the $shapely$ \footnote{https://pypi.python.org/pypi/Shapely} graphing library to compare the actual road length to our interpolated distance for the road. If the interpolated distance was incorrect by more than a factor of 10, we made the assumption that the nodes were incorrectly tagged in the data and we therefore dropped the connection attribute. The elevation and crash data was independently collected from the different government websites and the intersection id's were used to map this data into the `intersection' and `connection' graphs and dictionaries.
+The geolocation data were used to create a set of nodes with coordinate positions, and a set of connections which define the roads and the intersections that those roads are connected to. The data from Cambridge contained routing errors where some intersections were incorrectly connected to other intersections, resulting in roads that spanned the entire graph rather than simply connecting the two nearest neighboring intersections. Our solution was to use the $geometry$ data within the Pandas geolocation dataframe and the $shapely$ \footnote{https://pypi.python.org/pypi/Shapely} graphing library to compare the actual road length to our interpolated distance for the road. If the interpolated distance was incorrect by more than a factor of 10, we made the assumption that the nodes were incorrectly tagged in the data and the connection attribute was dropped. The elevation and crash data were independently collected from the different government websites, and the intersection id's were used to map this data into the `intersection' and `connection' graphs and dictionaries.
 \par The resulting connected graphs for `Cambridge' and `San Francisco' are shown in figure \ref{connected_graphs}
 
 \begin{figure}%
@@ -62,11 +62,11 @@ As discussed above, these geolocation data are used to create a set of nodes wit
 \end{figure}
 
 \subsection{$A^{*}$ Search}
-$A^{*}$ is an adaptive graph search algorithm that is able to take different cost and heuristic functions as parameters and then traverses the graph based on the output of these functions. $A^{*}$ search was chosen over the uniform cost alternative due to the efficient graph search under a good heuristic. We note that while a simple heuristic is to use the Euclidean distance to the goal node, incorporating accident and elevation data is non-trivial and may lead to inconsistent heuristic functions.\par
-Please refer to Appendix \ref{algorithms}, \nameref{a_star_algo} for a formal outline of the algorithm.
+$A^{*}$ is an adaptive graph search algorithm that can be use to find routes based on different cost and heuristic functions passed in as parameters to the algorithm. $A^{*}$ search was chosen over the uniform cost alternative due to the possibility of a more efficient graph search under a good heuristic. Initially we started with a simple heuristic, the Euclidean distance to the goal node. We were careful to note that developing more sophisticated heuristics involving accident and elevation data is non-trivial, and may lead to inconsistent heuristic functions.\par
+Please refer to Appendix \ref{algorithms}, \nameref{a_star_algo} for a formal outline of the $A^{*}$ algorithm.
 
 \subsubsection{Cost Functions}
-We seek to minimize some cost function:
+The goal of $A^{*}$ search is to find a path which minimizes some cost function:
 \begin{equation}
 cost = \sum_{i=0}^n cost(path_i)
 \end{equation}
@@ -85,15 +85,16 @@ cost_{distance\_safety}(path_i) &= (\alpha \times length_i) \times  (\beta \time
 cost_{distance\_safety\_elevation}(path_i) &= (\alpha \times length_i) \times  (\beta \times accidents_i) + abs(\Delta elevation_i)
 \end{align}
 
-\noindent  $\alpha$ and $\beta$ are scaling multipliers to weight the relative magnitudes of the different cost measurements. We used a value of $\alpha = 10000$ to scale the coordinate based length measurement to a number on the same magnitude of $\Delta elevation$. $\beta$ was set to 5 to penalize roads with accidents by increasing their apparent length . These values can be tuned empirically.\par
+\noindent  where $\alpha$ and $\beta$ are scaling multipliers to weight the relative magnitudes of the different cost measurements. We used a value of $\alpha = 10000$ to scale the coordinate based length measurement to a number on the same magnitude of $\Delta elevation$. $\beta$ was set to 5 to penalize roads with accidents by increasing their apparent length . These values can be tuned empirically.\par
 \noindent In the optimization section of the project, we seek to minimize the total cost to all parties:
 \begin{equation}
 min(\sum_j^n cost_j)
 \end{equation}
-where $cost_j$ is the cost to participant j.
+where $cost_j$ is the cost to participant j. Alternatively we could also consider minimising the difference between the maximum and minimum cost to the riders in the group. 
 
 \subsubsection{Heuristic Functions}
-We used three main heuristic functions for testing the $A^{*}$ algorithm. We firstly used a null heuristic that we use as a baseline to compare the other heuristics against. We used a simple euclidean distance heuristic that measures the distance from the current node i to the goal node as an admissible and consistent heuristic. Finally we used a heuristic that makes a simple delta elevation estimate from the current goal to the end goal and a minimum of the number of accidents on the connections from the current goal. This `combined heuristic' also included the euclidean distance element and a linear combination of these values was used.
+We used three main heuristic functions for testing the performance of the $A^{*}$ algorithm. Our baseline was a null heuristic. We first tried a simple admissible and consistent heuristic based on the euclidean distance heuristic from the current node to the goal node. As a more sophisticated heuristic, we created a function which is a linear combination of the estimated change in elevation from the current node to the goal, and a minimum of the number of accidents on the connections (road segments) from the current node. This `combined heuristic' also included the euclidean distance estimate. 
+
 \begin{align}\label{heuristic_fns}
 heuristic_{null}(node_i) &= 0 \\
 heuristic_{euclidean\_distance}(node_i) &= euclidean\_distance(node_i, goal)\\
@@ -103,7 +104,7 @@ heuristic_{combined}(node_i) &= (\alpha \times euclidean\_distance(node_i, goal)
 \end{align}
 
 \subsection{Local Search: Simulated Annealing}
-The Simulated Annealing Search involved initializing a centroid and iteratively hill climbing the space around that centroid to find a local optimum point. Initially, a temperature attribute is set high, such that the hill climbing algorithm accepts non-optimal nodes with a high probability. As the algorithm proceeds, and converges on a local optimum, the temperature is decreased such that the hill climbing becomes more deterministic.
+The simulated annealing search involved initializing a centroid and iteratively hill climbing the space around the centroid to minimize the cost function to find a local optimum point. The temperature attribute is initialised at a high value such that the hill climbing algorithm accepts non-optimal nodes with a high probability. As the algorithm proceeds and converges on a local optimum, the temperature is decreased such that cost minimisation becomes more deterministic.
 \par
 As the state space of the search graph is large, and the distance metric is highly interpretable, we opted to initialize the first centroid at the intersection that represents the Euclidean mean between all cyclists. Our aim was to initialize the centroid within the vicinity of an optimal meeting point and allow the high initial temperature to counteract any potential local optimum intersections that may have been encountered.
 \par
@@ -111,7 +112,7 @@ Please refer to Appendix \ref{algorithms}, \nameref{annealing_algo} for a formal
 
 \subsection{Local Search: K-Beam Search}
 
-K Beam search involved initializing a number of centroids within the state space of the graph and iteratively hill climbing from the K best centroids to find a local optimum.
+K Beam search involved first initializing a number of centroids within the state space of the graph. The centroids were initialised in a region of the graph bounded by the starting points.  All the successors of these centroids were generated, and the k best centroids based on the cost function were chosen as the successor centroids. This iterative hill climbing from the k best centroids was used to find a local optimum. Different values of the beam width 'k', were tested to see the effect on the optimum cost and running time of the algorithm.
 \par
 Please refer to Appendix \ref{algorithms}, \nameref{k_beam_algo} for a formal outline of the algorithm.
 
@@ -122,15 +123,15 @@ Please refer to Appendix \ref{algorithms}, \nameref{k_beam_algo} for a formal ou
 % system. Testing is a critical part of system construction, and the
 % scope of your testing will be an important component in our
 % evaluation. Discuss what you learned from the implementation.
-We aimed to test:
+We carried out a number of experiments to test the performance of our A* algorithm and various parameters. We aimed to test:
 \begin{itemize}
-\item The effect of the varying cost functions on the routes that were found.
-\item The effect of the $A^{*}$ heuristic on the speed of search (and consistency of the route)
+\item The effect of the varying cost functions on the routes that were returned
+\item The effect of the different $A^{*}$ heuristics on the speed of search (and consistency of the route)
 \item The efficiency and effectiveness of the resulting search
 \end{itemize}
 
 \subsection{Testing $A^{*}$ Search}
-We randomly selected nodes within the two graphs and ran $A^{*}$ search to find the optimal route through the map. The figure \ref{fig:connected_san_fran} shows an example of $A^{*}$ finding an optimal route under two different costs.
+We randomly selected nodes within the two graphs and ran $A^{*}$ search to find the optimal route. The figure \ref{fig:connected_san_fran} shows an example of $A^{*}$ finding an optimal route under two different costs with the safety and comfort optimised route returning a path which avoids area of high elevation. 
 
 \begin{figure}
 \center
@@ -140,27 +141,29 @@ We randomly selected nodes within the two graphs and ran $A^{*}$ search to find 
 \end{figure}
 
 \par
-We then ran an iteration of 100 simulations for each cost function (\ref{cost_fns}) and each heuristic function (\ref{heuristic_fns}). Specifically the null and euclidean heuristics are both expected to find the optimal route. The euclidean heuristic should explore fewer nodes than the null heuristic. When the cost function is simple distance or simple distance and safety, the combined heuristic is neither admissible nor consistent as it is penalizing nodes for a cost that is not encoded in the algorithm. We expect to see this algorithm find a `longer than necessary optimal path'. However, when the cost function also encodes all of these costs, we now expect the combined heuristic to out perform the other heuristics on all accounts. Please refer to \nameref{results} for a further discussion on the above.
+We then ran 100 simulations for each cost function (\ref{cost_fns}) and each heuristic function (\ref{heuristic_fns}). 
+
+We expected the null and euclidean heuristics to find the optimal route, with the euclidean heuristic exploring fewer nodes than the null heuristic. When the cost function is simple distance or simple distance and safety, the combined heuristic is neither admissible nor consistent as it is penalizing nodes for a cost that is being used by the algorithm. With this heuristic we expect the returned optimum path to be `longer than necessary'. However, when a combined cost function is used which accounts for distance, safety and elevation, the combined heuristic is expected to out perform the other heuristics on all accounts. Please refer to \nameref{results} for a further discussion on the above.
 
 \subsection{Testing Local Search}
 
-We ran Simulated Annealing and K-Beam Search on a number of different iterations of randomly selected nodes. While both algorithms can be tuned to run faster (by reducing the temperature faster for simulated annealing and reducing `k' for k-beam search at the cost of being more susceptible to local minima) we can make a reasonable comparison of the two algorithms in terms of their total runtime and resulting cost of the returned node.
+We ran Simulated Annealing and K-Beam Search on a number of different iterations of randomly selected nodes. While both algorithms can be tuned to run faster (by reducing the temperature faster for simulated annealing and reducing `k' for k-beam search at the cost of being more susceptible to local minima), we can make a reasonable comparison of the two algorithms in terms of their total runtime and resulting cost of the returned node.
 
 \section{Results}\label{results}
 
 \subsection{$A^{*}$ Search Results}
-Initially we ran a test of the different cost functions using a null heuristic. We are thus guaranteed to find the optimal solution for each of the cost functions (this is analogous to uniform cost search) but this search is inefficient. For this experiment, we are interested in comparing the cost functions and thus this is not important.
+Initially we ran a test of the different cost functions using a null heuristic. We are thus guaranteed to find the optimal solution for each of the cost functions (this is analogous to uniform cost search), this search is inefficient. For this experiment, we are interested in comparing the cost functions and thus this is not important.
 \par
 
-Figure \ref{cost_comparison} shows the route distance, number of nodes searched and the total change in elevation of the route vs the euclidean distance from source node to goal node for different routes, changing the cost function that is used in the $A^{*}$ search. Here we see that the basic road cost will find the shortest possible route to the solution, but as additional costs are added to certain road segments the distance of the other solutions will increase. Interestingly, the three cost functions often require the same number of nodes to be searched. Lastly, we see that the combined cost function generally results in a solution that has the lowest total change in elevation (the uncommon event when it does not result in the lowest elevation is because it is also optimizing over the distance and the number of accidents on each road link).
+Figure \ref{cost_comparison} shows the route distance, number of nodes expanded and the total change in elevation of the route for different cost functions that are used in the $A^{*}$ search. Here we see that the basic road cost will find the shortest possible route to the goal, but as additional costs are added to certain road segments, the distance of the paths returned by the other cost functions will increase. Interestingly, the three cost functions often require the same number of nodes to be searched. Lastly, we see that the combined cost function generally results in a solution that has the lowest total change in elevation (the uncommon event when it does not result in the lowest elevation is because it is also optimizing over the distance and the number of accidents on each road link).
 
 \begin{figure}[H]
 \includegraphics[width=1\textwidth]{../images/cost}
-\caption{Basic metrics for the three cost functions.}
+\caption{Basic metrics for the three cost functions with the null heuristic}
 \label{cost_comparison}
 \end{figure}
 
-In Figure \ref{simple_distance_cost} we see that the combined heuristic significantly under performs the null heuristic and euclidean heuristic in terms of distance as the heuristic does not properly model the cost function (it is adding expected costs for each node that do not actually exist). This heuristic is therefore not admissible for these cost functions and it does not return the optimal path to the solution. The euclidean heuristic still finds the optimal path but it expands far fewer nodes than the null heuristic.
+Figure \ref{simple_distance_cost} shows a comparison of the different heuristic functions under the basic road cost function. We see that the combined heuristic significantly under performs compared to the null heuristic and euclidean heuristic in terms of distance, as the combined heuristic does not properly model the cost function (it is adding expected costs for each node that are not accounted for by the basic road cost function). This heuristic is therefore not admissible for this cost function and it does not return the optimal path to the solution. The euclidean heuristic is still seen to find the optimal path and as expected, it expands far fewer nodes than the null heuristic.
 
 \begin{figure}[H]
 \caption{Varying the three heuristics for the basic road distance cost.}
@@ -168,7 +171,7 @@ In Figure \ref{simple_distance_cost} we see that the combined heuristic signific
 \label{simple_distance_cost}
 \end{figure}
 
-Again, figure \ref{simple_distance_and_safety} shows that the combined heuristic is not admissible. The euclidean heuristic again far outperforms the null heuristic in terms of nodes searched.
+Figure \ref{simple_distance_and_safety} shows a similar comparison of the three heuristics now under the safety road cost (which accounts for road accidents). The results show that again, the combined heuristic is not admissible as elevation is not accounted for by the cost function. The euclidean heuristic again far outperforms the null heuristic in terms of reducing the number of nodes searched.
 
 \begin{figure}[H]
 \includegraphics[width=1\textwidth]{../images/simple_distance_and_elevation}
@@ -176,7 +179,7 @@ Again, figure \ref{simple_distance_and_safety} shows that the combined heuristic
 \label{simple_distance_and_safety}
 \end{figure}
 
-Finally, we see in \ref{simple_distance_elevation_and_safety} that the the combined heuristic returns a path that is comparable to the other two heuristics (in terms of path distance). The fact that it is different suggests that the heuristic might not be admissible as the number of accidents from one node to the next may be dramatically different from what the heuristic is guessing (this is a very hard parameter to model). However, the fact that this heuristic now does model the accident and elevation costs that are present means that it is very efficient in finding an optimal route (in terms of numbers of nodes searched).
+Finally, \ref{simple_distance_elevation_and_safety} shows the comparison of the three heuristics under the safety road cost with elevation data also included. In this case, the the combined heuristic returns a path that is comparable to the other two heuristics (in terms of path distance). The fact the path length different suggests that the heuristic might not be admissible, as the number of accidents from one node to the next may be dramatically different from what the heuristic is guessing (this is a difficult cost parameter to model). However, the fact that this heuristic is able to model the accident and elevation costs that are calculated by the cost function means that using this heuristic is very efficient in finding an optimal route (in terms of reducing the number of nodes searched).
 
 \begin{figure}[H]
 \caption{Safety, distance, and elevation cost under three different heuristics.}
@@ -185,7 +188,7 @@ Finally, we see in \ref{simple_distance_elevation_and_safety} that the the combi
 \end{figure}
 
 \subsection{Local Search Results}
-As for the $A^{*}$ search evaluation, we randomly selected 4 nodes and computed the time that it took the algorithm to converge and the overall cost of all routes to the final returned centroid location. In figure \ref{sim_ann_and_k_beam_cost} we see that k beam generally finds a solution centroid with a slightly lower cost than simulated annealing. Furthermore, from \ref{sim_ann_and_k_beam_time}, apart from under the null heuristic, we see that k beam search with $k=5$ has a very comparable search time to that of simulated annealing.
+Similar to the approach used to test the $A^{*}$ search algorithm, we randomly selected 4 nodes and computed the time that it took the algorithm to return a solution as well as the total cost. In figure \ref{sim_ann_and_k_beam_cost} we see that k beam search algorithm generally finds a solution centroid with a slightly lower cost than simulated annealing. Furthermore, from \ref{sim_ann_and_k_beam_time}, apart from under the null heuristic, we see that k beam search with $k=5$ has a very comparable search time to that of simulated annealing.
 
 \begin{figure}[H]
 \center
@@ -197,42 +200,45 @@ As for the $A^{*}$ search evaluation, we randomly selected 4 nodes and computed 
 \begin{figure}[H]
 \center
 \caption{Total cost of routes from all starting nodes to the returned centroid for both Simulated Annealing and K Beam search (with $k = 5$)}
-\includegraphics[width=0.6\textwidth]{../images/sim_ann_and_k_beam_time.png}
+\includegraphics[width=0.6\textwidth]{../images/k_beam_sim_running_time.png}
 \label{sim_ann_and_k_beam_time}
 \end{figure}
 
-The reason for k beam search out performing simulated annealing is the presence of very definite local optima. The initialization of multiple random start points within a reasonable area of possibilities has a greater chance of initializing close to the solution than the simulated annealing. Even with the temperature set at a high value, the simulated annealing struggles to fully leave the vicinity of the node that it is initialized at (and since this is deterministically the absolute center of all the cyclists, especially if the route is hilly or has many road accidents, it may be far from the global optimum point).
+The reason for k beam search out performing simulated annealing is the presence of very definite local optima. The initialization of multiple random starting points within the possible central region has a greater chance of resulting in the centroid being close to the optimal solution than with simulated annealing. Even with the temperature initialised at a high value, simulated annealing struggles to explore beyond the vicinity of the node that it is initialized at.  Since this starting node is deterministically the absolute center of all the cyclists, especially if the route is hilly or has many road accidents, it may be far from the global optimum point.
 \par
-While the k beam solution does out perform the simulated annealing solution, in practice we do see that the costs are still comparable and thus the solution that the simulated annealing returns is still valid. The below figure \ref{overall_plot} is a plot showing the centroid found between four cyclists (under the combined cost cost function and combined heuristic).
+While the k beam solution does out perform the simulated annealing solution, in practice we do see that the costs are still comparable and thus the solution that is returned by simulated annealing is still valid. The below figure \ref{overall_plot} is a plot showing the centroid found between four cyclists (under the combined cost function and combined heuristic).
 
 \begin{figure}[H]
-\caption{Plot showing the centroid found between four cyclists in Cambridge, and each cyclist's route to the solution. The plot encodes the cost of every other node in the map as if it were the solution (and thus shows the high cost nodes in red - i.e. unlikely centroids) and the low cost nodes in yellow (i.e. likely centroids). We further see from this plot that while the combined cost for the four cyclists is not necessarily the same as the cost of only one cyclist, the route that the $A^{*}$ algorithm finds generally follows a path that avoids the red high cost nodes.}
+\caption{Plot showing the centroid found between four cyclists in Cambridge, and each cyclist's route to the solution. The plot encodes the cost of every other node in the map as if it were the centroid (and thus shows the high cost nodes in red - i.e. unlikely centroids) and the low cost nodes in yellow (i.e. likely centroids). We further see from this plot that while the combined cost for the four cyclists is not necessarily the same as the cost of only one cyclist, the route that the $A^{*}$ algorithm finds generally follows a path that avoids the red high cost nodes.}
 \includegraphics[width=1\textwidth]{../images/overall_plot.png}
 \label{overall_plot}
 \end{figure}
 
 \section{Discussion}
 
-Our algorithms could have been made to run somewhat faster by incorporating pruning strategies but we were generally satisfied with run times (especially when evaluating the combined heuristic with the distance, safety and elevation costs). Additionally, it was difficult to generate a very useful admissible heuristic for bike crashes because one could almost always find an extremely convoluted path to avoid almost all of them, and so to have a heuristic which is always $\le$ the actual cost to the goal is often not consistent. However, even without being consistent (i.e. it was returning a solution that was slightly different from the optimal solution), the heuristic did provide a very good solution for the problem.
+Through this project we have explored a range of algorithms, cost, and heuristic functions for graph search in cities, optimising for different objectives and compared their performance.  The graph search approach offers a highly adaptive solution to the problem of intelligent bike routing. Given our pre-existing knowledge of Cambridge and San Francisco city streetscape, we felt the results were reasonable. 
+
+The running time of the algorithms we have developed could have been decreased by incorporating pruning strategies, but run times were generally satisfactory (especially when evaluating the combined heuristic with the distance, safety and elevation costs). In developing heuristics, it was difficult to generate a useful non-trivial heuristic for bike crashes which was also admissible - an extremely convoluted path could almost always be found to avoid all bike accident locations. Therefore a heuristic which is always $\le$ the actual cost to the goal is often not consistent. However, even without being consistent (i.e. it was returning a solution that was slightly different from the optimal solution), the combined heuristic did provide a good route.
+
 \par
-Furthermore, calculating the number of accidents per road segment is a good estimate of how dangerous a given road segment is, but probably a better indicator would be accidents per units of bicycle traffic. If we were able to collect bicycle traffic data for each road segment, we could then calculate the Bayesian probability of:
+Furthermore, while calculating the number of accidents per road segment is a good estimate of the danger posed by a road segment, a better indicator might be accidents per units of bicycle traffic. If we were able to collect bicycle traffic data for each road segment, we could then calculate the Bayesian probability of:
 \begin{equation}
-P(\text{road segment | accident}) \propto P(\text{accident | road segment}) * P(\text{road segment})
-\end{equation}In particular, we may be over-penalizing roads with a large amount of cycling traffic.
+P(\text{road segment $\vert$ accident}) \propto P(\text{accident $\vert$ road segment}) * P(\text{road segment})
+\end{equation}In particular, we may be overpenalizing roads with a large amount of cycling traffic.
 \par
-The graph search approach shows a very feasible solution to this problem of intelligent routing. We felt that our results were very reasonable given our preexisting knowledge of Cambridge and San Francisco streets.
+
 \par
 \noindent Takeaways from this project:
 \begin{itemize}
-\item You're only as good as your data. We had some lofty goals for the data that we'd be able to collect and use for this project, but even the data we ended up using was harder to collect and map than we had originally anticipated. Furthermore, while still applicable to testing these algorithm implementations, much of the crash data was a few years old and thus to be more applicable we would want to include a real time update to the data and an expiration of old data. Cambridge and San Francisco are relatively tech-forward cities, so we can imagine this would be even more difficult in most other environments.
-\item We initially built the system for the Cambridge data but then obtained the larger mapping data for San Francisco. It was therefore interesting to see how our algorithm scaled to the larger map of San Francisco. To plan routes through a larger area, it's clear that we would have to adapt the algorithm to get the runtime within a reasonable range. In particular, we found in our reading that many routing engines actually use inadmissible heuristics for these tasks and still find reasonable results but in a much quicker time.
+\item You are only as good as your data - we had high expectations for the data we would be able to collect and use for this project, however even the data we ended up using was harder to collect and map than we had originally anticipated. Furthermore, while still applicable to testing these algorithm implementations, much of the crash data was a few years old and thus to be more applicable we would want to include real time updates to the bike accident data and an expiration of old data. Cambridge and San Francisco are relatively tech-forward cities, so we can imagine this would be even more difficult in most other cities.
+\item We initially built the system for the Cambridge data but then obtained the larger dataset for San Francisco. It was therefore interesting to see how our algorithms scaled to the larger map. To plan routes through a larger graph, it is clear that we would have to adapt the algorithm to improve the runtime performance to be within a reasonable range. Our background research suggested that many routing engines actually use inadmissible heuristics to reduce the running time but are still able to find reasonable results. 
 \end{itemize}
 
 \newpage
 \appendix
 \section{System Description}
 
-The easiest way to use our system is to open the provided iPython notebook and run each of the cells. All of the supporting functions can be found in $final\_project.py$.\footnote{$final\_project.py$: \url{https://github.com/NickHoernle/Artificial-Intelligence-CS182-Project/blob/master/final_project.py}} \footnote{$final\_project.ipynb$: \url{https://github.com/NickHoernle/Artificial-Intelligence-CS182-Project/blob/master/final_project.ipynb}}
+The easiest way to use our system is to clone the repo , open the provided iPython notebook and run each of the cells. All of the supporting functions can be found in $final\_project.py$.\footnote{$final\_project.py$: \url{https://github.com/NickHoernle/Artificial-Intelligence-CS182-Project/blob/master/final_project.py}} \footnote{$final\_project.ipynb$: \url{https://github.com/NickHoernle/Artificial-Intelligence-CS182-Project/blob/master/final_project.ipynb}}
 
 \section{Group Makeup}
 
